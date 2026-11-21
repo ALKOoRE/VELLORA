@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية | VELLORA فيلورا</title>
+    <meta name="description" content="سياسة الخصوصية والسرية الطبية لدى VELLORA فيلورا: ما البيانات التي نستلمها، وكيف نستخدمها ونحميها، وحقوقك في التصحيح والحذف.">
+    <meta name="theme-color" content="#081B2E">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="سياسة الخصوصية | VELLORA">
+    <meta property="og:image" content="vellora-logo.jpg">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Tailwind: uses the compiled tailwind.css when present (see BUILD-CSS.md); falls back to the CDN if the file is missing -->
+    <script>
+        function loadTailwindCDN() {
+            if (window.__twLoading) return;
+            window.__twLoading = true;
+            var sc = document.createElement('script');
+            sc.src = 'https://cdn.tailwindcss.com';
+            sc.onload = function () {
+                tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        stone: {
+                            50: '#FDFBF7',
+                            100: '#EFEBE3', // Canvas Base
+                            200: '#E7E1D6', // Alternate Warm Stone
+                            300: '#D8CEBE',
+                            400: '#BCAB92',
+                            800: '#4A3E2C',
+                            900: '#2C2317'
+                        },
+                        navy: {
+                            800: '#102840', // Elevated Navy
+                            900: '#081B2E', // Deep Midnight Navy
+                            950: '#040F1B'
+                        },
+                        gold: {
+                            400: '#D4AF37',
+                            500: '#C49A52', // Antique Gold
+                            600: '#A67C37',
+                            700: '#7D5A1C'  // Dark Bronze
+                        },
+                        slate: {
+                            850: '#172433',
+                            900: '#0B1B2B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'Plus Jakarta Sans', 'sans-serif'],
+                        en: ['Plus Jakarta Sans', 'sans-serif'],
+                        ar: ['Tajawal', 'sans-serif']
+                    }
+                }
+            }
+        };
+            };
+            document.head.appendChild(sc);
+        }
+    </script>
+    <link rel="stylesheet" href="tailwind.css" onerror="loadTailwindCDN()">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome as JS (turns icons into inline SVG): works even where external stylesheets are blocked, e.g. in-app previews -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <style>
+        body { font-family: 'Tajawal', 'Plus Jakarta Sans', sans-serif; background-color: #EFEBE3; color: #0B1B2B; overflow-x: hidden; }
+        html[lang="en"] body { font-family: 'Plus Jakarta Sans', 'Tajawal', sans-serif; }
+        .glass-navy { background: rgba(8,27,46,.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(196,154,82,.25); }
+        .glass-card-light { background: rgba(252,250,246,.85); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid rgba(196,154,82,.22); }
+        .gold-gradient-text { background: linear-gradient(135deg,#EAD096 0%,#C49A52 50%,#8C6221 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-pattern {
+            background:
+                radial-gradient(circle at 85% 10%, rgba(196,154,82,.18), transparent 45%),
+                radial-gradient(circle at 5% 100%, rgba(16,40,64,.9), transparent 55%),
+                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0L100 50L50 100L0 50Z' fill='none' stroke='%23C49A52' stroke-width='0.5' stroke-opacity='0.10'/%3E%3C/svg%3E"),
+                #081B2E;
+        }
+        .toc-link { transition: all .2s ease; }
+        .toc-link.active { color: #7D5A1C; background: rgba(196,154,82,.14); font-weight: 700; }
+        ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #EFEBE3; } ::-webkit-scrollbar-thumb { background: #C49A52; border-radius: 4px; }
+            html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+        html[lang="ar"] body :not([dir="ltr"]):not([dir="ltr"] *) { letter-spacing: normal; }
+        footer .text-stone-500 { color: #BCAB92; }
+            /* ===== Header: refined floating bar ===== */
+        .site-nav {
+            position: relative; width: calc(100% - 1rem); max-width: 80rem; margin: 0.5rem auto;
+            padding: 0.5rem 0.6rem 0.5rem 0.75rem; border-radius: 1.25rem;
+            background: linear-gradient(135deg, rgba(16, 40, 64, 0.96) 0%, rgba(6, 20, 36, 0.97) 100%);
+            -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
+            border: 1px solid rgba(196, 154, 82, 0.45);
+            box-shadow: 0 16px 40px -16px rgba(4, 15, 27, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+        }
+        .site-nav::after {
+            content: ""; position: absolute; left: 14%; right: 14%; bottom: -1px; height: 2px; pointer-events: none;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        }
+        .nav-medallion {
+            flex: none; width: 46px; height: 46px; border-radius: 9999px; display: flex; align-items: center; justify-content: center;
+            background: #FEF7ED; border: 1.5px solid #C49A52;
+            box-shadow: 0 0 0 3px rgba(196, 154, 82, 0.2), 0 6px 16px -6px rgba(0, 0, 0, 0.6);
+            transition: box-shadow .3s ease;
+        }
+        .nav-medallion img { width: 31px; height: auto; display: block; }
+        .group:hover .nav-medallion { box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.35), 0 6px 16px -6px rgba(0, 0, 0, 0.6); }
+        .nav-wordmark { font-size: 1.35rem; font-weight: 700; letter-spacing: 0.14em; color: #fff; line-height: 1; }
+        .nav-tagline {
+            display: block; margin-top: 0.35rem; font-size: 6.5px; letter-spacing: 0.14em; font-weight: 600;
+            text-transform: uppercase; color: #D4AF37; white-space: nowrap; line-height: 1;
+        }
+        .nav-btn {
+            height: 40px; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            border-radius: 0.9rem; font-size: 0.78rem; font-weight: 700; letter-spacing: normal;
+            transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+        }
+        .nav-btn:hover { transform: translateY(-1px); }
+        .nav-lang { padding: 0 0.75rem; color: #EAD096; background: rgba(196, 154, 82, 0.1); border: 1px solid rgba(196, 154, 82, 0.55); }
+        .nav-lang:hover { background: rgba(196, 154, 82, 0.2); border-color: #D4AF37; }
+        .nav-wa {
+            min-width: 40px; padding: 0 0.7rem; color: #fff; border: 1px solid rgba(110, 231, 160, 0.45);
+            background: linear-gradient(135deg, #1FA855 0%, #0F7A3A 100%);
+            box-shadow: 0 8px 20px -8px rgba(16, 185, 129, 0.7);
+        }
+        .nav-wa:hover { background: linear-gradient(135deg, #25C063 0%, #12904A 100%); }
+        @media (min-width: 640px) {
+            .site-nav { padding: 0.65rem 1.5rem; }
+            .nav-medallion { width: 56px; height: 56px; }
+            .nav-medallion img { width: 39px; }
+            .nav-wordmark { font-size: 1.75rem; letter-spacing: 0.16em; }
+            .nav-tagline { font-size: 8.5px; letter-spacing: 0.3em; margin-top: 0.45rem; }
+            .nav-wa { padding: 0 1.1rem; }
+            .nav-btn { font-size: 0.85rem; }
+        }
+
+        .nav-home { padding: 0 0.9rem; color: #040F1B; border: 1px solid rgba(255, 255, 255, 0.25);
+            background: linear-gradient(135deg, #A67C37 0%, #D4AF37 50%, #A67C37 100%); box-shadow: 0 8px 20px -8px rgba(196, 154, 82, 0.7); }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-white">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 right-0 z-50">
+        <nav class="site-nav flex items-center justify-between">
+            <a id="brand-link" href="index.html" class="flex items-center gap-3 group focus:outline-none shrink-0" aria-label="VELLORA">
+                <div class="nav-medallion">
+                    <img src="logo-icon.jpg" alt="VELLORA" width="1042" height="893">
+                </div>
+                <div class="flex flex-col justify-center leading-none" dir="ltr">
+                    <span class="nav-wordmark" style="font-family:'Cormorant Garamond','Plus Jakarta Sans',serif">VELLORA</span>
+                    <span class="nav-tagline font-en">Medical Travel Concierge</span>
+                </div>
+            </a>
+            <div class="flex items-center gap-2 sm:gap-3">
+                <button id="lang-toggle-btn" onclick="toggleLanguage()" class="nav-btn nav-lang">
+                    <i class="fa-solid fa-globe text-gold-400 hidden sm:inline"></i>
+                    <span id="lang-btn-label">English</span>
+                </button>
+                <a id="back-link" href="index.html" class="nav-btn nav-home">
+                    <i class="fa-solid fa-house text-sm"></i>
+                    <span id="back-text">الرئيسية</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero-pattern relative pt-36 pb-24 md:pt-44 md:pb-28 text-white overflow-hidden">
+        <div class="absolute -bottom-20 -left-16 opacity-[0.06] pointer-events-none text-gold-500">
+            <i class="fa-solid fa-shield-halved text-[380px]"></i>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-6">
+            <div class="mx-auto w-20 h-20 rounded-3xl border border-gold-500/50 bg-white/5 flex items-center justify-center shadow-[0_0_40px_-8px_rgba(196,154,82,0.55)]">
+                <i class="fa-solid fa-shield-heart text-3xl text-gold-400"></i>
+            </div>
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold">
+                <i class="fa-regular fa-calendar"></i>
+                <span id="updated-text"></span>
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight" id="page-title"></h1>
+            <p class="text-sm sm:text-lg text-stone-300 leading-relaxed max-w-2xl mx-auto" id="page-lead"></p>
+        </div>
+    </section>
+
+    <!-- AT A GLANCE (overlaps hero) -->
+    <section class="relative z-10 -mt-12 sm:-mt-14">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="glance-grid"></div>
+        </div>
+    </section>
+
+    <!-- BODY: TOC + SECTIONS -->
+    <main class="py-16 md:py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+            <aside class="lg:col-span-4 lg:sticky lg:top-28">
+                <div class="glass-card-light rounded-3xl p-5 shadow-sm">
+                    <h2 class="text-sm font-extrabold text-navy-900 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-list-ul text-gold-600"></i><span id="toc-title"></span>
+                    </h2>
+                    <ol class="space-y-1" id="toc-list"></ol>
+                </div>
+            </aside>
+            <div class="lg:col-span-8 space-y-5" id="sections"></div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 text-white border-t border-gold-500/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
+            <div class="flex flex-col sm:flex-row items-center gap-4">
+                <a href="index.html" class="inline-block rounded-xl p-2 border border-gold-500/40 hover:border-gold-400 transition-colors shrink-0" style="background:#FBF7EB" aria-label="VELLORA — Medical Travel Concierge">
+                    <img src="vellora-logo.jpg" alt="VELLORA Medical Travel Concierge" class="block w-32 sm:w-36 h-auto rounded-md" width="1400" height="1226" loading="lazy">
+                </a>
+                <p id="footer-copy"></p>
+            </div>
+            <a id="footer-back" href="index.html" class="inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 transition">
+                <i class="fa-solid fa-arrow-right rtl:rotate-180"></i><span id="footer-back-text"></span>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        let currentLang = 'ar';
+        const PHONE_DISPLAY = '+963 930 888 475';
+        const PHONE_LINK = 'https://wa.me/963930888475';
+
+        // WhatsApp buttons open the chat directly (no wa.me "Continue to chat" page)
+        document.addEventListener('click', function (e) {
+            const link = e.target.closest('a[href*="wa.me/"]');
+            if (!link) return;
+            e.preventDefault();
+            const phone = '963930888475';
+            const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) ||
+                             (navigator.maxTouchPoints > 1 && /Macintosh/i.test(navigator.userAgent));
+            if (isMobile) {
+                const fb = setTimeout(() => { if (!document.hidden) location.href = 'https://api.whatsapp.com/send?phone=' + phone; }, 1800);
+                document.addEventListener('visibilitychange', () => { if (document.hidden) clearTimeout(fb); }, { once: true });
+                window.addEventListener('pagehide', () => clearTimeout(fb), { once: true });
+                location.href = 'whatsapp://send?phone=' + phone;
+            } else {
+                const webUrl = 'https://web.whatsapp.com/send?phone=' + phone;
+                let handled = false;
+                const mark = () => { handled = true; };
+                window.addEventListener('blur', mark, { once: true });
+                document.addEventListener('visibilitychange', () => { if (document.hidden) handled = true; }, { once: true });
+                location.href = 'whatsapp://send?phone=' + phone;
+                setTimeout(() => {
+                    window.removeEventListener('blur', mark);
+                    if (handled || document.getElementById('wa-web-hint')) return;
+                    const ar = document.documentElement.lang === 'ar';
+                    const box = document.createElement('div');
+                    box.id = 'wa-web-hint';
+                    box.style.cssText = 'position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;max-width:92vw;background:#081B2E;color:#fff;border:1px solid #C49A52;border-radius:14px;padding:12px 16px;box-shadow:0 18px 50px -12px rgba(0,0,0,.55);font-size:13px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center';
+                    const msg = document.createElement('span');
+                    msg.textContent = ar ? 'لم يُفتح تطبيق واتساب؟' : "WhatsApp didn't open?";
+                    const a2 = document.createElement('a');
+                    a2.href = webUrl; a2.target = '_blank'; a2.rel = 'noopener';
+                    a2.textContent = ar ? 'افتح واتساب ويب' : 'Open WhatsApp Web';
+                    a2.style.cssText = 'background:#C49A52;color:#040F1B;font-weight:700;padding:6px 12px;border-radius:10px;text-decoration:none';
+                    box.append(msg, a2);
+                    document.body.appendChild(box);
+                    setTimeout(() => box.remove(), 15000);
+                }, 3500);
+            }
+        });
+
+        const T = {
+            ar: {
+                langBtn: 'English', back: 'الرئيسية',
+                title: 'سياسة الخصوصية والسرية الطبية',
+                lead: 'نؤمن أن ثقتك هي أساس أي رحلة علاج. هنا نشرح بوضوح ما الذي نستلمه منك، ولماذا، وكيف نحميه.',
+                updated: 'آخر تحديث: 21 نوفمبر 2026',
+                toc: 'محتويات الصفحة',
+                copy: '© 2026 VELLORA Medical Travel Concierge. جميع الحقوق محفوظة.',
+                backHome: 'العودة إلى الموقع',
+                contactTitle: 'لأي سؤال أو طلب بخصوص بياناتك',
+                contactText: 'راسلنا عبر واتساب وسنرد عليك بأقرب وقت ممكن.',
+                contactBtn: 'تواصل عبر واتساب'
+            },
+            en: {
+                langBtn: 'عربي', back: 'Home',
+                title: 'Privacy & Medical Confidentiality Policy',
+                lead: 'Trust is the foundation of any care journey. Here we explain plainly what we receive from you, why, and how we protect it.',
+                updated: 'Last updated: 21 November 2026',
+                toc: 'On this page',
+                copy: '© 2026 VELLORA Medical Travel Concierge. All rights reserved.',
+                backHome: 'Back to the website',
+                contactTitle: 'Questions or requests about your data',
+                contactText: 'Message us on WhatsApp and we will reply as soon as we can.',
+                contactBtn: 'Contact us on WhatsApp'
+            }
+        };
+
+        const glance = [
+            { icon: 'fa-brands fa-whatsapp',
+              ar: ['الإرسال بيدك', 'لا يُرسل أي شيء إلا عندما تضغط إرسال داخل واتساب.'],
+              en: ['You stay in control', 'Nothing is sent until you press send inside WhatsApp.'] },
+            { icon: 'fa-solid fa-database',
+              ar: ['لا نخزّن النموذج', 'نموذج الموقع لا يحفظ بياناتك على خادم تابع للموقع.'],
+              en: ['No form storage', 'The website form does not save your details on a website server.'] },
+            { icon: 'fa-solid fa-hand',
+              ar: ['لا نبيع بياناتك', 'لا نبيع معلوماتك ولا نستخدمها في الإعلانات.'],
+              en: ['We never sell your data', 'We do not sell your information or use it for advertising.'] },
+            { icon: 'fa-solid fa-eraser',
+              ar: ['حقك في الحذف', 'اطلب تصحيح بياناتك أو حذفها في أي وقت.'],
+              en: ['Your right to erase', 'Ask us to correct or delete your details at any time.'] }
+        ];
+
+        // Each body item: string = paragraph, {list:[...]} = bullet list, {note:'...'} = highlighted note
+        const sections = [
+            { id: 's1', icon: 'fa-solid fa-building-shield',
+              ar: { t: 'من نحن', b: [
+                    'VELLORA (فيلورا) خدمة تنسيق طبي وسفر علاجي إلى لندن. توضّح هذه السياسة ما نجمعه من معلومات عند استخدامك هذا الموقع أو التواصل معنا، وكيف نتعامل معها.',
+                    'للتواصل بخصوص الخصوصية: واتساب ' + PHONE_DISPLAY + '.'] },
+              en: { t: 'Who we are', b: [
+                    'VELLORA is a medical travel concierge service for London. This policy explains what information we collect when you use this website or contact us, and how we handle it.',
+                    'For privacy matters, contact us on WhatsApp: ' + PHONE_DISPLAY + '.'] } },
+
+            { id: 's2', icon: 'fa-solid fa-clipboard-list',
+              ar: { t: 'البيانات التي نستلمها', b: [
+                    { list: [
+                        'ما تكتبه في نموذج الطلب: الاسم الكامل، الجنسية أو بلد الإقامة، التخصص الطبي المطلوب، الإطار الزمني، حالة التأشيرة البريطانية، وملاحظاتك عن الحالة (وقد تتضمن معلومات صحية).',
+                        'ما ترسله لنا لاحقاً عبر واتساب، مثل التقارير الطبية أو نسخ جوازات السفر، إن طلبنا ذلك لإتمام التنسيق.',
+                        'بيانات واتساب الخاصة بك: رقم هاتفك واسم ملفك الشخصي كما يظهران في المحادثة.'] },
+                    'نطلب الحد الأدنى اللازم فقط، ولا نطلب مستندات حساسة قبل أن تكون ضرورية للخطوة التالية.'] },
+              en: { t: 'Information we receive', b: [
+                    { list: [
+                        'What you type into the request form: full name, nationality or country of residence, requested specialty, timeline, UK visa status, and your notes about the case (which may include health information).',
+                        'What you send us later on WhatsApp, such as medical reports or passport copies, if we ask for them to complete the coordination.',
+                        'Your WhatsApp details: your phone number and profile name as they appear in the chat.'] },
+                    'We ask only for the minimum needed, and we do not request sensitive documents before they are necessary for the next step.'] } },
+
+            { id: 's3', icon: 'fa-solid fa-paper-plane',
+              ar: { t: 'كيف يعمل نموذج الطلب', b: [
+                    'عند تعبئة النموذج يجهّز الموقع رسالة جاهزة داخل متصفحك فقط، ثم يفتح واتساب لتراجعها وترسلها بنفسك. لا يرسل الموقع بياناتك إلى خادم تابع لنا ولا يحفظها، ولا تصل إلينا إلا بعد ضغطك على إرسال في واتساب.',
+                    'لا يستخدم الموقع نفسه ملفات تعريف ارتباط (Cookies) للتتبع أو الإعلانات، ولا أدوات تحليلات.',
+                    { note: 'الموافقة المطلوبة في النموذج تعني أنك اطلعت على هذه السياسة وتوافق على إرسال بياناتك إلينا عبر واتساب.' }] },
+              en: { t: 'How the request form works', b: [
+                    'When you fill in the form, the website prepares a ready-made message inside your browser only, then opens WhatsApp so you can review and send it yourself. The website does not send your details to a server of ours or store them, and they reach us only after you press send in WhatsApp.',
+                    'The website itself does not use tracking or advertising cookies, and it does not run analytics tools.',
+                    { note: 'The consent box in the form means you have read this policy and agree to send us your details via WhatsApp.' }] } },
+
+            { id: 's4', icon: 'fa-solid fa-bullseye',
+              ar: { t: 'كيف نستخدم بياناتك', b: [
+                    { list: [
+                        'الرد على استفسارك وإجراء تقييم أولي لطلبك.',
+                        'ترتيب المواعيد مع المستشارين والمستشفيات في لندن.',
+                        'تجهيز الدعم اللوجستي (الاستقبال، الإقامة، المواصلات) وإرشادك في إجراءات التأشيرة.',
+                        'المتابعة معك قبل الرحلة وأثناءها وبعدها.'] },
+                    'لا نستخدم معلوماتك الصحية لأي غرض تسويقي.'] },
+              en: { t: 'How we use your information', b: [
+                    { list: [
+                        'To answer your enquiry and make an initial assessment of your request.',
+                        'To arrange appointments with consultants and hospitals in London.',
+                        'To organise logistics (reception, accommodation, transport) and guide you through visa procedures.',
+                        'To follow up with you before, during and after your trip.'] },
+                    'We never use your health information for marketing purposes.'] } },
+
+            { id: 's5', icon: 'fa-solid fa-user-doctor',
+              ar: { t: 'مع من نشارك بياناتك', b: [
+                    'لا نبيع بياناتك ولا نؤجرها. نشاركها فقط مع من يلزم لتنفيذ طلبك، كالمستشار الطبي أو المستشفى أو مزوّد خدمة ننسّق معه، وبالقدر اللازم لطلبك فقط وبعد إعلامك.',
+                    'وقد نفصح عن معلومات إذا ألزمنا القانون أو جهة مختصة بذلك.'] },
+              en: { t: 'Who we share your information with', b: [
+                    'We do not sell or rent your data. We share it only with those needed to carry out your request, such as the medical consultant, the hospital or a service provider we coordinate with, only to the extent your request requires, and after informing you.',
+                    'We may disclose information if required to do so by law or by a competent authority.'] } },
+
+            { id: 's6', icon: 'fa-solid fa-globe',
+              ar: { t: 'واتساب والخدمات الخارجية', b: [
+                    'تمر المحادثات عبر واتساب (شركة Meta) وتخضع لشروطه وسياسة خصوصيته، لذا نوصيك بعدم إرسال معلومات لا ترغب بمشاركتها.',
+                    'كما يحمّل الموقع خطوطاً وأيقونات وصوراً وأدوات تنسيق من خدمات خارجية (مثل Google Fonts وcdnjs وUnsplash وWikimedia). قد ترى هذه الجهات عنوان IP وبيانات المتصفح عند التحميل، وفق سياساتها الخاصة.'] },
+              en: { t: 'WhatsApp and third-party services', b: [
+                    'Conversations pass through WhatsApp (a Meta company) and are subject to its terms and privacy policy, so please do not send information you are not comfortable sharing.',
+                    'The website also loads fonts, icons, images and styling tools from third-party services (such as Google Fonts, cdnjs, Unsplash and Wikimedia). These providers may see your IP address and browser details when loading them, under their own policies.'] } },
+
+            { id: 's7', icon: 'fa-solid fa-lock',
+              ar: { t: 'السرية الطبية وحماية المعلومات', b: [
+                    'نتعامل مع المعلومات الصحية بوصفها بيانات حساسة؛ ويقتصر الاطلاع عليها على من يحتاجها من فريقنا وإدارتنا الطبية لخدمة طلبك. نتخذ إجراءات معقولة لحمايتها، غير أنه لا توجد وسيلة نقل أو تخزين إلكتروني آمنة بنسبة مطلقة.',
+                    { note: 'هذا الموقع لا يقدّم تشخيصاً ولا علاجاً. في الحالات الطارئة اتصل فوراً بخدمات الطوارئ في بلدك ولا تنتظر ردّنا.' }] },
+              en: { t: 'Medical confidentiality and protection', b: [
+                    'We treat health information as sensitive data: access is limited to those on our team and medical leadership who need it to serve your request. We take reasonable measures to protect it, but no electronic method of transmission or storage is completely secure.',
+                    { note: 'This website does not provide diagnosis or treatment. In an emergency, call your local emergency services immediately and do not wait for our reply.' }] } },
+
+            { id: 's8', icon: 'fa-solid fa-scale-balanced',
+              ar: { t: 'مدة الاحتفاظ وحقوقك', b: [
+                    'نحتفظ بمعلوماتك للمدة اللازمة لمعالجة طلبك ومتابعته، ثم نحذفها أو نؤرشفها بأمان ما لم يلزمنا القانون بغير ذلك. ولك في أي وقت أن:',
+                    { list: ['تطلب نسخة من المعلومات التي لدينا عنك.', 'تطلب تصحيح أي معلومة غير دقيقة.', 'تطلب حذف بياناتك.', 'تسحب موافقتك على معالجتها.'] },
+                    'الخدمة موجّهة للبالغين؛ وإن كان المريض قاصراً فيرسل الطلب وليّ أمره.'] },
+              en: { t: 'Retention and your rights', b: [
+                    'We keep your information for as long as needed to handle and follow up your request, then delete or securely archive it unless the law requires otherwise. At any time you may:',
+                    { list: ['Ask for a copy of the information we hold about you.', 'Ask us to correct anything inaccurate.', 'Ask us to delete your data.', 'Withdraw your consent to its processing.'] },
+                    'The service is intended for adults; if the patient is a minor, the request should be sent by a parent or legal guardian.'] } },
+
+            { id: 's9', icon: 'fa-solid fa-arrows-rotate',
+              ar: { t: 'التحديثات والتواصل', b: [
+                    'قد نحدّث هذه السياسة من وقت لآخر، وسيظهر تاريخ آخر تحديث في أعلى الصفحة. استمرارك في استخدام الموقع بعد التحديث يعني اطلاعك على النسخة الجديدة.',
+                    { contact: true }] },
+              en: { t: 'Updates and contact', b: [
+                    'We may update this policy from time to time; the last-updated date appears at the top of the page. Continuing to use the website after an update means you have seen the new version.',
+                    { contact: true }] } }
+        ];
+
+        function renderBody(items, lang) {
+            return items.map(it => {
+                if (typeof it === 'string') return `<p class="text-sm sm:text-[15px] leading-8 text-slate-800">${it}</p>`;
+                if (it.list) return `<ul class="space-y-2.5">${it.list.map(li => `
+                    <li class="flex items-start gap-3 text-sm sm:text-[15px] leading-7 text-slate-800">
+                        <i class="fa-solid fa-check mt-1.5 text-[10px] text-gold-600 shrink-0"></i><span>${li}</span>
+                    </li>`).join('')}</ul>`;
+                if (it.note) return `
+                    <div class="flex items-start gap-3 rounded-2xl border border-gold-500/40 bg-gold-500/10 p-4">
+                        <i class="fa-solid fa-circle-info mt-0.5 text-gold-600"></i>
+                        <p class="text-sm leading-7 font-medium text-navy-900">${it.note}</p>
+                    </div>`;
+                if (it.contact) return `
+                    <div class="rounded-2xl bg-navy-900 text-white p-5 sm:p-6 border border-gold-500/40 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <h3 class="font-bold text-gold-400 text-base">${T[lang].contactTitle}</h3>
+                            <p class="text-xs sm:text-sm text-stone-300 mt-1">${T[lang].contactText}</p>
+                        </div>
+                        <a href="${PHONE_LINK}" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white text-sm font-semibold px-4 py-3 rounded-xl border border-emerald-400/30 shrink-0">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>${T[lang].contactBtn}</span>
+                            <span class="font-en text-xs opacity-80" dir="ltr">${PHONE_DISPLAY}</span>
+                        </a>
+                    </div>`;
+                return '';
+            }).join('');
+        }
+
+        function render(lang) {
+            currentLang = lang;
+            const t = T[lang];
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            document.title = (lang === 'ar' ? 'سياسة الخصوصية | VELLORA فيلورا' : 'Privacy Policy | VELLORA');
+
+            document.getElementById('lang-btn-label').textContent = t.langBtn;
+            document.getElementById('back-text').textContent = t.back;
+            document.getElementById('page-title').textContent = t.title;
+            document.getElementById('page-lead').textContent = t.lead;
+            document.getElementById('updated-text').textContent = t.updated;
+            document.getElementById('toc-title').textContent = t.toc;
+            document.getElementById('footer-copy').textContent = t.copy;
+            document.getElementById('footer-back-text').textContent = t.backHome;
+            ['brand-link', 'back-link', 'footer-back'].forEach(id => { document.getElementById(id).href = 'index.html?lang=' + lang; });
+
+            document.getElementById('glance-grid').innerHTML = glance.map(g => `
+                <div class="glass-card-light rounded-3xl p-5 shadow-xl text-center space-y-3">
+                    <div class="mx-auto w-12 h-12 rounded-2xl bg-navy-900 border border-gold-500/50 flex items-center justify-center text-gold-400 text-xl"><i class="${g.icon}"></i></div>
+                    <h3 class="font-extrabold text-navy-900 text-base">${g[lang][0]}</h3>
+                    <p class="text-xs sm:text-[13px] leading-6 text-slate-700">${g[lang][1]}</p>
+                </div>`).join('');
+
+            document.getElementById('toc-list').innerHTML = sections.map((s, i) => `
+                <li><a href="#${s.id}" data-toc="${s.id}" class="toc-link flex items-center gap-3 rounded-xl px-3 py-2 text-[13px] text-slate-700 hover:bg-gold-500/10">
+                    <span class="font-en text-[11px] font-bold text-gold-600 w-5">${String(i + 1).padStart(2, '0')}</span>
+                    <span>${s[lang].t}</span></a></li>`).join('');
+
+            document.getElementById('sections').innerHTML = sections.map((s, i) => `
+                <section id="${s.id}" class="scroll-mt-28 glass-card-light rounded-3xl p-6 sm:p-8 shadow-sm relative overflow-hidden">
+                    <span class="font-en absolute top-3 ltr:right-5 rtl:left-5 text-6xl sm:text-7xl font-extrabold text-gold-500/15 select-none pointer-events-none">${String(i + 1).padStart(2, '0')}</span>
+                    <div class="flex items-center gap-3 mb-4 relative">
+                        <div class="w-11 h-11 rounded-2xl bg-navy-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shrink-0"><i class="${s.icon}"></i></div>
+                        <h2 class="text-lg sm:text-xl font-extrabold text-navy-900">${s[lang].t}</h2>
+                    </div>
+                    <div class="space-y-4 relative">${renderBody(s[lang].b, lang)}</div>
+                </section>`).join('');
+            observeSections();
+        }
+
+        function toggleLanguage() { render(currentLang === 'ar' ? 'en' : 'ar'); }
+
+        // highlight the current section in the table of contents
+        let io;
+        function observeSections() {
+            if (io) io.disconnect();
+            io = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        document.querySelectorAll('.toc-link').forEach(a => a.classList.toggle('active', a.dataset.toc === e.target.id));
+                    }
+                });
+            }, { rootMargin: '-25% 0px -65% 0px' });
+            document.querySelectorAll('#sections section').forEach(el => io.observe(el));
+        }
+
+        window.onload = function () {
+            const q = new URLSearchParams(location.search).get('lang');
+            render(q === 'en' ? 'en' : 'ar');
+        };
+    </script>
+</body>
+</html>

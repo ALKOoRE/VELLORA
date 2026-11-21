@@ -1,0 +1,2272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELLORA | فيلورا — Medical Travel Concierge (London)</title>
+
+    <meta name="description" content="VELLORA فيلورا — تنسيق طبي وسفر علاجي إلى لندن: حجز مواعيد لدى كبار الاستشاريين، مراجعة التقارير الطبية، استقبال وإقامة ومرافقة طوال الرحلة.">
+    <meta name="theme-color" content="#081B2E">
+    <!-- Open Graph / sharing preview. NOTE: when the site is published, replace og:image with the full URL, e.g. https://your-domain.com/vellora-logo.jpg -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VELLORA">
+    <meta property="og:title" content="VELLORA | فيلورا — Medical Travel Concierge">
+    <meta property="og:description" content="تنسيق طبي وسفر علاجي إلى لندن: استشاريون من الصف الأول، مراجعة التقارير، استقبال وإقامة ومرافقة.">
+    <meta property="og:image" content="vellora-logo.jpg">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:locale:alternate" content="en_GB">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VELLORA | فيلورا — Medical Travel Concierge">
+    <meta name="twitter:description" content="تنسيق طبي وسفر علاجي إلى لندن: استشاريون من الصف الأول، مراجعة التقارير، استقبال وإقامة ومرافقة.">
+    <meta name="twitter:image" content="vellora-logo.jpg">
+
+
+    <!-- Google Fonts: Tajawal for Arabic, Plus Jakarta Sans for English -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Tajawal:wght@300;400;500;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome as JS (turns icons into inline SVG): works even where external stylesheets are blocked, e.g. in-app previews -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <!-- Tailwind: uses the compiled tailwind.css when present (see BUILD-CSS.md); falls back to the CDN if the file is missing -->
+    <script>
+        function loadTailwindCDN() {
+            if (window.__twLoading) return;
+            window.__twLoading = true;
+            var sc = document.createElement('script');
+            sc.src = 'https://cdn.tailwindcss.com';
+            sc.onload = function () {
+                tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        stone: {
+                            50: '#FDFBF7',
+                            100: '#EFEBE3', // Canvas Base
+                            200: '#E7E1D6', // Alternate Warm Stone
+                            300: '#D8CEBE',
+                            400: '#BCAB92',
+                            800: '#4A3E2C',
+                            900: '#2C2317'
+                        },
+                        navy: {
+                            800: '#102840', // Elevated Navy
+                            900: '#081B2E', // Deep Midnight Navy
+                            950: '#040F1B'
+                        },
+                        gold: {
+                            400: '#D4AF37',
+                            500: '#C49A52', // Antique Gold
+                            600: '#A67C37',
+                            700: '#7D5A1C'  // Dark Bronze
+                        },
+                        slate: {
+                            850: '#172433',
+                            900: '#0B1B2B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'Plus Jakarta Sans', 'sans-serif'],
+                        en: ['Plus Jakarta Sans', 'sans-serif'],
+                        ar: ['Tajawal', 'sans-serif']
+                    }
+                }
+            }
+        };
+            };
+            document.head.appendChild(sc);
+        }
+    </script>
+    <link rel="stylesheet" href="tailwind.css" onerror="loadTailwindCDN()">
+
+    <style>
+        /* Base typography & rendering tweaks */
+        body {
+            font-family: 'Tajawal', 'Plus Jakarta Sans', sans-serif;
+            background-color: #EFEBE3;
+            color: #0B1B2B;
+            font-variant-numeric: lining-nums tabular-nums;
+            overflow-x: hidden;
+        }
+
+        html[lang="en"] body {
+            font-family: 'Plus Jakarta Sans', 'Tajawal', sans-serif;
+        }
+
+        /* Glassmorphism Classes */
+        .glass-navy {
+            background: rgba(8, 27, 46, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(196, 154, 82, 0.25);
+        }
+
+        .glass-card-light {
+            background: rgba(253, 251, 247, 0.94);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(196, 154, 82, 0.2);
+        }
+
+        .glass-card-dark {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(196, 154, 82, 0.28);
+        }
+
+        /* Semi-Transparent Decorative Patterns & Layered Background Overlays */
+        .bg-architectural-overlay {
+            background-image: radial-gradient(circle at 50% 50%, rgba(196, 154, 82, 0.08) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        .bg-hero-pattern {
+            background-color: #EFEBE3;
+            background-image: 
+                linear-gradient(180deg, rgba(239, 235, 227, 0.82) 0%, rgba(239, 235, 227, 0.95) 100%),
+                url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h80v80H0z' fill='none'/%3E%3Cpath d='M40 0L0 40h40V0zm0 80l40-40H40v40z' fill='%23C49A52' fill-opacity='0.035'/%3E%3C/svg%3E");
+        }
+
+        .bg-about-pattern {
+            background-color: #081B2E;
+            background-image: 
+                radial-gradient(circle at 80% 20%, rgba(196, 154, 82, 0.12), transparent 45%),
+                radial-gradient(circle at 10% 90%, rgba(16, 40, 64, 0.6), transparent 50%),
+                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0L100 50L50 100L0 50Z' fill='none' stroke='%23C49A52' stroke-width='0.5' stroke-opacity='0.08'/%3E%3C/svg%3E");
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #EFEBE3;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C49A52;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7D5A1C;
+        }
+
+        /* Pulse Dot Animation */
+        .pulse-green {
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            animation: pulse-green-anim 2s infinite;
+        }
+        @keyframes pulse-green-anim {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+
+        /* Gold Shimmer Text Effect */
+        .gold-gradient-text {
+            color: #D4AF37; /* fallback */
+            background: linear-gradient(135deg, #F0D9A0 0%, #D4AF37 50%, #B98A3A 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 0.08em 0.04em;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+        }
+
+        .gold-border-glow {
+            box-shadow: 0 0 20px -5px rgba(196, 154, 82, 0.3);
+        }
+
+        /* Accordion transition */
+        /* Closed = zero-height grid row + hidden: no border, padding or text peeks out. Open animates to the real content height. */
+        .faq-answer {
+            display: grid; grid-template-rows: 0fr; visibility: hidden;
+            transition: grid-template-rows 0.35s ease, visibility 0s linear 0.35s;
+        }
+        .faq-answer.open { grid-template-rows: 1fr; visibility: visible; transition: grid-template-rows 0.35s ease, visibility 0s; }
+        .faq-answer-inner { overflow: hidden; min-height: 0; }
+        @media (prefers-reduced-motion: reduce) { .faq-answer, .faq-answer.open { transition: none; } }
+
+        /* Mobile menu: animated burger + slide-down panel */
+        .burger { position: relative; display: block; width: 20px; height: 14px; }
+        .burger span {
+            position: absolute; inset-inline-start: 0; height: 2px; border-radius: 2px;
+            background: linear-gradient(90deg, #EAD096, #C49A52);
+            transition: all .35s cubic-bezier(.2,.8,.2,1);
+        }
+        .burger span:nth-child(1) { top: 0; width: 100%; }
+        .burger span:nth-child(2) { top: 6px; width: 60%; }
+        .burger span:nth-child(3) { top: 12px; width: 82%; }
+        #mobile-menu-btn[aria-expanded="true"] .burger span:nth-child(1) { top: 6px; transform: rotate(45deg); }
+        #mobile-menu-btn[aria-expanded="true"] .burger span:nth-child(2) { opacity: 0; transform: translateX(8px); }
+        #mobile-menu-btn[aria-expanded="true"] .burger span:nth-child(3) { top: 6px; width: 100%; transform: rotate(-45deg); }
+        #mobile-menu { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .38s ease; }
+        #mobile-menu.is-open { grid-template-rows: 1fr; }
+        @media (min-width: 1024px) { #mobile-menu { display: none; } }
+        .mm-item { opacity: 0; transform: translateY(-8px); transition: opacity .35s ease, transform .35s ease, background-color .2s ease; }
+        #mobile-menu.is-open .mm-item { opacity: 1; transform: none; }
+
+        /* ===== Visual polish: solid navy cards, readable text, soft photo fades ===== */
+        html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+
+        /* Solid navy card for use on light sections (glass-navy stays for the floating navbar only) */
+        .card-navy {
+            background: linear-gradient(160deg, #102840 0%, #081B2E 60%, #061424 100%);
+            border: 1px solid rgba(196, 154, 82, 0.35);
+        }
+
+        /* Backdrop photos fade out softly instead of ending in a hard edge */
+        .photo-fade {
+            -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 45%, transparent 100%);
+            mask-image: linear-gradient(180deg, #000 0%, #000 45%, transparent 100%);
+        }
+
+        /* Arabic letters must stay connected: no letter-spacing on Arabic text (brand/English blocks keep theirs) */
+        html[lang="ar"] body :not([dir="ltr"]):not([dir="ltr"] *) { letter-spacing: normal; }
+
+        /* Dim grey text on dark footer was too faint */
+        footer .text-stone-500 { color: #BCAB92; }
+
+        /* ===== Concierge: ONE prominent fill-in form card (single column on every screen size) ===== */
+        .concierge-wrap { position: relative; max-width: 860px; margin: 0 auto; padding-top: 46px; }
+        .concierge-seal {
+            position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 5;
+            width: 92px; height: 92px; border-radius: 9999px; display: flex; align-items: center; justify-content: center;
+            background: #FEF7ED; border: 2px solid #C49A52;
+            box-shadow: 0 0 0 6px rgba(196, 154, 82, 0.18), 0 14px 34px -10px rgba(8, 27, 46, 0.55);
+        }
+        .concierge-seal img { width: 66px; height: auto; display: block; }
+        .concierge-card {
+            position: relative; display: block; overflow: hidden;
+            border-radius: 1.75rem; background: #FDFBF7;
+            border: 1.5px solid rgba(196, 154, 82, 0.6);
+            box-shadow: 0 40px 90px -35px rgba(8, 27, 46, 0.6), 0 0 0 8px rgba(196, 154, 82, 0.10);
+        }
+        .concierge-card::before {
+            content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px; z-index: 3;
+            background: linear-gradient(90deg, #7D5A1C, #D4AF37, #7D5A1C);
+        }
+        .concierge-form-panel { padding: 3.75rem 1.25rem 1.75rem; background: linear-gradient(180deg, #FFFFFF 0%, #FDFBF7 100%); }
+        .concierge-form-panel input[type="text"],
+        .concierge-form-panel select,
+        .concierge-form-panel textarea {
+            background: #FFFFFF; border: 1.5px solid #D8CEBE; border-radius: 0.9rem;
+            padding: 0.85rem 1rem; font-size: 0.95rem; color: #0B1B2B;
+            box-shadow: 0 1px 2px rgba(8, 27, 46, 0.05);
+            transition: border-color .2s ease, box-shadow .2s ease;
+        }
+        .concierge-form-panel input[type="text"]:focus,
+        .concierge-form-panel select:focus,
+        .concierge-form-panel textarea:focus {
+            outline: none; border-color: #C49A52; box-shadow: 0 0 0 4px rgba(196, 154, 82, 0.22);
+        }
+        .concierge-form-panel label.block { font-size: 0.82rem; letter-spacing: normal; }
+        .concierge-preview-panel {
+            position: relative; display: flex; flex-direction: column; overflow: hidden;
+            padding: 1.75rem 1.25rem 1.5rem; color: #fff;
+            background: linear-gradient(160deg, #102840 0%, #081B2E 55%, #040F1B 100%);
+            border-top: 2px solid rgba(196, 154, 82, 0.55);
+        }
+        .concierge-preview-panel::before {
+            content: ""; position: absolute; top: -90px; inset-inline-end: -90px; width: 260px; height: 260px;
+            background: radial-gradient(circle, rgba(196, 154, 82, 0.22), transparent 70%); pointer-events: none;
+        }
+        .concierge-preview-panel > * { position: relative; }
+        #whatsapp-message-box { max-height: 17rem; overflow-y: auto; }
+        @media (min-width: 640px) {
+            .concierge-form-panel { padding: 4.25rem 2.75rem 2.25rem; }
+            .concierge-preview-panel { padding: 2.25rem 2.75rem 2.25rem; }
+        }
+
+        /* ===== Header: refined floating bar ===== */
+        .site-nav {
+            position: relative; width: calc(100% - 1rem); max-width: 80rem; margin: 0.5rem auto;
+            padding: 0.5rem 0.6rem 0.5rem 0.75rem; border-radius: 1.25rem;
+            background: linear-gradient(135deg, rgba(16, 40, 64, 0.96) 0%, rgba(6, 20, 36, 0.97) 100%);
+            -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
+            border: 1px solid rgba(196, 154, 82, 0.45);
+            box-shadow: 0 16px 40px -16px rgba(4, 15, 27, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+        }
+        .site-nav::after {
+            content: ""; position: absolute; left: 14%; right: 14%; bottom: -1px; height: 2px; pointer-events: none;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        }
+        .nav-medallion {
+            flex: none; width: 46px; height: 46px; border-radius: 9999px; display: flex; align-items: center; justify-content: center;
+            background: #FEF7ED; border: 1.5px solid #C49A52;
+            box-shadow: 0 0 0 3px rgba(196, 154, 82, 0.2), 0 6px 16px -6px rgba(0, 0, 0, 0.6);
+            transition: box-shadow .3s ease;
+        }
+        .nav-medallion img { width: 31px; height: auto; display: block; }
+        .group:hover .nav-medallion { box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.35), 0 6px 16px -6px rgba(0, 0, 0, 0.6); }
+        .nav-wordmark { font-size: 1.35rem; font-weight: 700; letter-spacing: 0.14em; color: #fff; line-height: 1; }
+        .nav-tagline {
+            display: block; margin-top: 0.35rem; font-size: 6.5px; letter-spacing: 0.14em; font-weight: 600;
+            text-transform: uppercase; color: #D4AF37; white-space: nowrap; line-height: 1;
+        }
+        .nav-btn {
+            height: 40px; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            border-radius: 0.9rem; font-size: 0.78rem; font-weight: 700; letter-spacing: normal;
+            transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+        }
+        .nav-btn:hover { transform: translateY(-1px); }
+        .nav-lang { padding: 0 0.75rem; color: #EAD096; background: rgba(196, 154, 82, 0.1); border: 1px solid rgba(196, 154, 82, 0.55); }
+        .nav-lang:hover { background: rgba(196, 154, 82, 0.2); border-color: #D4AF37; }
+        .nav-wa {
+            min-width: 40px; padding: 0 0.7rem; color: #fff; border: 1px solid rgba(110, 231, 160, 0.45);
+            background: linear-gradient(135deg, #1FA855 0%, #0F7A3A 100%);
+            box-shadow: 0 8px 20px -8px rgba(16, 185, 129, 0.7);
+        }
+        .nav-wa:hover { background: linear-gradient(135deg, #25C063 0%, #12904A 100%); }
+        .nav-book {
+            padding: 0 0.95rem; color: #081B2E; border: 1px solid rgba(255, 236, 170, 0.6);
+            background: linear-gradient(135deg, #E6C871 0%, #C49A52 52%, #A67C37 100%);
+            box-shadow: 0 8px 20px -8px rgba(212, 175, 55, 0.6);
+        }
+        .nav-book:hover { background: linear-gradient(135deg, #EED488 0%, #D4AF37 52%, #B8883F 100%); }
+        .nav-book:focus-visible, .nav-lang:focus-visible, .nav-wa:focus-visible { outline: 2px solid #EAD096; outline-offset: 2px; }
+        /* ===== Hospital card image carousel ===== */
+        .hc-slider { position: relative; height: 12rem; overflow: hidden; background: #040F1B; touch-action: pan-y; }
+        .hc-slider::after { content: ""; position: absolute; inset-inline: 0; bottom: 0; height: 3.5rem; pointer-events: none; background: linear-gradient(to top, rgba(4, 15, 27, 0.65), transparent); }
+        .hc-slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.06); transition: opacity .9s ease, transform 6s ease-out; }
+        .hc-slide.is-active { opacity: .92; transform: scale(1); }
+        .hc-tag { z-index: 3; }
+        .hc-nav {
+            position: absolute; top: 50%; z-index: 3; width: 30px; height: 30px; margin-top: -15px; border-radius: 9999px; display: flex; align-items: center; justify-content: center;
+            color: #EAD096; background: rgba(8, 27, 46, 0.72); border: 1px solid rgba(196, 154, 82, 0.5); font-size: 11px; opacity: 0; transition: opacity .2s ease, background .2s ease;
+        }
+        .hc-nav-left { left: 0.5rem; } .hc-nav-right { right: 0.5rem; }
+        .hc-slider:hover .hc-nav, .hc-nav:focus-visible { opacity: 1; }
+        .hc-nav:hover { background: rgba(8, 27, 46, 0.95); }
+        @media (hover: none) { .hc-nav { opacity: 0.85; } }
+        .hc-dots { position: absolute; z-index: 3; inset-inline: 0; bottom: 0.6rem; display: flex; justify-content: center; gap: 0.35rem; }
+        .hc-dot { width: 6px; height: 6px; padding: 0; border: 0; border-radius: 9999px; background: rgba(255, 255, 255, 0.55); cursor: pointer; transition: width .3s ease, background .3s ease; }
+        .hc-dot.is-active { width: 18px; background: #D4AF37; }
+        .hc-dot[hidden] { display: none; }
+        /* Branded placeholder under the photos: shows while photos load, and stays if a hospital has no working photo */
+        .hc-ph { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.6rem; text-align: center; padding: 0 1rem;
+            background: radial-gradient(circle at 80% 15%, rgba(196, 154, 82, 0.22), transparent 50%), linear-gradient(135deg, #102840 0%, #040F1B 100%); }
+        .hc-ph i, .hc-ph svg { font-size: 2.4rem; color: #C49A52; opacity: 0.9; }
+        .hc-ph span { font-family: 'Cormorant Garamond', 'Plus Jakarta Sans', serif; font-size: 1.15rem; font-weight: 600; letter-spacing: 0.08em; color: #EAD096; }
+        .hc-credit { position: absolute; z-index: 3; inset-inline-start: 0.6rem; bottom: 0.5rem; font-size: 9px; line-height: 1; padding: 0.3rem 0.55rem; border-radius: 9999px;
+            color: rgba(255, 255, 255, 0.88); background: rgba(4, 15, 27, 0.6); text-decoration: none; transition: color .2s ease; }
+        .hc-credit:hover, .hc-credit:focus-visible { color: #EAD096; }
+        .hc-credit[hidden] { display: none; }
+        @media (prefers-reduced-motion: reduce) { .hc-slide { transition: opacity .2s ease; transform: none; } }
+        .nb-full { display: none; }
+        .nb-short { display: inline; }
+        @media (min-width: 640px) { .nav-book { padding: 0 1.1rem; } .nb-full { display: inline; } .nb-short { display: none; } }
+        /* Phones: logo + WhatsApp + Book (icon + word) + language (globe) + menu, all compact so they fit on one line */
+        @media (max-width: 639px) {
+            .site-nav { padding: 0.45rem 0.5rem 0.45rem 0.6rem; }
+            .site-nav .nav-brand { gap: 0.5rem; }
+            .site-nav .nav-actions { gap: 5px; }
+            .nav-btn, #mobile-menu-btn { height: 38px; }
+            .nav-medallion { width: 36px; height: 36px; }
+            .nav-medallion img { width: 24px; }
+            .nav-wordmark { font-size: 0.95rem; letter-spacing: 0.06em; }
+            .nav-tagline { display: none; }
+            .nav-wa { width: 38px; min-width: 38px; padding: 0; }
+            .nav-book { padding: 0 0.5rem; gap: 0.3rem; }
+            /* Language shows as a globe icon only; the label stays available to screen readers */
+            .nav-lang { width: 38px; padding: 0; }
+            .nav-lang .fa-globe { display: inline-block; font-size: 1rem; }
+            .nav-lang #lang-btn-label {
+                position: absolute; width: 1px; height: 1px; overflow: hidden;
+                clip: rect(0 0 0 0); white-space: nowrap;
+            }
+            #mobile-menu-btn { width: 38px; }
+        }
+        @media (max-width: 359px) {
+            .site-nav .nav-brand { gap: 0.4rem; }
+            .site-nav .nav-actions { gap: 4px; }
+            .nav-btn, #mobile-menu-btn { height: 36px; }
+            .nav-medallion { width: 32px; height: 32px; }
+            .nav-medallion img { width: 22px; }
+            .nav-wordmark { font-size: 0.82rem; letter-spacing: 0.04em; }
+            .nav-book { padding: 0 0.4rem; gap: 0.25rem; }
+            .nav-wa, .nav-lang, #mobile-menu-btn { width: 36px; min-width: 36px; }
+        }
+        /* Very small phones: the Book button keeps its word but drops its icon */
+        @media (max-width: 335px) {
+            .nav-book .fa-calendar-check { display: none; }
+            .nav-book { padding: 0 0.5rem; }
+        }
+        #mobile-menu { padding-inline: 0.5rem; }
+        @media (min-width: 640px) {
+            .site-nav { padding: 0.65rem 1.5rem; }
+            .nav-medallion { width: 56px; height: 56px; }
+            .nav-medallion img { width: 39px; }
+            .nav-wordmark { font-size: 1.75rem; letter-spacing: 0.16em; }
+            .nav-tagline { font-size: 8.5px; letter-spacing: 0.3em; margin-top: 0.45rem; }
+            .nav-wa { padding: 0 1.1rem; }
+            .nav-btn { font-size: 0.85rem; }
+        }
+
+        /* Gold headline on LIGHT sections needs a deeper gold to stay readable */
+        .bg-hero-pattern .gold-gradient-text {
+            color: #8C6221;
+            background: linear-gradient(135deg, #7D5A1C 0%, #A67C37 45%, #8C6221 100%);
+            -webkit-background-clip: text; background-clip: text;
+        }
+
+        /* ===== Hero ===== */
+        h1.hero-title {
+            font-family: 'Amiri', 'Tajawal', serif; font-weight: 700;
+            font-size: clamp(2.2rem, 4.8vw, 3.9rem); line-height: 1.55; letter-spacing: normal;
+            text-wrap: balance;
+        }
+        h1.hero-title .gold-gradient-text { display: inline-block; margin-top: 0.05em; padding-bottom: 0.12em; }
+        html[lang="en"] h1.hero-title {
+            font-family: 'Cormorant Garamond', 'Plus Jakarta Sans', serif; font-weight: 700;
+            font-size: clamp(2.5rem, 5.4vw, 4.4rem); line-height: 1.12; letter-spacing: -0.005em;
+        }
+        html[lang="en"] h1.hero-title .gold-gradient-text { margin-top: 0.12em; padding-bottom: 0.08em; }
+        .hero-card-title { font-family: 'Amiri', 'Tajawal', serif; font-size: 1.3rem !important; line-height: 1.4; }
+        html[lang="en"] .hero-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem !important; }
+        .hero-status {
+            flex: none; display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.28rem 0.7rem; border-radius: 9999px;
+            font-size: 0.7rem; font-weight: 700; color: #86EFAC; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(52, 211, 153, 0.35);
+        }
+        .hero-lead { font-size: clamp(1rem, 1.35vw, 1.15rem); line-height: 1.95; max-width: 40rem; }
+        .hero-assure {
+            display: flex; flex-direction: column; list-style: none; margin: 0.5rem 0 0; padding: 0.2rem 0.4rem; width: fit-content; max-width: 100%;
+            background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(196, 154, 82, 0.4); border-radius: 1rem;
+            box-shadow: 0 10px 24px -16px rgba(8, 27, 46, 0.4);
+        }
+        .hero-assure li {
+            display: flex; align-items: center; gap: 0.55rem; padding: 0.6rem 0.9rem;
+            font-size: 0.8rem; font-weight: 700; color: #081B2E;
+        }
+        .hero-assure li + li { border-top: 1px solid rgba(196, 154, 82, 0.3); }
+        @media (min-width: 900px) {
+            .hero-assure { flex-direction: row; padding: 0.2rem 0.3rem; }
+            .hero-assure li { padding: 0.55rem 1rem; }
+            .hero-assure li + li { border-top: 0; border-inline-start: 1px solid rgba(196, 154, 82, 0.35); }
+        }
+        .hero-assure i { color: #A67C37; font-size: 0.85rem; }
+        .hero-feat-icon {
+            flex: none; width: 2rem; height: 2rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center;
+            background: rgba(196, 154, 82, 0.14); border: 1px solid rgba(196, 154, 82, 0.4);
+        }
+        .hero-feat-icon i { color: #D4AF37; font-size: 0.75rem; }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-white">
+
+    <!-- ========================================== -->
+    <!-- 1. STREAMLINED GLASSMORPHISM STICKY NAVBAR -->
+    <!-- ========================================== -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="site-nav flex items-center justify-between">
+            
+            <!-- Logo & Brand Identifier: emblem tile + wordmark -->
+            <a href="#" class="nav-brand flex items-center gap-3 group focus:outline-none shrink-0" aria-label="VELLORA — Medical Travel Concierge">
+                <div class="nav-medallion" id="nav-logo-icon">
+                    <img src="logo-icon.jpg" alt="VELLORA" width="1042" height="893">
+                </div>
+                <div class="flex flex-col justify-center leading-none" dir="ltr">
+                    <span class="nav-wordmark" style="font-family:'Cormorant Garamond','Plus Jakarta Sans',serif">VELLORA<span class="hidden" id="nav-brand-sub">UK</span></span>
+                    <span class="nav-tagline font-en" id="nav-tagline">Medical Travel Concierge</span>
+                </div>
+            </a>
+
+            <!-- Concise Navigation Links (4 Links ONLY) -->
+            <div class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium text-stone-200">
+                <a href="#about" class="hover:text-gold-400 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500" id="nav-link-about">عن فيلورا والقادة</a>
+                <a href="#journey" class="hover:text-gold-400 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500" id="nav-link-journey">رحلة المريض</a>
+                <a href="#centers" class="hover:text-gold-400 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500" id="nav-link-centers">المراكز الطبية</a>
+                <a href="#faq" class="hover:text-gold-400 transition-colors py-1 border-b-2 border-transparent hover:border-gold-500" id="nav-link-faq">الأسئلة الشائعة</a>
+            </div>
+
+            <!-- Header Action Controls -->
+            <div class="nav-actions flex items-center gap-2 sm:gap-3">
+                <!-- Booking CTA -->
+                <a href="#concierge" class="nav-btn nav-book" id="nav-book">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <span class="nb-full" id="nav-book-text">احجز موعدك</span><span class="nb-short" id="nav-book-short">احجز</span>
+                </a>
+
+                <!-- Language Toggle Button -->
+                <button id="lang-toggle-btn" onclick="toggleLanguage()" class="nav-btn nav-lang">
+                    <i class="fa-solid fa-globe text-gold-400 hidden sm:inline"></i>
+                    <span id="lang-btn-label">English</span>
+                </button>
+
+                <!-- Compact WhatsApp CTA -->
+                <a href="https://wa.me/963930888475" target="_blank" class="nav-btn nav-wa" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp" style="font-size:1.2rem"></i>
+                    <span class="hidden xl:inline" id="nav-cta-text">استشارة خاصة</span>
+                </a>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" type="button" onclick="toggleMobileMenu()" aria-expanded="false" aria-controls="mobile-menu" aria-label="القائمة" class="lg:hidden w-10 h-10 shrink-0 rounded-xl border border-gold-500/50 bg-gradient-to-br from-navy-800 to-navy-950 flex items-center justify-center hover:border-gold-400 transition-colors shadow-inner">
+                    <span class="burger"><span></span><span></span><span></span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile menu panel -->
+        <div id="mobile-menu" class="max-w-7xl mx-auto" aria-hidden="true" inert>
+            <div class="overflow-hidden">
+                <div class="glass-navy rounded-2xl shadow-2xl mb-2 overflow-hidden">
+                    <div class="h-px bg-gradient-to-r from-transparent via-gold-500/70 to-transparent"></div>
+                    <div class="p-2 divide-y divide-white/5">
+                        <a href="#about" onclick="closeMobileMenu()" class="mm-item group flex items-center gap-4 px-4 py-3.5 rounded-xl hover:bg-white/5" style="transition-delay:40ms">
+                            <span class="font-en text-[11px] font-semibold tracking-widest text-gold-500/80 w-6">01</span>
+                            <span class="flex-1 text-[15px] font-medium text-stone-100 group-hover:text-gold-400 transition-colors" id="mm-link-about">عن فيلورا والقادة</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] text-gold-500/60 rtl:rotate-180"></i>
+                        </a>
+                        <a href="#journey" onclick="closeMobileMenu()" class="mm-item group flex items-center gap-4 px-4 py-3.5 rounded-xl hover:bg-white/5" style="transition-delay:90ms">
+                            <span class="font-en text-[11px] font-semibold tracking-widest text-gold-500/80 w-6">02</span>
+                            <span class="flex-1 text-[15px] font-medium text-stone-100 group-hover:text-gold-400 transition-colors" id="mm-link-journey">رحلة المريض</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] text-gold-500/60 rtl:rotate-180"></i>
+                        </a>
+                        <a href="#centers" onclick="closeMobileMenu()" class="mm-item group flex items-center gap-4 px-4 py-3.5 rounded-xl hover:bg-white/5" style="transition-delay:140ms">
+                            <span class="font-en text-[11px] font-semibold tracking-widest text-gold-500/80 w-6">03</span>
+                            <span class="flex-1 text-[15px] font-medium text-stone-100 group-hover:text-gold-400 transition-colors" id="mm-link-centers">المراكز الطبية</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] text-gold-500/60 rtl:rotate-180"></i>
+                        </a>
+                        <a href="#faq" onclick="closeMobileMenu()" class="mm-item group flex items-center gap-4 px-4 py-3.5 rounded-xl hover:bg-white/5" style="transition-delay:190ms">
+                            <span class="font-en text-[11px] font-semibold tracking-widest text-gold-500/80 w-6">04</span>
+                            <span class="flex-1 text-[15px] font-medium text-stone-100 group-hover:text-gold-400 transition-colors" id="mm-link-faq">الأسئلة الشائعة</span>
+                            <i class="fa-solid fa-chevron-right text-[10px] text-gold-500/60 rtl:rotate-180"></i>
+                        </a>
+                    </div>
+                    <div class="mm-item p-3 pt-2 space-y-2" style="transition-delay:240ms">
+                        <a href="#concierge" onclick="closeMobileMenu()" class="w-full flex items-center justify-center gap-2.5 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 text-navy-950 font-bold text-sm py-3.5 rounded-xl shadow-lg">
+                            <i class="fa-regular fa-calendar-check text-lg"></i>
+                            <span id="mm-book-text">احجز موعدك</span>
+                        </a>
+                        <a href="https://wa.me/963930888475" target="_blank" rel="noopener" onclick="closeMobileMenu()" class="w-full flex items-center justify-center gap-2.5 border border-gold-500/60 text-gold-400 font-bold text-sm py-3.5 rounded-xl">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span id="mm-cta-text">استشارة خاصة</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- 2. HERO SECTION WITH SEMI-TRANSPARENT LAYER -->
+    <!-- ========================================== -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-hero-pattern">
+        <!-- Layered Semi-Transparent Background Photo Layer -->
+        <div class="absolute inset-0 pointer-events-none opacity-[0.16] mix-blend-multiply bg-cover bg-center photo-fade" style="background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1800&q=80');"></div>
+        
+        <!-- Giant Ultra-Subtle Watermark Emblem -->
+        <div class="absolute -bottom-24 -left-20 opacity-[0.045] pointer-events-none text-navy-900">
+            <svg class="w-[550px] h-[550px]" viewBox="0 0 100 100" fill="currentColor">
+                <path d="M50 5 L90 25 L90 75 L50 95 L10 75 L10 25 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left/Right Text Column (Depending on RTL/LTR) -->
+                <div class="lg:col-span-7 space-y-6 text-right rtl:text-right ltr:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-700 text-xs font-semibold">
+                        <i class="fa-solid fa-crown text-gold-600"></i>
+                        <span id="hero-badge">تنسيق طبي فاخر للعلاج في لندن</span>
+                    </div>
+
+                    <h1 class="hero-title font-extrabold text-navy-900" id="hero-title">
+                        علاج استثنائي في لندن،<br>
+                        <span class="gold-gradient-text">برعاية تبدأ قبل سفرك وتمتد حتى عودتك</span>
+                    </h1>
+
+                    <p class="hero-lead text-slate-800 font-normal" id="hero-description">
+                        تتولّى <strong class="text-navy-900 font-bold">VELLORA</strong> ترتيب رحلتك العلاجية بالكامل: من حجز موعدك لدى نخبة الاستشاريين في لندن، إلى الاستقبال والإقامة والمرافقة الشخصية، بإشراف طبي بريطاني مباشر وخصوصية تامة لبياناتك.
+                    </p>
+
+                    <!-- CTA Group -->
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="#concierge" class="bg-navy-900 hover:bg-navy-800 text-gold-400 border border-gold-500/50 hover:border-gold-400 text-sm sm:text-base font-bold px-7 py-3.5 rounded-2xl shadow-xl hover:shadow-2xl transition-all flex items-center gap-3">
+                            <i class="fa-solid fa-paper-plane text-gold-400"></i>
+                            <span id="hero-btn-primary">احجز استشارتك الخاصة</span>
+                        </a>
+                        <a href="#about" class="bg-stone-200/80 hover:bg-stone-300 text-navy-900 text-sm sm:text-base font-semibold px-6 py-3.5 rounded-2xl border border-stone-300 transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-user-doctor text-gold-600"></i>
+                            <span id="hero-btn-secondary">تعرّف على د. مرهف الحموي</span>
+                        </a>
+                    </div>
+
+                    <!-- Assurance chips -->
+                    <ul class="hero-assure" aria-label="VELLORA">
+                        <li><i class="fa-solid fa-lock"></i><span id="stat-1-label">سرّية تامة لبياناتك الطبية</span></li>
+                        <li><i class="fa-solid fa-user-doctor"></i><span id="stat-2-label">إشراف طبي بريطاني مباشر</span></li>
+                        <li><i class="fa-solid fa-clock"></i><span id="stat-3-label">ردّ خلال 30 دقيقة، على مدار الساعة</span></li>
+                    </ul>
+                </div>
+
+                <!-- Right Quick Inquiry Translucent Frosted Navy Card -->
+                <div class="lg:col-span-5">
+                    <div class="card-navy p-6 sm:p-8 rounded-3xl text-white shadow-2xl relative overflow-hidden gold-border-glow">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full blur-2xl"></div>
+                        
+                        <div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 border-b border-white/10 pb-4 mb-5">
+                            <div>
+                                <h3 class="hero-card-title font-bold text-gold-400 flex items-center gap-2" id="card-quick-title">
+                                    <i class="fa-solid fa-gem"></i>
+                                    خدمة الكونسيرج الطبي
+                                </h3>
+                                <p class="text-xs text-stone-300 mt-1" id="card-quick-subtitle">فريق مخصّص لحالتك منذ أول تواصل</p>
+                            </div>
+                            <span class="hero-status"><span class="w-2 h-2 bg-emerald-500 rounded-full pulse-green"></span><span id="card-status">متاح الآن</span></span>
+                        </div>
+
+                        <ul class="space-y-4 text-sm text-stone-100 mb-7">
+                            <li class="flex items-start gap-3">
+                                <span class="hero-feat-icon"><i class="fa-solid fa-calendar-check"></i></span>
+                                <span id="feat-1">حجز مواعيد سريعة لدى كبار الاستشاريين في لندن.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="hero-feat-icon"><i class="fa-solid fa-file-medical"></i></span>
+                                <span id="feat-2">مراجعة التقارير الطبية قبل السفر لضمان خطة علاج متكاملة.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="hero-feat-icon"><i class="fa-solid fa-plane-arrival"></i></span>
+                                <span id="feat-3">تسهيل إجراءات الإقامة الفاخرة والاستقبال في مطارات لندن.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="hero-feat-icon"><i class="fa-solid fa-language"></i></span>
+                                <span id="feat-4">ترجمة طبية معتمدة ومرافق خاص خلال الزيارات الميدانية.</span>
+                            </li>
+                        </ul>
+
+                        <a href="#concierge" class="w-full block text-center bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-bold py-3.5 rounded-xl transition-all shadow-md" id="card-quick-btn">
+                            أرسل طلبك الآن
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. LEADERSHIP SECTION (#about) - DR. MORHAF -->
+    <!-- ========================================== -->
+    <section id="about" class="relative py-20 md:py-28 bg-navy-900 text-white overflow-hidden bg-about-pattern">
+        <!-- Layered Architectural Backdrop Opacity 0.11 -->
+        <div class="absolute inset-0 pointer-events-none opacity-[0.11] bg-cover bg-center filter grayscale" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1800&q=80');"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Dr. Morhaf Museum Frame Image -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative group">
+                        <!-- Frame Gold Glow Backdrop -->
+                        <div class="absolute -inset-2 bg-gradient-to-r from-gold-500 to-gold-700 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+                        
+                        <div class="relative w-72 sm:w-80 md:w-96 rounded-2xl overflow-hidden border-2 border-gold-500/50 bg-navy-950 shadow-2xl">
+                            <!-- Image Source: Dr_Morhaf.jpg with Clean SVG Fallback -->
+                            <img src="Dr_Morhaf.jpg" 
+                                 alt="Dr. Morhaf Al Hamwi / د. مرهف الحموي" 
+                                 class="w-full h-[420px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                                 onerror="this.style.display='none'; document.getElementById('dr-fallback').style.display='flex';">
+
+                            <!-- Fallback UI if Dr_Morhaf.jpg is not present in local directory -->
+                            <div id="dr-fallback" class="hidden w-full h-[420px] bg-gradient-to-b from-navy-800 to-navy-950 flex-col items-center justify-center p-6 text-center border-b border-gold-500/30">
+                                <div class="w-24 h-24 rounded-full bg-navy-900 border-2 border-gold-500/60 flex items-center justify-center mb-4 shadow-inner">
+                                    <i class="fa-solid fa-user-md text-4xl text-gold-400"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-gold-400">د. مرهف الحموي</h4>
+                                <p class="text-xs text-stone-300 mt-1">Dr. Morhaf Al Hamwi</p>
+                                <span class="text-[11px] text-stone-400 mt-3 max-w-xs leading-relaxed">استشاري جراحة طب وجراحة العيون والمؤسس لمركز الأبحاث الطبية الحيوية</span>
+                            </div>
+
+                            <!-- Editorial Museum Label Overlay -->
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-navy-950 via-navy-950/90 to-transparent p-4 text-center">
+                                <h4 class="text-lg font-bold text-gold-400" id="dr-img-name">د. مرهف الحموي</h4>
+                                <p class="text-xs text-stone-300" id="dr-img-title">Dr. Morhaf Al Hamwi — Founder & Medical Director</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text & Credential Cards (Strict Single-Language Render) -->
+                <div class="lg:col-span-7 space-y-6 text-right rtl:text-right ltr:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span id="about-badge">قيادة طبية واستشارية موثوقة</span>
+                    </div>
+
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight" id="about-title">
+                        إشراف طبي بريطاني مباشر بقيادة <span class="gold-gradient-text">الدكتور مرهف الحموي</span>
+                    </h2>
+
+                    <p class="text-sm sm:text-base text-stone-300 leading-relaxed font-normal" id="about-bio">
+                        تأسست منصة <strong class="text-gold-400">VELLORA</strong> لتوفير الجسر الطبي الأمثل بين المرضى وكبار الاستشاريين في بريطانيا. يمتلك الدكتور مرهف الحموي مسيرة علمية وبحثية حافلة في كبرى المؤسسات الطبية البريطانية والأكاديمية العالمية، مما يضمن أعلى درجات الدقة والنزاهة في اختيار الخطة العلاجية والمركز الطبي الأنسب لجمهورنا.
+                    </p>
+
+                    <!-- 5 Credentials in Active Language ONLY (No stacking) -->
+                    <div class="space-y-3 pt-2" id="credentials-container">
+                        <!-- Rendered dynamically by JavaScript -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. PATIENT JOURNEY SECTION (#journey)      -->
+    <!-- ========================================== -->
+    <section id="journey" class="relative py-20 md:py-28 bg-stone-100 overflow-hidden">
+        <!-- Layered Architectural Blueprint SVG Pattern Overlay -->
+        <div class="absolute inset-0 pointer-events-none opacity-[0.08] bg-architectural-overlay"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="inline-block px-3.5 py-1.5 rounded-full bg-navy-900/10 text-navy-900 text-xs font-bold tracking-wide" id="journey-badge">
+                    خطوات منظمة ومريحة
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900" id="journey-title">
+                    رحلة العلاج مع فيلورا من الفحص وحتى التعافي
+                </h2>
+                <p class="text-sm sm:text-base text-slate-700" id="journey-subtitle">
+                    نحن نتحمل عنك كافة أعباء التنسيق الطبي واللوجستي لتتفرغ تماماً لصحتك وصحة من تحب.
+                </p>
+            </div>
+
+            <!-- 4 Step Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Step 1 -->
+                <div class="glass-card-light p-6 rounded-3xl shadow-sm border border-gold-500/20 hover:border-gold-500/50 transition-all group relative">
+                    <div class="w-12 h-12 rounded-2xl bg-navy-900 text-gold-400 font-bold font-en text-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-md">
+                        01
+                    </div>
+                    <h3 class="text-lg font-bold text-navy-900 mb-2" id="step1-title">الفرز الطبي الأولي</h3>
+                    <p class="text-xs sm:text-sm text-slate-700 leading-relaxed" id="step1-desc">
+                        استلام ملفك الطبي ودراسته بعناية تحت إشراف د. مرهف الحموي لتحديد الاستشاري البريطاني الدقيق للحالة.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="glass-card-light p-6 rounded-3xl shadow-sm border border-gold-500/20 hover:border-gold-500/50 transition-all group relative">
+                    <div class="w-12 h-12 rounded-2xl bg-navy-900 text-gold-400 font-bold font-en text-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-md">
+                        02
+                    </div>
+                    <h3 class="text-lg font-bold text-navy-900 mb-2" id="step2-title">خطة العلاج والمواعيد</h3>
+                    <p class="text-xs sm:text-sm text-slate-700 leading-relaxed" id="step2-desc">
+                        تزويدكم بالتقرير الاستشاري البريطاني المبدئي وحجز مواعيد الفحص المباشر في لندن بدون قوائم انتظار.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass-card-light p-6 rounded-3xl shadow-sm border border-gold-500/20 hover:border-gold-500/50 transition-all group relative">
+                    <div class="w-12 h-12 rounded-2xl bg-navy-900 text-gold-400 font-bold font-en text-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-md">
+                        03
+                    </div>
+                    <h3 class="text-lg font-bold text-navy-900 mb-2" id="step3-title">الاستقبال والخدمات الملكية</h3>
+                    <p class="text-xs sm:text-sm text-slate-700 leading-relaxed" id="step3-desc">
+                        ترتيب الاستقبال في مطار لندن، وتوفير المواصلات الخاصة والإقامة الفاخرة المجاورة للمستشفى.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="glass-card-light p-6 rounded-3xl shadow-sm border border-gold-500/20 hover:border-gold-500/50 transition-all group relative">
+                    <div class="w-12 h-12 rounded-2xl bg-navy-900 text-gold-400 font-bold font-en text-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-md">
+                        04
+                    </div>
+                    <h3 class="text-lg font-bold text-navy-900 mb-2" id="step4-title">المرافقة والمتابعة المستمرة</h3>
+                    <p class="text-xs sm:text-sm text-slate-700 leading-relaxed" id="step4-desc">
+                        مترجم طبي متخصص خلال الجلسات، مع متابعة دقيقة ومستمرة بعد العودة إلى أرض الوطن.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. EXCLUSIVE MEDICAL DISCOUNTS BANNER      -->
+    <!-- ========================================== -->
+    <section class="py-12 bg-stone-200/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="card-navy rounded-3xl p-8 sm:p-10 text-white relative overflow-hidden shadow-2xl">
+                <!-- Semi-Transparent Photo Backdrop -->
+                <div class="absolute inset-0 pointer-events-none opacity-[0.16] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80');"></div>
+
+                <div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-8 space-y-3 text-right rtl:text-right ltr:text-left">
+                        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/20 text-gold-300 text-xs font-bold border border-gold-500/30">
+                            <i class="fa-solid fa-percent text-gold-400"></i>
+                            <span id="disc-badge">امتيازات حصرية لعملاء فيلورا</span>
+                        </span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white" id="disc-title">
+                            خصومات وأسعار تفضيلية خاصة في أرقى المستشفيات البريطانية
+                        </h3>
+                        <p class="text-xs sm:text-sm text-stone-200 leading-relaxed font-normal" id="disc-desc">
+                            بفضل شراكاتنا الممتدة ورصيدنا الموثوق مع كبرى مجموعات الرعاية الصحية الفاخرة والفنادق في لندن، يحصل مرضانا على أسعار تفضيلية خاصة وتسهيلات ممتازة لكافة الفحوصات والإقامات الطبية.
+                        </p>
+                    </div>
+
+                    <div class="md:col-span-4 flex justify-center md:justify-end">
+                        <a href="#concierge" class="bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-bold px-6 py-3.5 rounded-2xl shadow-lg transition-all text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-tags"></i>
+                            <span id="disc-btn">استفسر عن الأسعار التفضيلية</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. UK FLAGSHIP CENTERS SECTION (#centers)  -->
+    <!-- ========================================== -->
+    <section id="centers" class="relative py-20 md:py-28 bg-stone-100 overflow-hidden">
+        <!-- Semi-transparent backdrop opacity 0.07 -->
+        <div class="absolute inset-0 pointer-events-none opacity-[0.07] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1800&q=80');"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="inline-block px-3.5 py-1.5 rounded-full bg-navy-900/10 text-navy-900 text-xs font-bold tracking-wide" id="centers-badge">
+                    مراكز التميز الشريكة
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900" id="centers-title">
+                    أرقى المستشفيات والمراكز الطبية في العاصمة بريطانيا
+                </h2>
+                <p class="text-sm sm:text-base text-slate-700" id="centers-subtitle">
+                    ننسق علاجاتكم مع أفضل الصروح الطبية العالمية المعتمدة في لندن
+                </p>
+            </div>
+
+            <!-- 6 Centers Grid -->
+            <div class="flex flex-wrap justify-center gap-8" id="centers-grid">
+                <!-- Dynamically Rendered by JS -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 7. INTERACTIVE CONCIERGE DESK (#concierge) -->
+    <!-- ========================================== -->
+    <section id="concierge" class="relative py-20 md:py-28 bg-hero-pattern overflow-hidden">
+        <!-- Semi-transparent backdrop opacity 0.11 -->
+        <div class="absolute inset-0 pointer-events-none opacity-[0.11] bg-cover bg-center photo-fade" style="background-image: url('https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?auto=format&fit=crop&w=1800&q=80');"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 text-gold-700 border border-gold-500/30 text-xs font-bold">
+                    <i class="fa-solid fa-headset text-gold-600"></i>
+                    <span id="concierge-badge">التنسيق المباشر</span>
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900" id="concierge-title">
+                    ارسل طلب التنسيق الطبي المباشر إلى مستشارنا
+                </h2>
+                <p class="text-sm sm:text-base text-slate-700" id="concierge-subtitle">
+                    قم بتعبئة بياناتك الأساسية لمعاينة رسالة الواتساب الرسمية وتحديد الاحتياجات بدقة قبل الإرسال.
+                </p>
+            </div>
+
+            <div class="concierge-wrap">
+                <div class="concierge-seal"><img src="logo-icon.jpg" alt="VELLORA" width="1042" height="893"></div>
+                <div class="concierge-card">
+                
+                <!-- Form Column -->
+                <div class="concierge-form-panel">
+                    <form id="concierge-form" novalidate onsubmit="event.preventDefault(); sendToWhatsAppDirect();" class="space-y-5">
+                        
+                        <!-- Name Input -->
+                        <div>
+                            <label class="block text-xs font-bold text-navy-900 mb-1.5" id="label-name">
+                                الاسم الكامل <span class="text-rose-500">*</span>
+                            </label>
+                            <input type="text" id="patient-name" required aria-required="true" autocomplete="name" 
+                                   class="w-full bg-white/90 border border-stone-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500 transition"
+                                   placeholder="مثال: عبد الله أحمد"
+                                   oninput="updateWhatsAppPreview()">
+                        </div>
+
+                        <!-- Searchable Nationality Combobox -->
+                        <div class="relative">
+                            <label class="block text-xs font-bold text-navy-900 mb-1.5" id="label-nationality">
+                                الجنسية / بلد الإقامة <span class="text-rose-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <input type="text" id="nationality-search" required aria-required="true" autocomplete="off" 
+                                       class="w-full bg-white/90 border border-stone-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500 transition"
+                                       placeholder="ابحث أو اختر الجنسية..."
+                                       onfocus="showNationalityDropdown()"
+                                       oninput="filterNationalities(); updateWhatsAppPreview();">
+                                <i class="fa-solid fa-chevron-down absolute ltr:right-3 rtl:left-3 top-3.5 text-stone-400 text-xs pointer-events-none"></i>
+                            </div>
+                            <!-- Dropdown Menu -->
+                            <div id="nationality-dropdown" class="hidden absolute left-0 right-0 top-full mt-1 bg-white border border-stone-300 rounded-xl shadow-xl max-h-56 overflow-y-auto z-50 p-1">
+                                <!-- Populated dynamically by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Medical Specialty Dropdown -->
+                        <div>
+                            <label class="block text-xs font-bold text-navy-900 mb-1.5" id="label-specialty">
+                                التخصص الطبي المطلوب <span class="text-rose-500">*</span>
+                            </label>
+                            <select id="patient-specialty" required aria-required="true" 
+                                    class="w-full bg-white/90 border border-stone-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500 transition"
+                                    onchange="updateWhatsAppPreview()">
+                                <!-- Dynamic options -->
+                            </select>
+                        </div>
+
+                        <!-- Preferred Treatment Timeline -->
+                        <div>
+                            <label class="block text-xs font-bold text-navy-900 mb-1.5" id="label-timeline">
+                                الإطار الزمني المتوقع للسفر والعلاج <span class="text-rose-500">*</span>
+                            </label>
+                            <select id="patient-timeline" required aria-required="true" 
+                                    class="w-full bg-white/90 border border-stone-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500 transition"
+                                    onchange="updateWhatsAppPreview()">
+                                <!-- Dynamic options -->
+                            </select>
+                        </div>
+
+                        <!-- UK Visa Status Options (Strict Professional Wording ONLY) -->
+                        <div>
+                            <label class="block text-xs font-bold text-navy-900 mb-2" id="label-visa">
+                                حالة التأشيرة البريطانية (UK Visa Status) <span class="text-rose-500">*</span>
+                            </label>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="visa-options-group">
+                                <!-- Populated dynamically by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Notes / Brief Description -->
+                        <div>
+                            <label class="block text-xs font-bold text-navy-900 mb-1.5" id="label-notes">
+                                ملاحظات أو تفاصيل الحالة الطبية (اختياري)
+                            </label>
+                            <textarea id="patient-notes" rows="3" 
+                                      class="w-full bg-white/90 border border-stone-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500 transition"
+                                      placeholder="اكتب هنا أي استفسارات أو تفاصيل إضافية..."
+                                      oninput="updateWhatsAppPreview()"></textarea>
+                        </div>
+
+                        <!-- Privacy consent (required) -->
+                        <label id="consent-box" class="flex items-start gap-3 rounded-xl border border-stone-300 bg-white/70 p-3.5 cursor-pointer transition">
+                            <input type="checkbox" id="patient-consent" required aria-required="true" class="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-[#C49A52]" onchange="updateWhatsAppPreview()">
+                            <span id="consent-text" class="text-xs leading-relaxed text-slate-700">أوافق على <a href="privacy.html" target="_blank" rel="noopener" class="font-bold text-navy-900 underline decoration-gold-500 decoration-2 underline-offset-4 hover:text-gold-700">سياسة الخصوصية</a> وأفهم أن بياناتي ومعلوماتي الطبية ستُرسل إلى فريق VELLORA عبر واتساب لأجل التنسيق الطبي. <span class="text-rose-500">*</span></span>
+                        </label>
+
+                    </form>
+                </div>
+
+                <!-- Live preview + send button (same card, navy panel) -->
+                <aside class="concierge-preview-panel">
+                        
+                        <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white flex items-center gap-2" id="card-preview-title">
+                                        معاينة الرسالة المباشرة
+                                    </h4>
+                                    <span class="text-[11px] text-stone-300" id="card-preview-status">تجهيز رسالتك الفورية لفريق التنسيق</span>
+                                </div>
+                            </div>
+                            <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full pulse-green"></span>
+                        </div>
+
+                        <!-- Formatted Live Message Output Box -->
+                        <div class="flex-1 bg-navy-950/80 border border-gold-500/20 rounded-2xl p-4 text-xs font-sans space-y-2 text-stone-200 leading-relaxed mb-5 shadow-inner">
+                            <div class="text-[11px] text-gold-400 font-bold border-b border-white/10 pb-1 flex justify-between">
+                                <span id="preview-header">VELLORA Medical Travel Concierge</span>
+                                <span class="text-stone-400 font-normal font-en" id="live-time-str">NOW</span>
+                            </div>
+                            <pre id="whatsapp-message-box" class="whitespace-pre-wrap font-sans text-stone-200 text-xs leading-relaxed" style="unicode-bidi:plaintext; text-align:start"></pre>
+                        </div>
+
+                        <!-- Dynamic Preparation Checklist -->
+                        <div class="mb-6">
+                            <h5 class="text-xs font-bold text-gold-400 mb-2 flex items-center gap-1.5" id="checklist-title">
+                                <i class="fa-solid fa-list-check"></i>
+                                المستندات المقترحة لإعدادها:
+                            </h5>
+                            <ul class="space-y-1.5 text-xs text-stone-300" id="checklist-items">
+                                <!-- Populated dynamically by JS -->
+                            </ul>
+                        </div>
+
+                        <!-- Direct 1-Click WhatsApp Button -->
+                        <button type="button" onclick="sendToWhatsAppDirect()" 
+                                class="mt-auto w-full bg-gradient-to-r from-emerald-600 via-emerald-500 to-emerald-600 hover:from-emerald-500 hover:to-emerald-400 text-white font-bold py-4 rounded-2xl shadow-xl transition-all flex items-center justify-center gap-3 border border-emerald-400/40 text-base">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span id="btn-send-whatsapp">إرسال الطلب عبر الواتساب الآن</span>
+                        </button>
+                </aside>
+
+                </div><!-- /concierge-card -->
+            </div><!-- /concierge-wrap -->
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 8. FAQ SECTION (#faq)                      -->
+    <!-- ========================================== -->
+    <section id="faq" class="relative py-20 md:py-28 bg-stone-100 overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="inline-block px-3.5 py-1.5 rounded-full bg-navy-900/10 text-navy-900 text-xs font-bold tracking-wide" id="faq-badge">
+                    الاستفسارات الشائعة
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900" id="faq-title">
+                    الأسئلة الأكثر تكراراً حول العلاج في لندن
+                </h2>
+                <p class="text-sm sm:text-base text-slate-700" id="faq-subtitle">
+                    إجابات واضحة ودقيقة عن خدمات فيلورا وكيفية بدء التنسيق الطبي.
+                </p>
+            </div>
+
+            <!-- Accordion List -->
+            <div class="space-y-4" id="faq-accordion-container">
+                <!-- Dynamically rendered by JS -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 9. FOOTER SECTION                          -->
+    <!-- ========================================== -->
+    <footer class="bg-navy-950 text-white pt-16 pb-10 border-t border-gold-500/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 border-b border-white/10 pb-12">
+                
+                <div class="md:col-span-5 space-y-4">
+                    <!-- Full logo plaque (ivory panel matches the logo background so it blends seamlessly) -->
+                    <a href="#" class="inline-block rounded-2xl p-3 sm:p-4 border border-gold-500/40 shadow-[0_12px_40px_-14px_rgba(196,154,82,0.45)] hover:border-gold-400 transition-colors" style="background:#FBF7EB" aria-label="VELLORA — Medical Travel Concierge">
+                        <img src="vellora-logo.jpg" alt="VELLORA Medical Travel Concierge" class="block w-48 sm:w-60 h-auto rounded-lg" width="1400" height="1226" loading="lazy">
+                    </a>
+                    <p class="text-xs text-stone-400 leading-relaxed max-w-sm" id="footer-bio">
+                        خدمات تنسيق طبي وسفر علاجي إلى لندن، واستشارات كبار الجراحين، برعاية وتنسيق احترافي موثوق.
+                    </p>
+                </div>
+
+                <div class="md:col-span-3 space-y-3">
+                    <h5 class="text-sm font-bold text-gold-400" id="footer-quick-links-title">روابط سريعة</h5>
+                    <ul class="space-y-2 text-xs text-stone-300">
+                        <li><a href="#about" class="hover:text-gold-400 transition" id="footer-link-about">عن فيلورا ود. مرهف الحموي</a></li>
+                        <li><a href="#journey" class="hover:text-gold-400 transition" id="footer-link-journey">خطوات رحلة المريض</a></li>
+                        <li><a href="#centers" class="hover:text-gold-400 transition" id="footer-link-centers">المستشفيات المعتمدة</a></li>
+                        <li><a href="#concierge" class="hover:text-gold-400 transition" id="footer-link-concierge">التنسيق المباشر</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-4 space-y-3">
+                    <h5 class="text-sm font-bold text-gold-400" id="footer-contact-title">تواصل معنا</h5>
+                    <div class="pt-2">
+                        <a href="https://wa.me/963930888475" target="_blank" class="inline-flex items-center gap-2 text-xs text-emerald-400 hover:text-emerald-300 bg-emerald-950/60 border border-emerald-500/30 px-3 py-2 rounded-xl">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span class="font-en" dir="ltr" style="direction: ltr; unicode-bidi: isolate;">+963 930 888 475</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+                <p id="footer-copyright">© 2026 VELLORA Medical Travel Concierge. جميع الحقوق محفوظة.</p>
+                <div class="flex gap-4">
+                    <a href="privacy.html" id="footer-privacy" class="hover:text-gold-400 transition">سياسة الخصوصية والسرية الطبية</a>
+                    <span>•</span>
+                    <a href="terms.html" id="footer-terms" class="hover:text-gold-400 transition">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ========================================== -->
+    <!-- JAVASCRIPT BILINGUAL ENGINE & LOGIC        -->
+    <!-- ========================================== -->
+    <script>
+        // GLOBAL STATE
+        let currentLang = 'ar'; // Default Arabic RTL
+        let selectedVisa = ''; // '' (not chosen yet) | 'has_visa' | 'no_visa' | 'eta_exempt'
+        let selectedCenterId = null;
+        let lastCenterInquiryText = '';
+
+        // NATIONALITY DATA (45+ Countries in Arabic & English)
+        const nationalities = [
+            { ar: "الكويت", en: "Kuwait" },
+            { ar: "المملكة العربية السعودية", en: "Saudi Arabia" },
+            { ar: "الإمارات العربية المتحدة", en: "United Arab Emirates" },
+            { ar: "قطر", en: "Qatar" },
+            { ar: "البحرين", en: "Bahrain" },
+            { ar: "سلطنة عُمان", en: "Oman" },
+            { ar: "العراق", en: "Iraq" },
+            { ar: "الأردن", en: "Jordan" },
+            { ar: "مصر", en: "Egypt" },
+            { ar: "سوريا", en: "Syria" },
+            { ar: "لبنان", en: "Lebanon" },
+            { ar: "ليبيا", en: "Libya" },
+            { ar: "تونس", en: "Tunisia" },
+            { ar: "الجزائر", en: "Algeria" },
+            { ar: "المغرب", en: "Morocco" },
+            { ar: "السودان", en: "Sudan" },
+            { ar: "اليمن", en: "Yemen" },
+            { ar: "فلسطين", en: "Palestine" },
+            { ar: "تركيا", en: "Turkey" },
+            { ar: "المملكة المتحدة", en: "United Kingdom" },
+            { ar: "الولايات المتحدة", en: "United States" },
+            { ar: "كندا", en: "Canada" },
+            { ar: "ألمانيا", en: "Germany" },
+            { ar: "فرنسا", en: "France" },
+            { ar: "سويسرا", en: "Switzerland" },
+            { ar: "إيطاليا", en: "Italy" },
+            { ar: "إسبانيا", en: "Spain" },
+            { ar: "هولندا", en: "Netherlands" },
+            { ar: "السويد", en: "Sweden" },
+            { ar: "النرويج", en: "Norway" },
+            { ar: "النمسا", en: "Austria" },
+            { ar: "بلجيكا", en: "Belgium" },
+            { ar: "أستراليا", en: "Australia" },
+            { ar: "الهند", en: "India" },
+            { ar: "باكستان", en: "Pakistan" },
+            { ar: "ماليزيا", en: "Malaysia" },
+            { ar: "سنغافورة", en: "Singapore" },
+            { ar: "الصين", en: "China" },
+            { ar: "اليابان", en: "Japan" },
+            { ar: "كوريا الجنوبية", en: "South Korea" },
+            { ar: "البرازيل", en: "Brazil" },
+            { ar: "جنوب أفريقيا", en: "South Africa" },
+            { ar: "قبرص", en: "Cyprus" },
+            { ar: "اليونان", en: "Greece" },
+            { ar: "إيرلندا", en: "Ireland" }
+        ];
+
+        // 5 VERIFIED CREDENTIALS FOR DR. MORHAF (Strict Single-Language)
+        const drCredentials = {
+            ar: [
+                "عضو المجمع الملكي البريطاني لأطباء العيون (RCOphth), UK",
+                "عضو في الأكاديمية الأمريكية لأطباء العيون (AAO)",
+                "مؤسس مركز الحموي للأبحاث الطبية الحيوية (Al Hamwi BioMedical)",
+                "باحث متخصص في زراعة القرنية واعتلال الشبكية الدقيق",
+                "رئيس مجلس إدارة جمعية المدد الطبية الخيرية"
+            ],
+            en: [
+                "Member of the Royal College of Ophthalmologists (RCOphth), UK",
+                "Member of the American Academy of Ophthalmology (AAO)",
+                "Establisher, Al Hamwi BioMedical Research Centre",
+                "Corneal Transplant & Retinopathy Specialist Researcher",
+                "Chairman, Al Madad Medical Charity"
+            ]
+        };
+
+        // FLAGSHIP CENTERS DATA
+        // Each centre has its OWN photos (imgs): the card slides through them. No photo is shared between hospitals.
+        // C("File name.jpg") = a free-licence photo from Wikimedia Commons (the card shows a small credit link to the file page, which names the author and licence).
+        // A plain string such as "images/hospitals/example-1.jpg" = your own approved photo placed next to this page. Missing or broken photos are skipped automatically,
+        // and a card with no working photo shows a branded placeholder instead.
+        const C = file => {
+            const n = encodeURIComponent(file.replace(/ /g, '_'));
+            return { src: `https://commons.wikimedia.org/wiki/Special:FilePath/${n}?width=960`, page: `https://commons.wikimedia.org/wiki/File:${n}` };
+        };
+        const flagshipCentersData = [
+            {
+                id: "moorfields",
+                title: { ar: "مستشفى مورفيلدز للعيون", en: "Moorfields Eye Hospital" },
+                desc: { 
+                    ar: "أقدم وأشهر مركز عالمي متخصص في طب وجراحة العيون وجراحات القرنية والشبكية في لندن.", 
+                    en: "World-leading eye hospital specializing in advanced corneal & retinal surgeries in London." 
+                },
+                imgs: [C("Finsbury moorfields eye hospital 1.jpg"), C("Finsbury moorfields eye hospital 2.jpg")],
+                tag: { ar: "طب وجراحة العيون", en: "Ophthalmology & Retina" }
+            },
+            {
+                id: "marsden",
+                title: { ar: "مستشفى الرويال مارسدن", en: "The Royal Marsden Hospital" },
+                desc: { 
+                    ar: "المركز الأوربي الأول المتخصص في أبحاث وجراحة وعلاج الأورام الدقيقة.", 
+                    en: "World's first hospital dedicated to cancer treatment & precision oncology research." 
+                },
+                imgs: [C("The Royal Marsden Hospital frontage Fulham Road (1).jpg"), C("The Royal Marsden Hospital frontage Fulham Road (2).jpg"), C("The Royal Marsden NHS Foundation Trust.jpg")],
+                tag: { ar: "علاج الأورام الدقيق", en: "Oncology & Cancer Care" }
+            },
+            {
+                id: "gosh",
+                title: { ar: "مستشفى غريت أورموند ستريت", en: "Great Ormond Street Hospital" },
+                desc: { 
+                    ar: "المرجع العالمي الأعلى لتخصصات وجراحات الأطفال الدقيقة والمعقدة.", 
+                    en: "World-renowned pediatric super-specialty hospital for complex child care." 
+                },
+                imgs: [C("St Christopher's Chapel, Great Ormond St Hospital, London, UK - Diliff.jpg"), C("Great Ormond Street Hospital, London - 04.jpg"), C("Great Ormond Street Hospital, London - 01.jpg")],
+                tag: { ar: "طب وجراحة الأطفال", en: "Pediatric Super-Specialist" }
+            }
+        ];
+
+        // FAQ DATA
+        const faqData = [
+            {
+                q: { ar: "كيف تبدأ عملية التنسيق الطبي مع فيلورا في لندن؟", en: "How does the medical coordination process with VELLORA begin?" },
+                a: { 
+                    ar: "تبدأ عبر إرسال بياناتكم وتقاريركم الطبية المبدئية، حيث يقدم د. مرهف الحموي وفريقه فرزاً طبياً دقيقاً، ثم نحدد المستشفى والاستشاري البريطاني الأنسب ونقوم بتجهيز جدول المواعيد السريعة.", 
+                    en: "It starts by sharing your basic info and medical reports. Dr. Morhaf Al Hamwi and our team review the clinical case to select the optimal London hospital and consultant." 
+                }
+            },
+            {
+                q: { ar: "هل تساعد منصة فيلورا في ترتيبات السفر والإقامة؟", en: "Does VELLORA assist with travel logistics and accommodation?" },
+                a: { 
+                    ar: "نعم بالكامل، نوفر استقبالاً خاصاً في مطارات لندن، وسيارات فاخرة مع سائق، وإقامة فندقية أو شقق مفروشة راقية بالقرب من المستشفى المعالج.", 
+                    en: "Yes completely. We organize private airport transfers, luxury chauffeur services, and premium accommodation close to the treating hospital." 
+                }
+            },
+            {
+                q: { ar: "ما هي التخصصات الطبية التي تشملها خدماتكم؟", en: "What medical specialties does VELLORA cover?" },
+                a: { 
+                    ar: "نغطي كافة التخصصات الدقيقة، وفي مقدمتها جراحة العيون والقرنية والشبكية، وجراحة القلب، وعلاج الأورام، وجراحة العظام والعمود الفقري، وطب الأطفال الدقيق، والفحوصات الشاملة.", 
+                    en: "We cover all major subspecialties including ophthalmology & retina, cardiology, oncology, orthopaedics & spine, pediatrics, and executive health assessments." 
+                }
+            },
+            {
+                q: { ar: "هل تتوفر خدمة الترجمة الطبية المعتمدة خلال الجلسات؟", en: "Is certified medical translation provided during clinical sessions?" },
+                a: { 
+                    ar: "بالتأكيد. يتواجد مرافق ومترجم طبي متخصص في كافة اللقاءات الطبية لضمان الفهم التام والاستفسار المباشر من الجراح المعالج.", 
+                    en: "Absolutely. A dedicated certified medical interpreter accompanies you during all doctor visits to ensure crystal-clear communication." 
+                }
+            },
+            {
+                q: { ar: "ماذا لو لم تكن لدي تأشيرة بريطانية سارية حالياً؟", en: "What if I do not currently hold a UK visa?" },
+                a: { 
+                    ar: "فريقنا يرشدكم إلى الخطوات الإجرائية والتنظيمية الرسمية المطلوبة ويساعدكم بالتنسيق مع المستشفى المعالج لإصدار التأشيرة الطبية المناسبة حسب لوائح المملكة المتحدة.", 
+                    en: "Our team guides you through official UK visa procedures and coordinates with the treating hospital to facilitate standard medical visa processing." 
+                }
+            }
+        ];
+
+        // DICTIONARY FOR 100% BILINGUAL TEXT
+        const dict = {
+            ar: {
+                pageTitle: "VELLORA | فيلورا — Medical Travel Concierge (London)",
+                brandSub: "UK",
+                tagline: "Medical Travel Concierge",
+                navAbout: "عن فيلورا والقادة",
+                navJourney: "رحلة المريض",
+                navCenters: "المراكز الطبية",
+                navFaq: "الأسئلة الشائعة",
+                navCta: "استشارة خاصة",
+                navBook: "احجز موعدك",
+                navBookShort: "احجز",
+                cardStatus: "متاح الآن",
+                heroBadge: "تنسيق طبي فاخر للعلاج في لندن",
+                heroTitle: `علاج استثنائي في لندن،<br><span class="gold-gradient-text">برعاية تبدأ قبل سفرك وتمتد حتى عودتك</span>`,
+                heroDesc: `تتولّى <strong class="text-navy-900 font-bold">VELLORA</strong> ترتيب رحلتك العلاجية بالكامل: من حجز موعدك لدى نخبة الاستشاريين في لندن، إلى الاستقبال والإقامة والمرافقة الشخصية، بإشراف طبي بريطاني مباشر وخصوصية تامة لبياناتك.`,
+                stat1: "سرّية تامة لبياناتك الطبية",
+                stat2: "إشراف طبي بريطاني مباشر",
+                stat3: "ردّ خلال 30 دقيقة، على مدار الساعة",
+                stat4: "مرافقة ومتابعة مستمرة",
+                heroPrimaryBtn: "احجز استشارتك الخاصة",
+                heroSecondaryBtn: "تعرّف على د. مرهف الحموي",
+                cardQuickTitle: "خدمة الكونسيرج الطبي",
+                cardQuickSubtitle: "فريق مخصّص لحالتك منذ أول تواصل",
+                feat1: "مواعيد ذات أولوية لدى كبار الاستشاريين في لندن.",
+                feat2: "مراجعة تقاريرك الطبية قبل السفر وإعداد خطة علاج متكاملة.",
+                feat3: "استقبال خاص في مطارات لندن وإقامة فاخرة تناسب حالتك.",
+                feat4: "مترجم طبي معتمد ومرافق شخصي في جميع زياراتك.",
+                cardQuickBtn: "أرسل طلبك الآن",
+                drImgName: "د. مرهف الحموي",
+                drImgTitle: "Dr. Morhaf Al Hamwi — Founder & Medical Director",
+                aboutBadge: "قيادة طبية واستشارية موثوقة",
+                aboutTitle: `إشراف طبي بريطاني مباشر بقيادة <span class="gold-gradient-text">الدكتور مرهف الحموي</span>`,
+                aboutBio: `تأسست منصة <strong class="text-gold-400">VELLORA</strong> لتوفير الجسر الطبي الأمثل بين المرضى وكبار الاستشاريين في بريطانيا. يمتلك الدكتور مرهف الحموي مسيرة علمية وبحثية حافلة في كبرى المؤسسات الطبية البريطانية والأكاديمية العالمية، مما يضمن أعلى درجات الدقة والنزاهة في اختيار الخطة العلاجية والمركز الطبي الأنسب لجمهورنا.`,
+                journeyBadge: "خطوات منظمة ومريحة",
+                journeyTitle: "رحلة العلاج مع فيلورا من الفحص وحتى التعافي",
+                journeySubtitle: "نحن نتحمل عنك كافة أعباء التنسيق الطبي واللوجستي لتتفرغ تماماً لصحتك وصحة من تحب.",
+                step1Title: "الفرز الطبي الأولي",
+                step1Desc: "استلام ملفك الطبي ودراسته بعناية تحت إشراف د. مرهف الحموي لتحديد الاستشاري البريطاني الدقيق للحالة.",
+                step2Title: "خطة العلاج والمواعيد",
+                step2Desc: "تزويدكم بالتقرير الاستشاري البريطاني المبدئي وحجز مواعيد الفحص المباشر في لندن بدون قوائم انتظار.",
+                step3Title: "الاستقبال والخدمات الملكية",
+                step3Desc: "ترتيب الاستقبال في مطار لندن، وتوفير المواصلات الخاصة والإقامة الفاخرة المجاورة للمستشفى.",
+                step4Title: "المرافقة والمتابعة المستمرة",
+                step4Desc: "مترجم طبي متخصص خلال الجلسات، مع متابعة دقيقة ومستمرة بعد العودة إلى أرض الوطن.",
+                discBadge: "امتيازات حصرية لعملاء فيلورا",
+                discTitle: "خصومات وأسعار تفضيلية خاصة في أرقى المستشفيات البريطانية",
+                discDesc: "بفضل شراكاتنا الممتدة ورصيدنا الموثوق مع كبرى مجموعات الرعاية الصحية الفاخرة والفنادق في لندن، يحصل مرضانا على أسعار تفضيلية خاصة وتسهيلات ممتازة لكافة الفحوصات والإقامات الطبية.",
+                discBtn: "استفسر عن الأسعار التفضيلية",
+                centersBadge: "مراكز التميز الشريكة",
+                centersTitle: "أرقى المستشفيات والمراكز الطبية في العاصمة بريطانيا",
+                centersSubtitle: "ننسق علاجاتكم مع أفضل الصروح الطبية العالمية المعتمدة في لندن",
+                conciergeBadge: "التنسيق المباشر",
+                conciergeTitle: "ارسل طلب التنسيق الطبي المباشر إلى مستشارنا",
+                conciergeSubtitle: "قم بتعبئة بياناتك الأساسية لمعاينة رسالة الواتساب الرسمية وتحديد الاحتياجات بدقة قبل الإرسال.",
+                labelName: "الاسم الكامل *",
+                labelNationality: "الجنسية / بلد الإقامة *",
+                labelSpecialty: "التخصص الطبي المطلوب *",
+                labelTimeline: "الإطار الزمني المتوقع للسفر والعلاج",
+                labelVisa: "حالة التأشيرة البريطانية (UK Visa Status) *",
+                labelNotes: "ملاحظات أو تفاصيل الحالة الطبية (اختياري)",
+                placeholderName: "مثال: عبد الله أحمد",
+                placeholderNat: "ابحث أو اختر الجنسية...",
+                placeholderNotes: "اكتب هنا أي استفسارات أو تفاصيل إضافية...",
+                cardPreviewTitle: "معاينة الرسالة المباشرة",
+                cardPreviewStatus: "تجهيز رسالتك الفورية لفريق التنسيق",
+                previewHeader: "VELLORA Medical Travel Concierge",
+                checklistTitle: "المستندات المقترحة لإعدادها:",
+                btnSendWhatsapp: "إرسال الطلب عبر الواتساب الآن",
+                faqBadge: "الاستفسارات الشائعة",
+                faqTitle: "الأسئلة الأكثر تكراراً حول العلاج في لندن",
+                faqSubtitle: "إجابات واضحة ودقيقة عن خدمات فيلورا وكيفية بدء التنسيق الطبي.",
+                footerBio: "خدمات تنسيق طبي وسفر علاجي إلى لندن، واستشارات كبار الجراحين، برعاية وتنسيق احترافي موثوق.",
+                footerQuickLinksTitle: "روابط سريعة",
+                footerContactTitle: "تواصل معنا",
+                footerCopyright: "© 2026 VELLORA Medical Travel Concierge. جميع الحقوق محفوظة.",
+            },
+            en: {
+                pageTitle: "VELLORA | Medical Travel Concierge (London)",
+                brandSub: "UK",
+                tagline: "Medical Travel Concierge",
+                navAbout: "About & Leadership",
+                navJourney: "Patient Journey",
+                navCenters: "Flagship Centers",
+                navFaq: "FAQ",
+                navCta: "Private Consultation",
+                navBook: "Book Now",
+                navBookShort: "Book",
+                cardStatus: "Available now",
+                heroBadge: "Luxury Medical Concierge for Care in London",
+                heroTitle: `Exceptional Care in London,<br><span class="gold-gradient-text">Looked After From First Call to Safe Return</span>`,
+                heroDesc: `<strong class="text-navy-900 font-bold">VELLORA</strong> arranges your entire medical journey: priority appointments with London’s leading consultants, private arrival and luxury accommodation, and a dedicated personal escort — all under direct UK medical oversight and with complete confidentiality.`,
+                stat1: "Strictly confidential medical data",
+                stat2: "Direct UK medical oversight",
+                stat3: "Reply within 30 minutes, 24/7",
+                stat4: "24/7 Dedicated Care",
+                heroPrimaryBtn: "Book Your Private Consultation",
+                heroSecondaryBtn: "Meet Dr. Morhaf Al Hamwi",
+                cardQuickTitle: "Private Medical Concierge",
+                cardQuickSubtitle: "A dedicated team assigned to your case from the first message",
+                feat1: "Priority appointments with senior London consultants.",
+                feat2: "Your medical reports reviewed before you travel, with a tailored care plan.",
+                feat3: "Private airport reception and luxury accommodation across London.",
+                feat4: "Certified medical interpreter and a personal escort at every visit.",
+                cardQuickBtn: "Send Your Request",
+                drImgName: "Dr. Morhaf Al Hamwi",
+                drImgTitle: "Founder & Medical Director",
+                aboutBadge: "Trusted Medical Leadership",
+                aboutTitle: `Direct UK Clinical Governance Led by <span class="gold-gradient-text">Dr. Morhaf Al Hamwi</span>`,
+                aboutBio: `<strong class="text-gold-400">VELLORA</strong> was founded to establish the premier clinical bridge between international patients and top UK consultants. Dr. Morhaf Al Hamwi brings an exemplary career in elite UK medical institutions and global research, ensuring utmost integrity and precision in selecting your care path.`,
+                journeyBadge: "Seamless 4-Step Process",
+                journeyTitle: "Your Care Journey with VELLORA",
+                journeySubtitle: "We manage all clinical and travel coordination so you can focus entirely on your healing.",
+                step1Title: "Initial Clinical Triage",
+                step1Desc: "Comprehensive review of your medical file supervised by Dr. Morhaf Al Hamwi to select the ideal UK specialist.",
+                step2Title: "Tailored Plan & Scheduling",
+                step2Desc: "Receive a preliminary UK consultant review and guaranteed priority appointment slots without waitlists.",
+                step3Title: "VIP Arrival & Logistics",
+                step3Desc: "Private London airport reception, luxury chauffeur transfers, and accommodation near the treating hospital.",
+                step4Title: "Bedside Escort & Follow-up",
+                step4Desc: "Dedicated medical interpreter during visits, alongside post-treatment follow-up after returning home.",
+                discBadge: "Exclusive Patient Privileges",
+                discTitle: "Preferential Rates & Custom Packages Across Premier London Hospitals",
+                discDesc: "Through established healthcare partnerships in London, VELLORA patients enjoy preferred rates and bespoke hospital package arrangements for all procedures.",
+                discBtn: "Inquire About Preferred Rates",
+                centersBadge: "Partner Centers of Excellence",
+                centersTitle: "London's Premier Medical Institutions",
+                centersSubtitle: "Direct coordination with world-leading accredited hospitals in the United Kingdom",
+                conciergeBadge: "Direct Dispatch Desk",
+                conciergeTitle: "Send Your Direct Medical Inquiry to Our Desk",
+                conciergeSubtitle: "Fill in your key details to generate your structured WhatsApp request for instant review.",
+                labelName: "Full Name *",
+                labelNationality: "Nationality / Country of Residence *",
+                labelSpecialty: "Requested Medical Specialty *",
+                labelTimeline: "Expected Travel Timeline",
+                labelVisa: "UK Visa Status *",
+                labelNotes: "Additional Notes or Brief Medical Overview (Optional)",
+                placeholderName: "e.g. Abdullah Ahmad",
+                placeholderNat: "Search or select nationality...",
+                placeholderNotes: "Type any extra notes or queries here...",
+                cardPreviewTitle: "Live Message Preview",
+                cardPreviewStatus: "Preparing your instant message for the coordination team",
+                previewHeader: "VELLORA Medical Travel Concierge",
+                checklistTitle: "Suggested Documents to Prepare:",
+                btnSendWhatsapp: "Send Request via WhatsApp Now",
+                faqBadge: "Frequently Asked Questions",
+                faqTitle: "Common Questions Regarding Care in London",
+                faqSubtitle: "Clear answers on VELLORA services and initiating medical travel.",
+                footerBio: "Medical travel concierge and senior consultant coordination for care in London.",
+                footerQuickLinksTitle: "Quick Links",
+                footerContactTitle: "Contact Us",
+                footerCopyright: "© 2026 VELLORA Medical Travel Concierge. All rights reserved.",
+            }
+        };
+
+        // SPECIALTIES & TIMELINE OPTIONS
+        const specialtyOptions = {
+            ar: [
+                "طب وجراحة العيون والقرنية والشبكية (Ophthalmology & Retina)",
+                "جراحة القلب والشرايين (Cardiology & Cardiac Surgery)",
+                "علاج وجراحة الأورام (Oncology & Cancer Care)",
+                "جراحة العظام والعمود الفقري (Orthopaedics & Spine)",
+                "جراحة الأعصاب والدماغ (Neurology & Neurosurgery)",
+                "طب وجراحة الأطفال الدقيقة (Pediatric Specialist Care)",
+                "الفحوصات الشاملة (Executive Health Assessment)",
+                "الجراحة التجميلية والترميمية (Cosmetic & Reconstructive)",
+                "تخصص آخر / غير محدد (Other Specialty)"
+            ],
+            en: [
+                "Ophthalmology, Cornea & Retina",
+                "Cardiology & Cardiac Surgery",
+                "Oncology & Precision Cancer Care",
+                "Orthopaedics & Spine Surgery",
+                "Neurology & Neurosurgery",
+                "Pediatric Super-Specialist Care",
+                "Executive Health Assessment",
+                "Cosmetic & Reconstructive Surgery",
+                "Other / General Inquiry"
+            ]
+        };
+
+        const timelineOptions = {
+            ar: [
+                "عاجل جداً (خلال 7 أيام)",
+                "خلال أسبوعين إلى 3 أسابيع",
+                "خلال الشهر القادم",
+                "تخطيط واستفسار عام"
+            ],
+            en: [
+                "Urgent (Within 7 Days)",
+                "Within 2-3 Weeks",
+                "Within Next Month",
+                "Planning Ahead / General Inquiry"
+            ]
+        };
+
+        // VISA OPTIONS (Strict Professional Wording ONLY)
+        const visaOptions = {
+            ar: [
+                { id: "has_visa", label: "لديّ تأشيرة بريطانية سارية حالياً", text: "Already hold a valid UK Visa" },
+                { id: "no_visa", label: "لا أملك تأشيرة بريطانية حالياً", text: "Do not hold a UK Visa yet" },
+                { id: "eta_exempt", label: "معفى من التأشيرة / مؤهل لـ (ETA)", text: "Visa-exempt / UK ETA eligible" }
+            ],
+            en: [
+                { id: "has_visa", label: "Already hold a valid UK Visa", text: "Already hold a valid UK Visa" },
+                { id: "no_visa", label: "Do not hold a UK Visa yet", text: "Do not hold a UK Visa yet" },
+                { id: "eta_exempt", label: "Visa-exempt / UK ETA eligible", text: "Visa-exempt / UK ETA eligible" }
+            ]
+        };
+
+        // MOBILE MENU
+        function setMobileMenu(open) {
+            const menu = document.getElementById('mobile-menu');
+            const btn = document.getElementById('mobile-menu-btn');
+            menu.classList.toggle('is-open', open);
+            menu.inert = !open;
+            menu.setAttribute('aria-hidden', String(!open));
+            btn.setAttribute('aria-expanded', String(open));
+        }
+        function toggleMobileMenu() { setMobileMenu(!document.getElementById('mobile-menu').classList.contains('is-open')); }
+        function closeMobileMenu() { setMobileMenu(false); }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileMenu(); });
+        document.addEventListener('click', e => {
+            const header = document.querySelector('header');
+            if (header && !header.contains(e.target)) closeMobileMenu();
+        });
+        window.addEventListener('resize', () => { if (window.innerWidth >= 1024) closeMobileMenu(); });
+
+        // EXTRA BILINGUAL TEXT (menu, required fields, consent, validation messages)
+        const extraText = {
+            ar: {
+                navMenu: "القائمة",
+                labelTimeline: "الإطار الزمني المتوقع للسفر والعلاج *",
+                labelNotes: "ملاحظات أو تفاصيل الحالة الطبية (اختياري)",
+                placeholderSpec: "اختر التخصص الطبي...",
+                placeholderTime: "اختر الإطار الزمني...",
+                consentBefore: "أوافق على ",
+                consentLink: "سياسة الخصوصية",
+                consentAfter: " وأفهم أن بياناتي ومعلوماتي الطبية ستُرسل إلى فريق VELLORA عبر واتساب لأجل التنسيق الطبي. *",
+                footerPrivacy: "سياسة الخصوصية والسرية الطبية",
+                footerTerms: "الشروط والأحكام",
+                err: {
+                    'patient-name': "يرجى كتابة الاسم الكامل",
+                    'nationality-search': "يرجى اختيار الجنسية أو بلد الإقامة",
+                    'patient-specialty': "يرجى اختيار التخصص الطبي",
+                    'patient-timeline': "يرجى اختيار الإطار الزمني",
+                    'visa-options-group': "يرجى اختيار حالة التأشيرة البريطانية",
+                    'patient-notes': "يرجى كتابة تفاصيل الحالة أو ملاحظاتك",
+                    'consent-box': "يلزم الموافقة على سياسة الخصوصية للمتابعة"
+                }
+            },
+            en: {
+                navMenu: "Menu",
+                labelTimeline: "Expected Travel Timeline *",
+                labelNotes: "Additional Notes or Brief Medical Overview (Optional)",
+                placeholderSpec: "Select a specialty...",
+                placeholderTime: "Select a timeline...",
+                consentBefore: "I agree to the ",
+                consentLink: "Privacy Policy",
+                consentAfter: " and understand that my details and medical information will be sent to the VELLORA team via WhatsApp for medical coordination. *",
+                footerPrivacy: "Privacy & Medical Confidentiality Policy",
+                footerTerms: "Terms & Conditions",
+                err: {
+                    'patient-name': "Please enter your full name",
+                    'nationality-search': "Please select your nationality or country of residence",
+                    'patient-specialty': "Please select a medical specialty",
+                    'patient-timeline': "Please select a timeline",
+                    'visa-options-group': "Please select your UK visa status",
+                    'patient-notes': "Please add some details about your case",
+                    'consent-box': "Please accept the Privacy Policy to continue"
+                }
+            }
+        };
+
+        function setLabel(id, text) {
+            document.getElementById(id).innerHTML = text.replace(/\*/g, '<span class="text-rose-500">*</span>');
+        }
+
+        function fillSelect(id, options, placeholder) {
+            const sel = document.getElementById(id);
+            const prev = sel.selectedIndex; // keep the user's choice when switching language
+            sel.innerHTML = '';
+            const ph = document.createElement('option');
+            ph.value = '';
+            ph.textContent = placeholder;
+            ph.disabled = true;
+            sel.appendChild(ph);
+            options.forEach(opt => {
+                const el = document.createElement('option');
+                el.value = opt;
+                el.textContent = opt;
+                sel.appendChild(el);
+            });
+            sel.selectedIndex = prev > 0 ? prev : 0;
+        }
+
+        function applyExtras(lang) {
+            const t = dict[lang], x = extraText[lang];
+            setLabel('label-name', t.labelName);
+            setLabel('label-nationality', t.labelNationality);
+            setLabel('label-specialty', t.labelSpecialty);
+            setLabel('label-timeline', x.labelTimeline);
+            setLabel('label-visa', t.labelVisa);
+            setLabel('label-notes', x.labelNotes);
+
+            document.getElementById('consent-text').innerHTML =
+                x.consentBefore +
+                `<a href="privacy.html?lang=${lang}" target="_blank" rel="noopener" class="font-bold text-navy-900 underline decoration-gold-500 decoration-2 underline-offset-4 hover:text-gold-700">${x.consentLink}</a>` +
+                x.consentAfter.replace('*', '<span class="text-rose-500">*</span>');
+
+            const fp = document.getElementById('footer-privacy');
+            fp.textContent = x.footerPrivacy;
+            fp.href = 'privacy.html?lang=' + lang;
+            const ft = document.getElementById('footer-terms');
+            ft.textContent = x.footerTerms;
+            ft.href = 'terms.html?lang=' + lang;
+
+            document.getElementById('mm-link-about').textContent = t.navAbout;
+            document.getElementById('mm-link-journey').textContent = t.navJourney;
+            document.getElementById('mm-link-centers').textContent = t.navCenters;
+            document.getElementById('mm-link-faq').textContent = t.navFaq;
+            document.getElementById('mm-cta-text').textContent = t.navCta;
+            document.getElementById('mm-book-text').textContent = t.navBook;
+            document.getElementById('mobile-menu-btn').setAttribute('aria-label', x.navMenu);
+        }
+
+        // FORM VALIDATION (every field is required)
+        let formSubmitAttempted = false;
+
+        function setFieldError(id, msg) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            let err = document.getElementById('err-' + id);
+            if (!err) {
+                err = document.createElement('p');
+                err.id = 'err-' + id;
+                err.setAttribute('role', 'alert');
+                err.className = 'hidden items-center gap-1.5 mt-1.5 text-[11px] font-medium text-rose-600';
+                const host = (id === 'nationality-search') ? el.parentElement : el;
+                host.insertAdjacentElement('afterend', err);
+            }
+            if (msg) {
+                err.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i><span></span>';
+                err.lastChild.textContent = msg;
+                err.classList.remove('hidden');
+                err.classList.add('flex');
+            } else {
+                err.classList.add('hidden');
+                err.classList.remove('flex');
+            }
+            if (id !== 'visa-options-group') {
+                el.classList.toggle('border-rose-400', !!msg);
+                el.classList.toggle('border-stone-300', !msg);
+                el.classList.toggle('ring-2', !!msg);
+                el.classList.toggle('ring-rose-200', !!msg);
+            }
+            el.setAttribute('aria-invalid', msg ? 'true' : 'false');
+        }
+
+        // returns the id of the first invalid field, or null when everything is valid
+        function validateForm(showErrors) {
+            const val = id => document.getElementById(id).value.trim();
+            const checks = [
+                ['patient-name', val('patient-name').length >= 2],
+                ['nationality-search', val('nationality-search').length >= 2],
+                ['patient-specialty', val('patient-specialty') !== ''],
+                ['patient-timeline', val('patient-timeline') !== ''],
+                ['visa-options-group', selectedVisa !== ''],
+                ['consent-box', document.getElementById('patient-consent').checked]
+            ];
+            let first = null;
+            checks.forEach(([id, ok]) => {
+                if (showErrors) setFieldError(id, ok ? '' : extraText[currentLang].err[id]);
+                if (!ok && !first) first = id;
+            });
+            return first;
+        }
+
+        // BILINGUAL RENDER FUNCTION
+        function applyLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+            const t = dict[lang];
+
+            // Title & Meta
+            document.title = t.pageTitle;
+            document.getElementById('lang-btn-label').textContent = lang === 'ar' ? 'English' : 'عربي';
+
+            // Navbar
+            document.getElementById('nav-brand-sub').textContent = t.brandSub;
+            document.getElementById('nav-tagline').textContent = t.tagline;
+            document.getElementById('nav-link-about').textContent = t.navAbout;
+            document.getElementById('nav-link-journey').textContent = t.navJourney;
+            document.getElementById('nav-link-centers').textContent = t.navCenters;
+            document.getElementById('nav-link-faq').textContent = t.navFaq;
+            document.getElementById('nav-cta-text').textContent = t.navCta;
+            document.getElementById('nav-book-text').textContent = t.navBook;
+            document.getElementById('nav-book-short').textContent = t.navBookShort;
+            document.getElementById('card-status').textContent = t.cardStatus;
+
+            // Hero
+            document.getElementById('hero-badge').textContent = t.heroBadge;
+            document.getElementById('hero-title').innerHTML = t.heroTitle;
+            document.getElementById('hero-description').innerHTML = t.heroDesc;
+            document.getElementById('stat-1-label').textContent = t.stat1;
+            document.getElementById('stat-2-label').textContent = t.stat2;
+            document.getElementById('stat-3-label').textContent = t.stat3;
+            document.getElementById('hero-btn-primary').textContent = t.heroPrimaryBtn;
+            document.getElementById('hero-btn-secondary').textContent = t.heroSecondaryBtn;
+
+            // Hero Card
+            document.getElementById('card-quick-title').innerHTML = `<i class="fa-solid fa-gem"></i> ${t.cardQuickTitle}`;
+            document.getElementById('card-quick-subtitle').textContent = t.cardQuickSubtitle;
+            document.getElementById('feat-1').textContent = t.feat1;
+            document.getElementById('feat-2').textContent = t.feat2;
+            document.getElementById('feat-3').textContent = t.feat3;
+            document.getElementById('feat-4').textContent = t.feat4;
+            document.getElementById('card-quick-btn').textContent = t.cardQuickBtn;
+
+            // Dr Morhaf Leadership Section
+            document.getElementById('dr-img-name').textContent = t.drImgName;
+            document.getElementById('dr-img-title').textContent = t.drImgTitle;
+            document.getElementById('about-badge').textContent = t.aboutBadge;
+            document.getElementById('about-title').innerHTML = t.aboutTitle;
+            document.getElementById('about-bio').innerHTML = t.aboutBio;
+
+            // Render Credentials (STRICT SINGLE LANGUAGE ONLY - NO STACKING)
+            const credContainer = document.getElementById('credentials-container');
+            credContainer.innerHTML = '';
+            drCredentials[lang].forEach((credText) => {
+                const credCard = document.createElement('div');
+                credCard.className = 'glass-card-dark p-3.5 rounded-2xl flex items-center gap-3.5 border border-gold-500/25';
+                credCard.innerHTML = `
+                    <div class="w-8 h-8 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 border border-gold-500/30">
+                        <i class="fa-solid fa-award text-sm"></i>
+                    </div>
+                    <span class="text-xs sm:text-sm text-stone-200 font-medium">${credText}</span>
+                `;
+                credContainer.appendChild(credCard);
+            });
+
+            // Patient Journey
+            document.getElementById('journey-badge').textContent = t.journeyBadge;
+            document.getElementById('journey-title').textContent = t.journeyTitle;
+            document.getElementById('journey-subtitle').textContent = t.journeySubtitle;
+            document.getElementById('step1-title').textContent = t.step1Title;
+            document.getElementById('step1-desc').textContent = t.step1Desc;
+            document.getElementById('step2-title').textContent = t.step2Title;
+            document.getElementById('step2-desc').textContent = t.step2Desc;
+            document.getElementById('step3-title').textContent = t.step3Title;
+            document.getElementById('step3-desc').textContent = t.step3Desc;
+            document.getElementById('step4-title').textContent = t.step4Title;
+            document.getElementById('step4-desc').textContent = t.step4Desc;
+
+            // Discounts Banner
+            document.getElementById('disc-badge').textContent = t.discBadge;
+            document.getElementById('disc-title').textContent = t.discTitle;
+            document.getElementById('disc-desc').textContent = t.discDesc;
+            document.getElementById('disc-btn').textContent = t.discBtn;
+
+            // Centers
+            document.getElementById('centers-badge').textContent = t.centersBadge;
+            document.getElementById('centers-title').textContent = t.centersTitle;
+            document.getElementById('centers-subtitle').textContent = t.centersSubtitle;
+            renderCenters(lang);
+
+            // Concierge Form
+            document.getElementById('concierge-badge').textContent = t.conciergeBadge;
+            document.getElementById('concierge-title').textContent = t.conciergeTitle;
+            document.getElementById('concierge-subtitle').textContent = t.conciergeSubtitle;
+            document.getElementById('label-name').innerHTML = `${t.labelName}`;
+            document.getElementById('label-nationality').innerHTML = `${t.labelNationality}`;
+            document.getElementById('label-specialty').innerHTML = `${t.labelSpecialty}`;
+            document.getElementById('label-timeline').textContent = t.labelTimeline;
+            document.getElementById('label-visa').innerHTML = `${t.labelVisa}`;
+            document.getElementById('label-notes').textContent = t.labelNotes;
+
+            document.getElementById('patient-name').placeholder = t.placeholderName;
+            document.getElementById('nationality-search').placeholder = t.placeholderNat;
+            document.getElementById('patient-notes').placeholder = t.placeholderNotes;
+
+            // Populate Specialty & Timeline dropdowns (first option is a disabled placeholder so the field is truly required)
+            fillSelect('patient-specialty', specialtyOptions[lang], extraText[lang].placeholderSpec);
+            fillSelect('patient-timeline', timelineOptions[lang], extraText[lang].placeholderTime);
+
+            // Render Visa Options
+            renderVisaOptions(lang);
+
+            // Concierge Card
+            document.getElementById('card-preview-title').textContent = t.cardPreviewTitle;
+            document.getElementById('card-preview-status').textContent = t.cardPreviewStatus;
+            document.getElementById('preview-header').textContent = t.previewHeader;
+            document.getElementById('checklist-title').innerHTML = `<i class="fa-solid fa-list-check"></i> ${t.checklistTitle}`;
+            document.getElementById('btn-send-whatsapp').textContent = t.btnSendWhatsapp;
+
+            // FAQ
+            document.getElementById('faq-badge').textContent = t.faqBadge;
+            document.getElementById('faq-title').textContent = t.faqTitle;
+            document.getElementById('faq-subtitle').textContent = t.faqSubtitle;
+            renderFAQ(lang);
+
+            // Footer
+            document.getElementById('footer-bio').textContent = t.footerBio;
+            document.getElementById('footer-quick-links-title').textContent = t.footerQuickLinksTitle;
+            document.getElementById('footer-contact-title').textContent = t.footerContactTitle;
+            document.getElementById('footer-copyright').textContent = t.footerCopyright;
+
+
+            applyExtras(lang);
+
+            // Update hospital inquiry sentence automatically when switching language
+            if (selectedCenterId && lastCenterInquiryText) {
+                const notesEl = document.getElementById('patient-notes');
+                const translatedText = getCenterInquiryText(selectedCenterId, lang);
+                if (notesEl && translatedText && notesEl.value.includes(lastCenterInquiryText)) {
+                    notesEl.value = notesEl.value.replace(lastCenterInquiryText, translatedText);
+                    lastCenterInquiryText = translatedText;
+                }
+            }
+
+            // Refresh Combobox and Live WhatsApp Card
+            filterNationalities();
+            updateWhatsAppPreview();
+        }
+
+        function toggleLanguage() {
+            const nextLang = currentLang === 'ar' ? 'en' : 'ar';
+            applyLanguage(nextLang);
+        }
+
+        // RENDER FLAGSHIP CENTERS
+        let centerSliderCleanups = [];
+        function renderCenters(lang) {
+            const grid = document.getElementById('centers-grid');
+            centerSliderCleanups.forEach(fn => fn());
+            centerSliderCleanups = [];
+            grid.innerHTML = '';
+            const rtl = lang === 'ar';
+
+            flagshipCentersData.forEach((center, idx) => {
+                const card = document.createElement('div');
+                card.className = 'glass-card-light rounded-3xl overflow-hidden shadow-sm border border-gold-500/20 hover:border-gold-500/60 transition group flex flex-col justify-between w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)]';
+
+                const items = center.imgs.map(e => typeof e === 'string' ? { src: e } : e);
+                const many = items.length > 1;
+                const slides = items.map((it, i) =>
+                    `<img src="${it.src}" alt="${center.title[lang]} (${i + 1}/${items.length})" class="hc-slide${i === 0 ? ' is-active' : ''}"${it.page ? ` data-page="${it.page}"` : ''} ${i === 0 ? '' : 'loading="lazy"'} decoding="async">`).join('');
+                const credit = items[0] && items[0].page
+                    ? `<a class="hc-credit" href="${items[0].page}" target="_blank" rel="noopener">${lang === 'ar' ? 'صورة: ويكيميديا كومنز' : 'Photo: Wikimedia Commons'}</a>` : '';
+                const dots = many ? items.map((_, i) =>
+                    `<button type="button" class="hc-dot${i === 0 ? ' is-active' : ''}" aria-label="${lang === 'ar' ? 'الصورة' : 'Photo'} ${i + 1}"></button>`).join('') : '';
+                const navBtns = many ? `
+                            <button type="button" class="hc-nav hc-nav-left" data-dir="${rtl ? 1 : -1}" aria-label="${rtl ? 'الصورة التالية' : 'Previous photo'}"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button type="button" class="hc-nav hc-nav-right" data-dir="${rtl ? -1 : 1}" aria-label="${rtl ? 'الصورة السابقة' : 'Next photo'}"><i class="fa-solid fa-chevron-right"></i></button>
+                            <div class="hc-dots">${dots}</div>` : '';
+
+                card.innerHTML = `
+                    <div>
+                        <div class="hc-slider" role="group" aria-roledescription="carousel" aria-label="${center.title[lang]}">
+                            <div class="hc-ph" aria-hidden="true"><i class="fa-solid fa-hospital"></i><span>${center.title.en}</span></div>
+                            ${slides}
+                            <span class="hc-tag absolute top-3 ltr:right-3 rtl:left-3 bg-navy-900/90 text-gold-400 text-[10px] font-bold px-3 py-1 rounded-full backdrop-blur-md border border-gold-500/30">
+                                ${center.tag[lang]}
+                            </span>
+                            ${credit}
+                            ${navBtns}
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-navy-900 mb-2">${center.title[lang]}</h3>
+                            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">${center.desc[lang]}</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <a href="#concierge" onclick="inquireCenter(event, '${center.id}')" class="text-xs font-bold text-navy-900 hover:text-gold-600 flex items-center gap-1.5 transition">
+                            <span>${lang === 'ar' ? 'استفسر عن مواعيد هذا المركز' : 'Inquire for appointments'}</span>
+                            <i class="fa-solid ${lang === 'ar' ? 'fa-arrow-left' : 'fa-arrow-right'} text-[10px]"></i>
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+                initCenterSlider(card.querySelector('.hc-slider'), idx);
+            });
+        }
+
+        function getCenterInquiryText(centerId, lang) {
+            const center = flagshipCentersData.find(c => c.id === centerId);
+            if (!center) return '';
+            return lang === 'ar'
+                ? `أرغب بالاستفسار عن حجز موعد في: ${center.title.ar}`
+                : `I would like to inquire about booking an appointment at: ${center.title.en}`;
+        }
+
+        function inquireCenter(e, centerId) {
+            if (e) e.preventDefault();
+            const notesEl = document.getElementById('patient-notes');
+            const newText = getCenterInquiryText(centerId, currentLang);
+            if (!notesEl || !newText) return;
+
+            let currentVal = notesEl.value.trim();
+
+            if (lastCenterInquiryText && currentVal.includes(lastCenterInquiryText)) {
+                currentVal = currentVal.replace(lastCenterInquiryText, newText);
+            } else if (currentVal) {
+                currentVal = newText + '\n' + currentVal;
+            } else {
+                currentVal = newText;
+            }
+
+            selectedCenterId = centerId;
+            lastCenterInquiryText = newText;
+            notesEl.value = currentVal;
+
+            updateWhatsAppPreview();
+
+            document.getElementById('concierge').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            notesEl.classList.add('ring-2', 'ring-gold-500');
+            setTimeout(() => {
+                notesEl.focus({ preventScroll: true });
+                notesEl.classList.remove('ring-2', 'ring-gold-500');
+            }, 900);
+        }
+
+        // Auto-sliding photos inside one hospital card: pauses on hover/focus/touch, runs only while on screen, skips photos that fail to load
+        function initCenterSlider(root, offset) {
+            const slides = [...root.querySelectorAll('.hc-slide')];
+            const dots = [...root.querySelectorAll('.hc-dot')];
+            const credit = root.querySelector('.hc-credit');
+            let cur = 0, timer = null, paused = false, visible = false;
+            const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const ok = () => slides.map((_, i) => i).filter(i => !slides[i].dataset.broken);
+
+            // the credit link always points to the Commons page of the photo that is on screen (hidden for your own photos)
+            function syncCredit(i) {
+                if (!credit) return;
+                const el = slides[i];
+                const page = el && !el.dataset.broken ? el.dataset.page : '';
+                credit.hidden = !page;
+                if (page) credit.href = page;
+            }
+            function show(i) {
+                cur = i;
+                slides.forEach((el, k) => el.classList.toggle('is-active', k === i));
+                dots.forEach((d, k) => { d.classList.toggle('is-active', k === i); d.setAttribute('aria-current', k === i ? 'true' : 'false'); });
+                syncCredit(i);
+            }
+            function step(d) {
+                const list = ok();
+                if (list.length < 2) return;
+                show(list[(list.indexOf(cur) + d + list.length) % list.length]);
+            }
+            function stop() { clearInterval(timer); timer = null; }
+            function play() {
+                stop();
+                if (reduce || paused || !visible) return;
+                timer = setInterval(() => step(1), 4200 + (offset % 3) * 500);
+            }
+            function markBroken(el) {
+                const k = slides.indexOf(el);
+                el.dataset.broken = '1';
+                el.style.visibility = 'hidden'; // hide the browser's broken-image icon so the placeholder shows through
+                if (dots[k]) dots[k].hidden = true;
+                if (k === cur) { const list = ok(); if (list.length) show(list[0]); else syncCredit(k); }
+            }
+
+            slides.forEach(el => {
+                el.addEventListener('error', () => markBroken(el));
+                if (el.complete && el.naturalWidth === 0 && el.getAttribute('src')) markBroken(el);
+            });
+            if (slides.length < 2) return; // nothing to slide: one photo (or none) stays put
+            root.querySelectorAll('.hc-nav').forEach(b => b.addEventListener('click', () => { step(parseInt(b.dataset.dir, 10)); play(); }));
+            dots.forEach((d, k) => d.addEventListener('click', () => { show(k); play(); }));
+
+            root.addEventListener('mouseenter', () => { paused = true; stop(); });
+            root.addEventListener('mouseleave', () => { paused = false; play(); });
+            root.addEventListener('focusin', () => { paused = true; stop(); });
+            root.addEventListener('focusout', () => { paused = false; play(); });
+
+            // swipe on touch screens
+            let x0 = null;
+            root.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; paused = true; stop(); }, { passive: true });
+            root.addEventListener('touchend', e => {
+                if (x0 !== null) {
+                    const dx = e.changedTouches[0].clientX - x0;
+                    if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1);
+                }
+                x0 = null; paused = false; play();
+            }, { passive: true });
+
+            const io = new IntersectionObserver(entries => { visible = entries[0].isIntersecting; play(); }, { threshold: 0.35 });
+            io.observe(root);
+            centerSliderCleanups.push(() => { stop(); io.disconnect(); });
+        }
+
+        // RENDER VISA OPTIONS
+        function renderVisaOptions(lang) {
+            const group = document.getElementById('visa-options-group');
+            group.innerHTML = '';
+
+            visaOptions[lang].forEach(opt => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = `p-3 rounded-xl border text-xs font-medium text-center transition flex items-center justify-center gap-2 ${selectedVisa === opt.id ? 'bg-navy-900 text-gold-400 border-gold-500 font-bold shadow-md' : 'bg-white/80 text-navy-900 border-stone-300 hover:border-gold-500'}`;
+                btn.onclick = () => {
+                    selectedVisa = opt.id;
+                    renderVisaOptions(lang);
+                    updateWhatsAppPreview();
+                };
+                btn.innerHTML = `
+                    <i class="fa-solid ${selectedVisa === opt.id ? 'fa-circle-check text-gold-400' : 'fa-circle text-stone-300'} text-sm"></i>
+                    <span>${opt.label}</span>
+                `;
+                group.appendChild(btn);
+            });
+        }
+
+        // SEARCHABLE NATIONALITY COMBOBOX LOGIC
+        function showNationalityDropdown() {
+            document.getElementById('nationality-dropdown').classList.remove('hidden');
+        }
+
+        function filterNationalities() {
+            const input = document.getElementById('nationality-search');
+            const filter = input.value.toLowerCase().trim();
+            const dropdown = document.getElementById('nationality-dropdown');
+            dropdown.innerHTML = '';
+
+            const matches = nationalities.filter(n => 
+                n.ar.toLowerCase().includes(filter) || 
+                n.en.toLowerCase().includes(filter)
+            );
+
+            if (matches.length === 0) {
+                const customEl = document.createElement('div');
+                customEl.className = 'px-3 py-2 text-xs text-stone-600 italic cursor-pointer hover:bg-stone-100 rounded-lg';
+                customEl.textContent = currentLang === 'ar' ? `استخدام: "${input.value}"` : `Use: "${input.value}"`;
+                customEl.onclick = () => {
+                    dropdown.classList.add('hidden');
+                    updateWhatsAppPreview();
+                };
+                dropdown.appendChild(customEl);
+            } else {
+                matches.forEach(n => {
+                    const item = document.createElement('div');
+                    item.className = 'px-3.5 py-2 text-xs text-navy-900 hover:bg-gold-500/15 hover:text-gold-700 cursor-pointer rounded-lg flex justify-between items-center transition';
+                    const displayLabel = currentLang === 'ar' ? `${n.ar} (${n.en})` : `${n.en} (${n.ar})`;
+                    item.textContent = displayLabel;
+                    item.onclick = () => {
+                        input.value = currentLang === 'ar' ? n.ar : n.en;
+                        dropdown.classList.add('hidden');
+                        updateWhatsAppPreview();
+                    };
+                    dropdown.appendChild(item);
+                });
+            }
+        }
+
+        // CLOSE COMBOBOX ON OUTSIDE CLICK
+        document.addEventListener('click', function(e) {
+            const container = document.getElementById('nationality-search');
+            const dropdown = document.getElementById('nationality-dropdown');
+            if (container && dropdown && !container.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        // RENDER FAQ ACCORDION
+        function renderFAQ(lang) {
+            const container = document.getElementById('faq-accordion-container');
+            container.innerHTML = '';
+
+            faqData.forEach((item, idx) => {
+                const acc = document.createElement('div');
+                acc.className = 'glass-card-light rounded-2xl border border-gold-500/20 overflow-hidden transition shadow-sm';
+                
+                acc.innerHTML = `
+                    <button type="button" onclick="toggleFaq(${idx})" aria-expanded="false" aria-controls="faq-ans-${idx}" class="w-full p-5 text-right rtl:text-right ltr:text-left flex items-center justify-between gap-4 focus:outline-none">
+                        <span class="text-sm sm:text-base font-bold text-navy-900 flex items-center gap-2">
+                            <i class="fa-solid fa-circle-question text-gold-600 text-sm"></i>
+                            ${item.q[lang]}
+                        </span>
+                        <i id="faq-icon-${idx}" class="fa-solid fa-chevron-down text-xs text-stone-400 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-ans-${idx}" class="faq-answer text-xs sm:text-sm text-slate-700 leading-relaxed" role="region">
+                        <div class="faq-answer-inner">
+                            <div class="px-5 pb-5 border-t border-stone-200/50">
+                                <p class="pt-3">${item.a[lang]}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(acc);
+            });
+        }
+
+        function toggleFaq(idx) {
+            const ans = document.getElementById(`faq-ans-${idx}`);
+            const icon = document.getElementById(`faq-icon-${idx}`);
+            const isOpen = ans.classList.contains('open');
+
+            // Close all
+            document.querySelectorAll('.faq-answer').forEach(el => el.classList.remove('open'));
+            document.querySelectorAll('[id^="faq-icon-"]').forEach(el => el.classList.remove('rotate-180'));
+            document.querySelectorAll('#faq-accordion-container button[aria-expanded]').forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+            if (!isOpen) {
+                ans.classList.add('open');
+                icon.classList.add('rotate-180');
+                document.querySelector(`#faq-accordion-container button[aria-controls="faq-ans-${idx}"]`).setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        // ===== LUXURY WHATSAPP MESSAGE (WhatsApp formatting: *bold*  _italic_) =====
+        // user text is stripped of WhatsApp formatting characters so it can never break the layout
+        function waClean(v) { return String(v || '').replace(/[*_~`]/g, '').trim(); }
+
+        function buildWhatsAppMessage() {
+            const ar = currentLang === 'ar';
+            const ns = ar ? '[لم يُحدد بعد]' : '[Not specified yet]';
+            const name = waClean(document.getElementById('patient-name').value) || ns;
+            const nationality = waClean(document.getElementById('nationality-search').value) || ns;
+            const specialty = waClean(document.getElementById('patient-specialty').value) || ns;
+            const timeline = waClean(document.getElementById('patient-timeline').value) || ns;
+            const visaObj = visaOptions[currentLang].find(v => v.id === selectedVisa);
+            const visa = visaObj ? waClean(visaObj.label) : ns;
+            const notes = waClean(document.getElementById('patient-notes').value);
+
+            const L = ar ? '\u200F' : '';                       // keeps every Arabic line right-aligned
+            const rule = '━━━━━━━━━━━━━━━━';
+            const notesFmt = notes.replace(/\r?\n+/g, '\n' + L);
+            const rows = ar ? [
+                `👤 *الاسم:* ${name}`,
+                `🌍 *الجنسية / الإقامة:* ${nationality}`,
+                `🩺 *التخصص الطبي:* ${specialty}`,
+                `⏳ *الإطار الزمني:* ${timeline}`,
+                `🛂 *التأشيرة البريطانية:* ${visa}`,
+                ...(notes ? [`📝 *تفاصيل الحالة:* ${notesFmt}`] : [])
+            ] : [
+                `👤 *Patient:* ${name}`,
+                `🌍 *Nationality / Residence:* ${nationality}`,
+                `🩺 *Specialty:* ${specialty}`,
+                `⏳ *Timeline:* ${timeline}`,
+                `🛂 *UK Visa Status:* ${visa}`,
+                ...(notes ? [`📝 *Case Details:* ${notesFmt}`] : [])
+            ];
+
+            const head = [rule, '✦ *VELLORA* ✦', '_Medical Travel Concierge_', rule];
+            const intro = ar ? [
+                'السلام عليكم ورحمة الله وبركاته 🤍',
+                'أودّ طلب استشارة وتنسيق طبي مع منصة *VELLORA* في لندن، وفيما يلي بياناتي:'
+            ] : [
+                'Hello VELLORA Concierge 🤍',
+                'I would like to request a private medical consultation and coordination in London. My details are below:'
+            ];
+            const outro = ar ? [
+                'نرجو التكرّم بالتواصل معي لتحديد الموعد والخطوات القادمة.',
+                'شاكرين لكم حسن تعاونكم 🤍'
+            ] : [
+                'Kindly contact me to arrange the appointment and next steps.',
+                'With sincere thanks 🤍'
+            ];
+
+            const withL = arr => arr.map(x => L + x);
+            return [
+                ...withL(head), '',
+                ...withL(intro), '',
+                ...withL(rows), '',
+                L + rule,
+                ...withL(outro)
+            ].join('\n');
+        }
+
+        // Preview shows the message the way WhatsApp will render it
+        function renderWhatsAppPreview(msg) {
+            const esc = msg.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return esc
+                .replace(/\*([^*\n]+)\*/g, '<strong class="text-gold-400 font-bold">$1</strong>')
+                .replace(/_([^_\n]+)_/g, '<em class="text-stone-300">$1</em>');
+        }
+
+        // UPDATE WHATSAPP LIVE PREVIEW & DYNAMIC CHECKLIST
+        function updateWhatsAppPreview() {
+            if (formSubmitAttempted) validateForm(true);
+            const ns = currentLang === 'ar' ? '[لم يُحدد بعد]' : '[Not specified yet]';
+            const name = document.getElementById('patient-name').value.trim();
+            const nationality = document.getElementById('nationality-search').value.trim();
+            const specialty = document.getElementById('patient-specialty').value;
+            const timeline = document.getElementById('patient-timeline').value;
+            const notes = document.getElementById('patient-notes').value.trim();
+
+            const message = buildWhatsAppMessage();
+            document.getElementById('whatsapp-message-box').innerHTML = renderWhatsAppPreview(message);
+
+            // Dynamic Checklist update
+            const checklistContainer = document.getElementById('checklist-items');
+            checklistContainer.innerHTML = '';
+            
+            const checkItems = [];
+            if (currentLang === 'ar') {
+                checkItems.push("تقرير طبي حديث أو ملخص الحالة (Medical Report)");
+                checkItems.push("نسخة من جواز السفر للمريض والمرافقين");
+                if (selectedVisa === 'no_visa') {
+                    checkItems.push("صورة عن جوازات السفر صالحة لمدة 6 أشهر على الأقل لاستخراج الفيزا الطبية");
+                }
+                if (specialty.includes("عيون") || specialty.includes("Ophthalmology")) {
+                    checkItems.push("صور الفحوصات والشبكية/القرنية إن توفرت (OCT Scan / Topography)");
+                }
+            } else {
+                checkItems.push("Recent Medical Report or Clinical Summary");
+                checkItems.push("Passport copy for patient & accompanying family");
+                if (selectedVisa === 'no_visa') {
+                    checkItems.push("Valid passport copy (at least 6 months validity) for UK medical visa support");
+                }
+                if (specialty.includes("Ophthalmology") || specialty.includes("Eye")) {
+                    checkItems.push("Recent Ophthalmic Scans / OCT / Topography if available");
+                }
+            }
+
+            checkItems.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'flex items-center gap-2';
+                li.innerHTML = `<i class="fa-solid fa-check text-gold-400 text-[10px]"></i> <span>${item}</span>`;
+                checklistContainer.appendChild(li);
+            });
+        }
+
+        // DIRECT 1-CLICK WHATSAPP LAUNCH
+        // Opens the chat itself with the message already filled in (no wa.me "Continue to chat" page).
+        function sendToWhatsAppDirect() {
+            formSubmitAttempted = true;
+            const firstBad = validateForm(true);
+            if (firstBad) {
+                const el = document.getElementById(firstBad);
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                if (['INPUT', 'SELECT', 'TEXTAREA'].includes(el.tagName)) el.focus({ preventScroll: true });
+                return;
+            }
+            launchWhatsApp(buildWhatsAppMessage());
+        }
+
+        // Opens the WhatsApp chat directly (no wa.me "Continue to chat" page). Empty text = just open the chat.
+        function launchWhatsApp(message) {
+            const phone = "963930888475";
+            const q = message ? `&text=${encodeURIComponent(message)}` : '';
+            const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) ||
+                             (navigator.maxTouchPoints > 1 && /Macintosh/i.test(navigator.userAgent));
+
+            if (isMobile) {
+                // Deep link straight into the WhatsApp app chat; falls back to the web link if the app isn't installed
+                const fallback = setTimeout(() => {
+                    if (!document.hidden) location.href = `https://api.whatsapp.com/send?phone=${phone}${q}`;
+                }, 1800);
+                document.addEventListener('visibilitychange', () => { if (document.hidden) clearTimeout(fallback); }, { once: true });
+                window.addEventListener('pagehide', () => clearTimeout(fallback), { once: true });
+                location.href = `whatsapp://send?phone=${phone}${q}`;
+            } else {
+                // Desktop: open the WhatsApp desktop app in this same tab (no extra browser tab)
+                const webUrl = `https://web.whatsapp.com/send?phone=${phone}${q}`;
+                let handled = false;
+                const mark = () => { handled = true; };
+                window.addEventListener('blur', mark, { once: true });
+                document.addEventListener('visibilitychange', () => { if (document.hidden) handled = true; }, { once: true });
+                location.href = `whatsapp://send?phone=${phone}${q}`;
+                // If nothing happened (app not installed) offer WhatsApp Web, without forcing a new tab
+                setTimeout(() => {
+                    window.removeEventListener('blur', mark);
+                    if (!handled) showWhatsAppWebHint(webUrl);
+                }, 3500);
+            }
+        }
+
+        function showWhatsAppWebHint(webUrl) {
+            if (document.getElementById('wa-web-hint')) return;
+            const ar = document.documentElement.lang === 'ar';
+            const box = document.createElement('div');
+            box.id = 'wa-web-hint';
+            box.setAttribute('role', 'status');
+            box.style.cssText = 'position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;max-width:92vw;' +
+                'background:#081B2E;color:#fff;border:1px solid #C49A52;border-radius:14px;padding:12px 16px;' +
+                'box-shadow:0 18px 50px -12px rgba(0,0,0,.55);font-size:13px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center';
+            const msg = document.createElement('span');
+            msg.textContent = ar ? 'لم يُفتح تطبيق واتساب؟' : "WhatsApp didn't open?";
+            const link = document.createElement('a');
+            link.href = webUrl; link.target = '_blank'; link.rel = 'noopener';
+            link.textContent = ar ? 'افتح واتساب ويب' : 'Open WhatsApp Web';
+            link.style.cssText = 'background:#C49A52;color:#040F1B;font-weight:700;padding:6px 12px;border-radius:10px;text-decoration:none';
+            const close = document.createElement('button');
+            close.type = 'button'; close.textContent = '×'; close.setAttribute('aria-label', 'close');
+            close.style.cssText = 'color:#BCAB92;font-size:18px;line-height:1;background:none;border:0;cursor:pointer';
+            const remove = () => box.remove();
+            close.onclick = remove; link.addEventListener('click', () => setTimeout(remove, 200));
+            box.append(msg, link, close);
+            document.body.appendChild(box);
+            setTimeout(remove, 15000);
+        }
+
+        // Every plain WhatsApp button on the page (header, footer) opens the chat the same direct way
+        document.addEventListener('click', function (e) {
+            const link = e.target.closest('a[href*="wa.me/"]');
+            if (!link) return;
+            e.preventDefault();
+            launchWhatsApp('');
+        });
+
+        // INITIALIZATION ON WINDOW LOAD
+        window.onload = function() {
+            // Apply Default Arabic Language
+            const qLang = new URLSearchParams(location.search).get('lang');
+            applyLanguage(qLang === 'en' ? 'en' : 'ar');
+        };
+    </script>
+</body>
+</html>
