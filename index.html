@@ -1742,8 +1742,8 @@
     </section>
 
     <!-- =========================================================
-         7. UNIFIED 3-STEP MEDICAL DOSSIER BUILDER (#studio)
-            Zero clutter: 1 guided card -> live luxury dossier -> full WhatsApp dispatch
+         7. UNIFIED SINGLE-PAGE MEDICAL DOSSIER BUILDER (#studio)
+            All fields visible in one effortless flow — 3 clear numbered sections + live dossier card
          ========================================================= -->
     <section id="studio" class="scroll-mt-32 py-16 md:py-24 bg-canvas border-b border-hairline">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1754,164 +1754,144 @@
                     Bespoke Medical Dossier Builder
                 </span>
                 <h2 id="studio-title" class="font-display text-3xl sm:text-4xl text-main">
-                    جهّز ملفك العلاجي في 3 خطوات سريعة
+                    جهّز ملفك العلاجي في صفحة واحدة واضحة
                 </h2>
                 <p id="studio-subtitle" class="text-xs sm:text-sm text-secondary leading-relaxed">
-                    كل اختيار تحدّده هنا يُضاف تلقائياً إلى بطاقة ملفك ورسالة واتساب الجاهزة للإرسال إلى فريقنا الطبي في بريطانيا.
+                    جميع الحقول أمامك مباشرة دون تنقّل بين بطاقات؛ كل اختيار يُضاف تلقائياً إلى بطاقة ملفك ورسالة واتساب الجاهزة للإرسال.
                 </p>
             </div>
 
-            <!-- Main 2-Column Studio: 3-Step Interactive Builder (7 cols) + Live Dossier Card (5 cols) -->
+            <!-- Main 2-Column Studio: Single-Page Flowing Form (7 cols) + Live Dossier Card (5 cols) -->
             <div id="concierge-form-anchor" class="scroll-mt-36 grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-8 items-start reveal">
 
-                <!-- 3-Step Interactive Form Card -->
+                <!-- Single-Page Flowing Form Card (All Sections Always Visible) -->
                 <div class="lg:col-span-7 arch-frame p-5 sm:p-8">
                     <span class="arch-corner arch-corner-tl" aria-hidden="true"></span>
                     <span class="arch-corner arch-corner-tr" aria-hidden="true"></span>
                     <span class="arch-corner arch-corner-bl" aria-hidden="true"></span>
                     <span class="arch-corner arch-corner-br" aria-hidden="true"></span>
 
-                    <div class="relative z-10 space-y-6">
-                        <!-- Clickable 3-Step Navigation Bar -->
-                        <div class="grid grid-cols-3 gap-2" role="tablist" aria-label="Dossier Steps">
-                            <button type="button" id="studio-step-btn-1" onclick="goToStudioStep(1)" role="tab" aria-selected="true" class="studio-step-pill is-active">
-                                <span class="step-badge">1</span>
-                                <span id="step-pill-1" class="truncate">بياناتك</span>
-                            </button>
-                            <button type="button" id="studio-step-btn-2" onclick="goToStudioStep(2)" role="tab" aria-selected="false" class="studio-step-pill">
-                                <span class="step-badge">2</span>
-                                <span id="step-pill-2" class="truncate">الرحلة والضيافة</span>
-                            </button>
-                            <button type="button" id="studio-step-btn-3" onclick="goToStudioStep(3)" role="tab" aria-selected="false" class="studio-step-pill">
-                                <span class="step-badge">3</span>
-                                <span id="step-pill-3" class="truncate">التأكيد والإرسال</span>
-                            </button>
-                        </div>
+                    <form id="concierge-form" novalidate onsubmit="event.preventDefault(); sendToWhatsAppDirect();" class="relative z-10 divide-y border-hairline">
 
-                        <form id="concierge-form" novalidate onsubmit="event.preventDefault(); sendToWhatsAppDirect();" class="space-y-5">
+                        <!-- SECTION 01: Patient & Specialty (Always Visible) -->
+                        <div id="studio-panel-1" class="pb-7 space-y-4">
+                            <div class="flex items-center justify-between gap-2">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-7 h-7 rounded-full bg-[var(--gold-soft)] border border-gold-line text-gold font-serif-en text-sm font-bold inline-flex items-center justify-center shrink-0">01</span>
+                                    <h3 id="sec-title-1" class="font-display text-lg sm:text-xl text-main">البيانات الأساسية والتخصص</h3>
+                                </div>
+                                <span id="sec-badge-1" class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-subtle border border-hairline text-muted">مطلوب</span>
+                            </div>
 
-                            <!-- STEP 1: Patient & Specialty -->
-                            <div id="studio-panel-1" class="space-y-5">
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div>
-                                        <label id="label-name" for="patient-name" class="block text-xs font-bold text-main mb-1.5">الاسم الكامل <span class="text-rose-500">*</span></label>
-                                        <input type="text" id="patient-name" required autocomplete="name" class="arch-input" placeholder="مثال: عبد الله أحمد" oninput="updateWhatsAppPreview()">
-                                    </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label id="label-name" for="patient-name" class="block text-xs font-bold text-main mb-1.5">الاسم الكامل <span class="text-rose-500">*</span></label>
+                                    <input type="text" id="patient-name" required autocomplete="name" class="arch-input" placeholder="مثال: عبد الله أحمد" oninput="updateWhatsAppPreview()">
+                                </div>
 
+                                <div class="relative">
+                                    <label id="label-nationality" for="nationality-search" class="block text-xs font-bold text-main mb-1.5">الجنسية / بلد الإقامة <span class="text-rose-500">*</span></label>
                                     <div class="relative">
-                                        <label id="label-nationality" for="nationality-search" class="block text-xs font-bold text-main mb-1.5">الجنسية / بلد الإقامة <span class="text-rose-500">*</span></label>
-                                        <div class="relative">
-                                            <input type="text" id="nationality-search" required autocomplete="off" class="arch-input ltr:pr-9 rtl:pl-9" placeholder="ابحث أو اختر الجنسية..."
-                                                   onfocus="showNationalityDropdown()" oninput="filterNationalities(); updateWhatsAppPreview();">
-                                            <button type="button" id="nationality-clear-btn" onclick="clearNationalityInput()" aria-label="Clear"
-                                                    class="hidden absolute ltr:right-8 rtl:left-8 top-2.5 w-6 h-6 rounded-full text-muted hover:text-main items-center justify-center text-xs cursor-pointer">
-                                                <i class="fa-solid fa-xmark"></i>
-                                            </button>
-                                            <i class="fa-solid fa-chevron-down absolute ltr:right-3 rtl:left-3 top-3.5 text-muted text-xs pointer-events-none"></i>
-                                        </div>
-                                        <div id="nationality-dropdown" class="hidden absolute inset-x-0 top-full mt-1 bg-surface border border-gold-line shadow-xl max-h-56 overflow-y-auto z-40 p-1 rounded-md"></div>
+                                        <input type="text" id="nationality-search" required autocomplete="off" class="arch-input ltr:pr-9 rtl:pl-9" placeholder="ابحث أو اختر الجنسية..."
+                                               onfocus="showNationalityDropdown()" oninput="filterNationalities(); updateWhatsAppPreview();">
+                                        <button type="button" id="nationality-clear-btn" onclick="clearNationalityInput()" aria-label="Clear"
+                                                class="hidden absolute ltr:right-8 rtl:left-8 top-2.5 w-6 h-6 rounded-full text-muted hover:text-main items-center justify-center text-xs cursor-pointer">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                        <i class="fa-solid fa-chevron-down absolute ltr:right-3 rtl:left-3 top-3.5 text-muted text-xs pointer-events-none"></i>
                                     </div>
+                                    <div id="nationality-dropdown" class="hidden absolute inset-x-0 top-full mt-1 bg-surface border border-gold-line shadow-xl max-h-56 overflow-y-auto z-40 p-1 rounded-md"></div>
                                 </div>
+                            </div>
 
-                                <!-- Instant Smart UK Entry Hint (replaces separate visa checker tool) -->
-                                <div id="smart-visa-hint" class="hidden px-3.5 py-2.5 rounded-md bg-subtle border border-gold-line text-xs text-main flex items-center gap-2.5">
-                                    <i class="fa-solid fa-passport text-gold shrink-0"></i>
-                                    <span id="smart-visa-hint-text"></span>
-                                </div>
+                            <!-- Instant UK Entry Note -->
+                            <div id="smart-visa-hint" class="hidden px-3.5 py-2.5 rounded-md bg-subtle border border-gold-line text-xs text-main flex items-center gap-2.5">
+                                <i class="fa-solid fa-passport text-gold shrink-0"></i>
+                                <span id="smart-visa-hint-text"></span>
+                            </div>
 
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-end">
                                 <div>
                                     <label id="label-specialty" for="patient-specialty" class="block text-xs font-bold text-main mb-1.5">التخصص الطبي المطلوب <span class="text-rose-500">*</span></label>
                                     <select id="patient-specialty" required class="arch-input" onchange="updateWhatsAppPreview()"></select>
                                 </div>
-
                                 <div>
-                                    <label id="label-consult-mode" class="block text-xs font-bold text-main mb-2">نوع الاستشارة المطلوبة</label>
-                                    <div id="consult-mode-group" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5"></div>
-                                </div>
-
-                                <div class="pt-2 flex justify-end">
-                                    <button type="button" onclick="goToStudioStep(2)" class="btn-editorial px-6 py-3 text-xs font-bold inline-flex items-center gap-2">
-                                        <span id="btn-next-1">التالي: تفاصيل الرحلة والضيافة</span>
-                                        <i class="fa-solid fa-arrow-left dir-rtl-only text-[11px]"></i>
-                                        <i class="fa-solid fa-arrow-right dir-ltr-only text-[11px]"></i>
-                                    </button>
+                                    <label id="label-timeline" for="patient-timeline" class="block text-xs font-bold text-main mb-1.5">الإطار الزمني للسفر <span class="text-rose-500">*</span></label>
+                                    <select id="patient-timeline" required class="arch-input" onchange="updateWhatsAppPreview()"></select>
                                 </div>
                             </div>
 
-                            <!-- STEP 2: Trip, Visa & VIP Concierge -->
-                            <div id="studio-panel-2" class="hidden space-y-5">
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div>
-                                        <label id="label-timeline" for="patient-timeline" class="block text-xs font-bold text-main mb-1.5">الإطار الزمني للسفر <span class="text-rose-500">*</span></label>
-                                        <select id="patient-timeline" required class="arch-input" onchange="updateWhatsAppPreview()"></select>
-                                    </div>
-                                    <div>
-                                        <label id="label-companions" class="block text-xs font-bold text-main mb-1.5">المسافرون والمرافقون</label>
-                                        <div id="studio-companions-group" class="grid grid-cols-3 gap-1.5"></div>
-                                    </div>
-                                </div>
+                            <div>
+                                <label id="label-consult-mode" class="block text-xs font-bold text-main mb-2">نوع الاستشارة المطلوبة</label>
+                                <div id="consult-mode-group" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5"></div>
+                            </div>
+                        </div>
 
-                                <div>
-                                    <label id="label-visa" class="block text-xs font-bold text-main mb-2">حالة التأشيرة البريطانية <span class="text-rose-500">*</span></label>
-                                    <div id="visa-options-group" class="grid grid-cols-1 sm:grid-cols-3 gap-2"></div>
+                        <!-- SECTION 02: Visa, Travelers & VIP Concierge (Always Visible) -->
+                        <div id="studio-panel-2" class="py-7 space-y-4">
+                            <div class="flex items-center justify-between gap-2">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-7 h-7 rounded-full bg-[var(--gold-soft)] border border-gold-line text-gold font-serif-en text-sm font-bold inline-flex items-center justify-center shrink-0">02</span>
+                                    <h3 id="sec-title-2" class="font-display text-lg sm:text-xl text-main">التأشيرة وتفاصيل الرحلة والضيافة</h3>
                                 </div>
-
-                                <div>
-                                    <label id="label-concierge-services" class="block text-xs font-bold text-main mb-2">خدمات الكونسيرج والضيافة المطلوبة (اختياري)</label>
-                                    <div id="studio-services-group" class="grid grid-cols-2 gap-2"></div>
-                                </div>
-
-                                <div class="pt-2 flex items-center justify-between gap-3">
-                                    <button type="button" onclick="goToStudioStep(1)" class="btn-outline-editorial px-4 py-2.5 text-xs font-bold inline-flex items-center gap-2">
-                                        <i class="fa-solid fa-arrow-right dir-rtl-only text-[11px]"></i>
-                                        <i class="fa-solid fa-arrow-left dir-ltr-only text-[11px]"></i>
-                                        <span id="btn-prev-2">السابق</span>
-                                    </button>
-                                    <button type="button" onclick="goToStudioStep(3)" class="btn-editorial px-6 py-3 text-xs font-bold inline-flex items-center gap-2">
-                                        <span id="btn-next-2">التالي: التقارير والإرسال</span>
-                                        <i class="fa-solid fa-arrow-left dir-rtl-only text-[11px]"></i>
-                                        <i class="fa-solid fa-arrow-right dir-ltr-only text-[11px]"></i>
-                                    </button>
-                                </div>
+                                <span id="sec-badge-2" class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-subtle border border-hairline text-muted">مطلوب</span>
                             </div>
 
-                            <!-- STEP 3: Ready Documents, Notes & Consent -->
-                            <div id="studio-panel-3" class="hidden space-y-5">
-                                <div>
-                                    <label id="label-ready-docs" class="block text-xs font-bold text-main mb-2">المستندات المتوفرة لديك حالياً (اختياري)</label>
-                                    <div id="studio-docs-group" class="grid grid-cols-1 sm:grid-cols-2 gap-2"></div>
-                                </div>
-
-                                <div>
-                                    <label id="label-notes" for="patient-notes" class="block text-xs font-bold text-main mb-1.5">تفاصيل الحالة الطبية أو ملاحظات إضافية (اختياري)</label>
-                                    <textarea id="patient-notes" rows="3" class="arch-input" placeholder="اكتب هنا أي تفاصيل تساعد الطبيب في الفرز الأولي..." oninput="updateWhatsAppPreview()"></textarea>
-                                </div>
-
-                                <label id="consent-box" class="flex items-start gap-3 p-3.5 border border-hairline bg-subtle rounded-md cursor-pointer">
-                                    <input type="checkbox" id="patient-consent" required class="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-[#C49A52]" onchange="updateWhatsAppPreview()">
-                                    <span id="consent-text" class="text-xs leading-relaxed text-secondary">أوافق على <a href="privacy.html?lang=ar" target="_blank" rel="noopener" class="font-bold text-main underline decoration-[#C49A52] underline-offset-4">سياسة الخصوصية</a> وأفهم أن بياناتي ومعلوماتي الطبية ستُرسل إلى فريق VELLORA عبر واتساب لأجل التنسيق الطبي. <span class="text-rose-500">*</span></span>
-                                </label>
-
-                                <p id="medical-disclaimer-note" class="text-[11px] text-muted leading-relaxed flex items-start gap-2">
-                                    <i class="fa-solid fa-circle-info text-gold mt-0.5 shrink-0"></i>
-                                    <span id="medical-disclaimer-text">تنويه طبي: الفرز الأولي يهدف لاختيار الاستشاري والمستشفى الأنسب في بريطانيا ولا يُعدّ تشخيصاً طبياً بديلاً عن الفحص السريري؛ في الحالات الطارئة يرجى التواصل فوراً مع خدمات الطوارئ المحلية.</span>
-                                </p>
-
-                                <div class="pt-1 flex items-center justify-between gap-3">
-                                    <button type="button" onclick="goToStudioStep(2)" class="btn-outline-editorial px-4 py-2.5 text-xs font-bold inline-flex items-center gap-2">
-                                        <i class="fa-solid fa-arrow-right dir-rtl-only text-[11px]"></i>
-                                        <i class="fa-solid fa-arrow-left dir-ltr-only text-[11px]"></i>
-                                        <span id="btn-prev-3">السابق</span>
-                                    </button>
-                                    <button type="button" onclick="sendToWhatsAppDirect()" class="btn-whatsapp px-6 py-3 text-xs sm:text-sm font-bold inline-flex items-center gap-2 shadow-sm">
-                                        <i class="fa-brands fa-whatsapp text-lg"></i>
-                                        <span id="btn-send-step3">إرسال الملف عبر واتساب</span>
-                                    </button>
-                                </div>
+                            <div>
+                                <label id="label-visa" class="block text-xs font-bold text-main mb-2">حالة التأشيرة البريطانية <span class="text-rose-500">*</span></label>
+                                <div id="visa-options-group" class="grid grid-cols-1 sm:grid-cols-3 gap-2"></div>
                             </div>
 
-                        </form>
-                    </div>
+                            <div>
+                                <label id="label-companions" class="block text-xs font-bold text-main mb-2">المسافرون والمرافقون</label>
+                                <div id="studio-companions-group" class="grid grid-cols-3 gap-2"></div>
+                            </div>
+
+                            <div>
+                                <label id="label-concierge-services" class="block text-xs font-bold text-main mb-2">خدمات الكونسيرج والضيافة المطلوبة (اختياري)</label>
+                                <div id="studio-services-group" class="grid grid-cols-2 gap-2"></div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 03: Ready Documents, Notes & Consent (Always Visible) -->
+                        <div id="studio-panel-3" class="pt-7 space-y-4">
+                            <div class="flex items-center justify-between gap-2">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="w-7 h-7 rounded-full bg-[var(--gold-soft)] border border-gold-line text-gold font-serif-en text-sm font-bold inline-flex items-center justify-center shrink-0">03</span>
+                                    <h3 id="sec-title-3" class="font-display text-lg sm:text-xl text-main">المستندات والملاحظات والتأكيد</h3>
+                                </div>
+                                <span id="sec-badge-3" class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-subtle border border-hairline text-muted">تأكيد الخصوصية</span>
+                            </div>
+
+                            <div>
+                                <label id="label-ready-docs" class="block text-xs font-bold text-main mb-2">المستندات المتوفرة لديك حالياً (اختياري)</label>
+                                <div id="studio-docs-group" class="grid grid-cols-1 sm:grid-cols-2 gap-2"></div>
+                            </div>
+
+                            <div>
+                                <label id="label-notes" for="patient-notes" class="block text-xs font-bold text-main mb-1.5">تفاصيل الحالة الطبية أو ملاحظات إضافية (اختياري)</label>
+                                <textarea id="patient-notes" rows="3" class="arch-input" placeholder="اكتب هنا أي تفاصيل تساعد الطبيب في الفرز الأولي..." oninput="updateWhatsAppPreview()"></textarea>
+                            </div>
+
+                            <label id="consent-box" class="flex items-start gap-3 p-3.5 border border-gold-line bg-subtle rounded-md cursor-pointer">
+                                <input type="checkbox" id="patient-consent" required class="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-[#C49A52]" onchange="updateWhatsAppPreview()">
+                                <span id="consent-text" class="text-xs leading-relaxed text-secondary">أوافق على <a href="privacy.html?lang=ar" target="_blank" rel="noopener" class="font-bold text-main underline decoration-[#C49A52] underline-offset-4">سياسة الخصوصية</a> وأفهم أن بياناتي ومعلوماتي الطبية ستُرسل إلى فريق VELLORA عبر واتساب لأجل التنسيق الطبي. <span class="text-rose-500">*</span></span>
+                            </label>
+
+                            <p id="medical-disclaimer-note" class="text-[11px] text-muted leading-relaxed flex items-start gap-2">
+                                <i class="fa-solid fa-circle-info text-gold mt-0.5 shrink-0"></i>
+                                <span id="medical-disclaimer-text">تنويه طبي: الفرز الأولي يهدف لاختيار الاستشاري والمستشفى الأنسب في بريطانيا ولا يُعدّ تشخيصاً طبياً بديلاً عن الفحص السريري؛ في الحالات الطارئة يرجى التواصل فوراً مع خدمات الطوارئ المحلية.</span>
+                            </p>
+
+                            <div class="pt-1 lg:hidden">
+                                <button type="button" onclick="sendToWhatsAppDirect()" class="btn-whatsapp w-full py-3.5 text-sm font-bold flex items-center justify-center gap-2.5 shadow-sm">
+                                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                                    <span id="btn-send-step3">إرسال الملف عبر واتساب الآن</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
                 </div>
 
                 <!-- Sticky Live Luxury Dossier Card (5 cols) -->
@@ -2991,7 +2971,7 @@
                 s4t: "متابعة مستمرة", s4h: "المرافقة وما بعد العلاج", s4d: "مترجم طبي معتمد في كافة الجلسات، ومتابعة سريرية منتظمة بعد العودة إلى الوطن.",
                 govTitle: "حوكمة سريرية بريطانية وضيافة لندنية فاخرة في كل خطوة", govDesc: "نتعامل حصراً مع استشاريين مسجّلين في المجلس الطبي العام البريطاني (GMC) ومستشفيات خاضعة لرقابة هيئة جودة الرعاية الصحية (CQC)، مع إصدار فواتير العلاج رسمياً باسم المريض مباشرة.",
                 b1: "استشاريون معتمدون", b2: "رقابة بريطانية", b3: "فواتير مباشرة",
-                studioTitle: "جهّز ملفك العلاجي في 3 خطوات سريعة", studioSub: "كل اختيار تحدّده هنا يُضاف تلقائياً إلى بطاقة ملفك ورسالة واتساب الجاهزة للإرسال إلى فريقنا الطبي في بريطانيا.",
+                studioTitle: "جهّز ملفك العلاجي في صفحة واحدة واضحة", studioSub: "جميع الحقول أمامك مباشرة دون تنقّل بين بطاقات؛ كل اختيار يُضاف تلقائياً إلى بطاقة ملفك ورسالة واتساب الجاهزة للإرسال.",
                 tab1: "1. مخطط الرحلة والإقامة", tab2: "2. فاحص التأشيرة وـ UK ETA", tab3: "3. مدقّق جاهزية الملف الطبي", skipForm: "تخطي للاستمارة السريعة ↓",
                 formPanelTitle: "بيانات طلب التنسيق الطبي",
                 lName: "الاسم الكامل *", lNat: "الجنسية / بلد الإقامة *", lSpec: "التخصص الطبي المطلوب *", lTime: "الإطار الزمني للسفر *", lMode: "نوع الاستشارة المطلوبة", lVisa: "حالة التأشيرة البريطانية *", lNotes: "تفاصيل الحالة الطبية أو ملاحظات إضافية (اختياري)",
@@ -3038,7 +3018,7 @@
                 s4t: "Ongoing Care", s4h: "Escort & Post-Op Follow-Up", s4d: "Certified medical interpreter at every clinical session and structured follow-up after returning home.",
                 govTitle: "Strict UK Clinical Governance & Luxury London Hospitality", govDesc: "We coordinate exclusively with GMC-registered consultants and CQC-regulated private hospitals in London, with official treatment invoices issued directly in the patient's name.",
                 b1: "GMC Consultants", b2: "CQC Hospitals", b3: "Direct Billing",
-                studioTitle: "Build Your Medical Dossier in 3 Quick Steps", studioSub: "Every choice you tap flows automatically into your live dossier card and WhatsApp message for our UK medical team.",
+                studioTitle: "Complete Your Medical Dossier in One Clear View", studioSub: "All fields are visible at once with zero hidden tabs; every choice updates your live dossier card and WhatsApp message automatically.",
                 tab1: "1. Journey & Stay Planner", tab2: "2. UK Visa & ETA Checker", tab3: "3. File Readiness Auditor", skipForm: "Skip to Quick Form ↓",
                 formPanelTitle: "Medical Coordination Intake",
                 lName: "Full Name *", lNat: "Nationality / Residence *", lSpec: "Requested Specialty *", lTime: "Expected Timeline *", lMode: "Consultation Format", lVisa: "UK Visa Status *", lNotes: "Case Details or Additional Notes (Optional)",
@@ -3112,17 +3092,9 @@
         ];
 
         function goToStudioStep(step) {
-            activeStudioStep = Math.max(1, Math.min(3, step));
-            [1, 2, 3].forEach(function (n) {
-                var panel = document.getElementById('studio-panel-' + n);
-                var btn = document.getElementById('studio-step-btn-' + n);
-                if (panel) panel.classList.toggle('hidden', n !== activeStudioStep);
-                if (btn) {
-                    btn.classList.toggle('is-active', n === activeStudioStep);
-                    btn.classList.toggle('is-done', n < activeStudioStep);
-                    btn.setAttribute('aria-selected', String(n === activeStudioStep));
-                }
-            });
+            // All form sections are always visible in one flowing page; smooth-scroll if requested
+            var panel = document.getElementById('studio-panel-' + step);
+            if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         function renderStudioCompanions(lang) {
@@ -3708,6 +3680,22 @@
                 var bar = document.getElementById('dossier-progress-fill');
                 if (bar) bar.style.width = Math.max(8, pct) + '%';
 
+                // Live Section Status Badges (01, 02, 03)
+                var setSecBadge = function (id, isDone, pendingText) {
+                    var b = document.getElementById(id);
+                    if (!b) return;
+                    if (isDone) {
+                        b.innerHTML = '<i class="fa-solid fa-check me-1"></i>' + (ar ? 'مكتمل' : 'Done');
+                        b.className = 'text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[var(--gold-soft)] border border-gold-line text-gold';
+                    } else {
+                        b.textContent = pendingText;
+                        b.className = 'text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-subtle border border-hairline text-muted';
+                    }
+                };
+                setSecBadge('sec-badge-1', (name.length >= 2 && nat.length >= 2 && !!spec && !!time), ar ? 'مطلوب' : 'Required');
+                setSecBadge('sec-badge-2', !!visa, ar ? 'مطلوب' : 'Required');
+                setSecBadge('sec-badge-3', !!(consentEl && consentEl.checked), ar ? 'تأكيد الخصوصية' : 'Consent');
+
                 var modeObj = consultModeOptions[currentLang].find(function (m) { return m.id === selectedConsultMode; }) || consultModeOptions[currentLang][0];
                 var centerObj = selectedCenterId ? flagshipCentersData.find(function (c) { return c.id === selectedCenterId; }) : null;
 
@@ -3813,9 +3801,6 @@
             formSubmitAttempted = true;
             var bad = validateForm(true);
             if (bad) {
-                if (['patient-name', 'nationality-search', 'patient-specialty'].includes(bad)) goToStudioStep(1);
-                else if (['patient-timeline', 'visa-options-group'].includes(bad)) goToStudioStep(2);
-                else goToStudioStep(3);
                 var el = document.getElementById(bad);
                 if (el) {
                     el.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -4111,17 +4096,13 @@
                 setText('bento-stat-3', t.b3);
                 renderJourneySection(currentLang);
 
-                // Unified 3-Step Dossier Studio
+                // Unified Single-Page Dossier Studio
                 setText('studio-title', t.studioTitle);
                 setText('studio-subtitle', t.studioSub);
-                setText('step-pill-1', currentLang === 'ar' ? 'بياناتك' : 'Your Details');
-                setText('step-pill-2', currentLang === 'ar' ? 'الرحلة والضيافة' : 'Trip & VIP');
-                setText('step-pill-3', currentLang === 'ar' ? 'التأكيد والإرسال' : 'Confirm & Send');
-                setText('btn-next-1', currentLang === 'ar' ? 'التالي: تفاصيل الرحلة والضيافة' : 'Next: Trip & VIP Concierge');
-                setText('btn-prev-2', currentLang === 'ar' ? 'السابق' : 'Back');
-                setText('btn-next-2', currentLang === 'ar' ? 'التالي: التقارير والإرسال' : 'Next: Reports & Send');
-                setText('btn-prev-3', currentLang === 'ar' ? 'السابق' : 'Back');
-                setText('btn-send-step3', currentLang === 'ar' ? 'إرسال الملف عبر واتساب' : 'Send Dossier via WhatsApp');
+                setText('sec-title-1', currentLang === 'ar' ? 'البيانات الأساسية والتخصص' : 'Patient Details & Specialty');
+                setText('sec-title-2', currentLang === 'ar' ? 'التأشيرة وتفاصيل الرحلة والضيافة' : 'UK Visa, Travel & VIP Concierge');
+                setText('sec-title-3', currentLang === 'ar' ? 'المستندات والملاحظات والتأكيد' : 'Documents, Notes & Confirmation');
+                setText('btn-send-step3', currentLang === 'ar' ? 'إرسال الملف عبر واتساب الآن' : 'Send Dossier via WhatsApp Now');
                 setText('label-companions', currentLang === 'ar' ? 'المسافرون والمرافقون' : 'Travelers & Companions');
                 setText('label-concierge-services', currentLang === 'ar' ? 'خدمات الكونسيرج والضيافة المطلوبة (اختياري)' : 'VIP Concierge Services (Optional)');
                 setText('label-ready-docs', currentLang === 'ar' ? 'المستندات المتوفرة لديك حالياً (اختياري)' : 'Documents Currently Ready (Optional)');
