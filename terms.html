@@ -1,240 +1,1011 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="ar" dir="rtl" data-theme="ivory" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الشروط والأحكام | VELLORA فيلورا</title>
-    <meta name="description" content="الشروط والأحكام لاستخدام موقع VELLORA فيلورا وخدمات التنسيق الطبي والسفر العلاجي: طبيعة الخدمة، الحجز، التأشيرة، التكاليف، والمسؤولية.">
-    <meta name="theme-color" content="#081B2E">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="الشروط والأحكام | VELLORA">
-    <meta property="og:image" content="vellora-logo.jpg">
 
+    <meta name="description" content="الشروط والأحكام لاستخدام موقع VELLORA فيلورا وخدمات التنسيق الطبي والسفر العلاجي إلى بريطانيا: طبيعة الخدمة، الحجز، التأشيرة، التكاليف، والمسؤولية.">
+    <meta name="theme-color" content="#FBF7EB" id="meta-theme-color">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VELLORA">
+    <meta property="og:title" content="الشروط والأحكام | VELLORA فيلورا">
+    <meta property="og:description" content="الشروط والأحكام لخدمات التنسيق الطبي والسفر العلاجي إلى بريطانيا لدى VELLORA فيلورا.">
+    <meta property="og:image" content="vellora-footer-banner.jpg">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:locale:alternate" content="en_GB">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- Tailwind: uses the compiled tailwind.css when present (see BUILD-CSS.md); falls back to the CDN if the file is missing -->
-    <script>
-        function loadTailwindCDN() {
-            if (window.__twLoading) return;
-            window.__twLoading = true;
-            var sc = document.createElement('script');
-            sc.src = 'https://cdn.tailwindcss.com';
-            sc.onload = function () {
-                tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        stone: {
-                            50: '#FDFBF7',
-                            100: '#EFEBE3', // Canvas Base
-                            200: '#E7E1D6', // Alternate Warm Stone
-                            300: '#D8CEBE',
-                            400: '#BCAB92',
-                            800: '#4A3E2C',
-                            900: '#2C2317'
-                        },
-                        navy: {
-                            800: '#102840', // Elevated Navy
-                            900: '#081B2E', // Deep Midnight Navy
-                            950: '#040F1B'
-                        },
-                        gold: {
-                            400: '#D4AF37',
-                            500: '#C49A52', // Antique Gold
-                            600: '#A67C37',
-                            700: '#7D5A1C'  // Dark Bronze
-                        },
-                        slate: {
-                            850: '#172433',
-                            900: '#0B1B2B'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Tajawal', 'Plus Jakarta Sans', 'sans-serif'],
-                        en: ['Plus Jakarta Sans', 'sans-serif'],
-                        ar: ['Tajawal', 'sans-serif']
-                    }
-                }
-            }
-        };
-            };
-            document.head.appendChild(sc);
-        }
-    </script>
-    <link rel="stylesheet" href="tailwind.css" onerror="loadTailwindCDN()">
-
+    <!-- Google Fonts: Amiri & IBM Plex Sans Arabic (AR) + Cormorant Garamond & Plus Jakarta Sans (EN) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6.4.0 (CSS + defer JS inline SVG fallback for mobile previews) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Font Awesome as JS (turns icons into inline SVG): works even where external stylesheets are blocked, e.g. in-app previews -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 
-    <style>
-        body { font-family: 'Tajawal', 'Plus Jakarta Sans', sans-serif; background-color: #EFEBE3; color: #0B1B2B; overflow-x: hidden; }
-        html[lang="en"] body { font-family: 'Plus Jakarta Sans', 'Tajawal', sans-serif; }
-        .glass-navy { background: rgba(8,27,46,.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(196,154,82,.25); }
-        .glass-card-light { background: rgba(252,250,246,.85); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid rgba(196,154,82,.22); }
-        .gold-gradient-text { background: linear-gradient(135deg,#EAD096 0%,#C49A52 50%,#8C6221 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-pattern {
-            background:
-                radial-gradient(circle at 85% 10%, rgba(196,154,82,.18), transparent 45%),
-                radial-gradient(circle at 5% 100%, rgba(16,40,64,.9), transparent 55%),
-                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0L100 50L50 100L0 50Z' fill='none' stroke='%23C49A52' stroke-width='0.5' stroke-opacity='0.10'/%3E%3C/svg%3E"),
-                #081B2E;
-        }
-        .toc-link { transition: all .2s ease; }
-        .toc-link.active { color: #7D5A1C; background: rgba(196,154,82,.14); font-weight: 700; }
-        ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #EFEBE3; } ::-webkit-scrollbar-thumb { background: #C49A52; border-radius: 4px; }
-            html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
-        html[lang="ar"] body :not([dir="ltr"]):not([dir="ltr"] *) { letter-spacing: normal; }
-        footer .text-stone-500 { color: #BCAB92; }
-            /* ===== Header: refined floating bar ===== */
-        .site-nav {
-            position: relative; width: calc(100% - 1rem); max-width: 80rem; margin: 0.5rem auto;
-            padding: 0.5rem 0.6rem 0.5rem 0.75rem; border-radius: 1.25rem;
-            background: linear-gradient(135deg, rgba(16, 40, 64, 0.96) 0%, rgba(6, 20, 36, 0.97) 100%);
-            -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
-            border: 1px solid rgba(196, 154, 82, 0.45);
-            box-shadow: 0 16px 40px -16px rgba(4, 15, 27, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.07);
-        }
-        .site-nav::after {
-            content: ""; position: absolute; left: 14%; right: 14%; bottom: -1px; height: 2px; pointer-events: none;
-            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
-        }
-        .nav-medallion {
-            flex: none; width: 46px; height: 46px; border-radius: 9999px; display: flex; align-items: center; justify-content: center;
-            background: #FEF7ED; border: 1.5px solid #C49A52;
-            box-shadow: 0 0 0 3px rgba(196, 154, 82, 0.2), 0 6px 16px -6px rgba(0, 0, 0, 0.6);
-            transition: box-shadow .3s ease;
-        }
-        .nav-medallion img { width: 31px; height: auto; display: block; }
-        .group:hover .nav-medallion { box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.35), 0 6px 16px -6px rgba(0, 0, 0, 0.6); }
-        .nav-wordmark { font-size: 1.35rem; font-weight: 700; letter-spacing: 0.14em; color: #fff; line-height: 1; }
-        .nav-tagline {
-            display: block; margin-top: 0.35rem; font-size: 6.5px; letter-spacing: 0.14em; font-weight: 600;
-            text-transform: uppercase; color: #D4AF37; white-space: nowrap; line-height: 1;
-        }
-        .nav-btn {
-            height: 40px; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
-            border-radius: 0.9rem; font-size: 0.78rem; font-weight: 700; letter-spacing: normal;
-            transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
-        }
-        .nav-btn:hover { transform: translateY(-1px); }
-        .nav-lang { padding: 0 0.75rem; color: #EAD096; background: rgba(196, 154, 82, 0.1); border: 1px solid rgba(196, 154, 82, 0.55); }
-        .nav-lang:hover { background: rgba(196, 154, 82, 0.2); border-color: #D4AF37; }
-        .nav-wa {
-            min-width: 40px; padding: 0 0.7rem; color: #fff; border: 1px solid rgba(110, 231, 160, 0.45);
-            background: linear-gradient(135deg, #1FA855 0%, #0F7A3A 100%);
-            box-shadow: 0 8px 20px -8px rgba(16, 185, 129, 0.7);
-        }
-        .nav-wa:hover { background: linear-gradient(135deg, #25C063 0%, #12904A 100%); }
-        @media (min-width: 640px) {
-            .site-nav { padding: 0.65rem 1.5rem; }
-            .nav-medallion { width: 56px; height: 56px; }
-            .nav-medallion img { width: 39px; }
-            .nav-wordmark { font-size: 1.75rem; letter-spacing: 0.16em; }
-            .nav-tagline { font-size: 8.5px; letter-spacing: 0.3em; margin-top: 0.45rem; }
-            .nav-wa { padding: 0 1.1rem; }
-            .nav-btn { font-size: 0.85rem; }
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Restore Saved Theme Before Paint & Graceful Asset Fallbacks -->
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem('vellora-theme');
+                if (saved === 'midnight' || saved === 'ivory') {
+                    document.documentElement.setAttribute('data-theme', saved);
+                }
+            } catch (e) {}
+        })();
+
+        // Graceful inline SVG fallback when local ornament image is unavailable in sandbox preview
+        function handleOrnamentError(imgEl) {
+            try {
+                if (!imgEl) return;
+                imgEl.style.display = 'none';
+                var fb = imgEl.parentElement && imgEl.parentElement.querySelector('.ornament-fallback');
+                if (fb) fb.classList.remove('hidden');
+            } catch (e) {}
         }
 
-        .nav-home { padding: 0 0.9rem; color: #040F1B; border: 1px solid rgba(255, 255, 255, 0.25);
-            background: linear-gradient(135deg, #A67C37 0%, #D4AF37 50%, #A67C37 100%); box-shadow: 0 8px 20px -8px rgba(196, 154, 82, 0.7); }
+        // Graceful inline SVG fallback when local vellora-logo.jpg is unavailable in sandbox preview
+        function handleCenterLogoError(imgEl) {
+            try {
+                if (!imgEl) return;
+                imgEl.style.display = 'none';
+                var fb = imgEl.parentElement && imgEl.parentElement.querySelector('.center-logo-fallback');
+                if (fb) fb.classList.remove('hidden');
+            } catch (e) {}
+        }
+    </script>
+
+    <style>
+        /* =========================================================
+           1. DUAL THEME SYSTEM (QUIET LUXURY IVORY & MIDNIGHT EDITORIAL)
+              Exact 1:1 token parity with index.html & privacy.html
+           ========================================================= */
+        :root,
+        [data-theme="ivory"] {
+            --bg-canvas: #FBF7EB;
+            --bg-surface: #FFFFFF;
+            --bg-subtle: #F3EDE0;
+            --bg-ribbon: rgba(251, 247, 235, 0.95);
+            --bg-band: #081B2E;
+            --text-band: #F7F3EA;
+            --text-band-muted: #B8C4D1;
+
+            --text-main: #081B2E;
+            --text-secondary: #3E4C5E;
+            --text-muted: #6A7685;
+
+            --gold: #9E742E;
+            --gold-bright: #C49A52;
+            --gold-soft: rgba(196, 154, 82, 0.13);
+
+            --border-line: rgba(8, 27, 46, 0.12);
+            --border-gold: rgba(166, 124, 55, 0.38);
+
+            --btn-primary-bg: #081B2E;
+            --btn-primary-text: #FBF7EB;
+            --btn-primary-hover: #112E4B;
+
+            --shadow-soft: 0 20px 48px -28px rgba(8, 27, 46, 0.16);
+            --drawer-bg: rgba(251, 247, 235, 0.98);
+            --sticky-bar-bg: rgba(251, 247, 235, 0.96);
+        }
+
+        [data-theme="midnight"] {
+            --bg-canvas: #061321;
+            --bg-surface: #0C1F34;
+            --bg-subtle: #091829;
+            --bg-ribbon: rgba(6, 19, 33, 0.95);
+            --bg-band: #0E2640;
+            --text-band: #F7F3EA;
+            --text-band-muted: #BDC8D6;
+
+            --text-main: #F7F3EA;
+            --text-secondary: #CBD4DF;
+            --text-muted: #93A2B4;
+
+            --gold: #D4AF37;
+            --gold-bright: #E8C975;
+            --gold-soft: rgba(212, 175, 55, 0.14);
+
+            --border-line: rgba(247, 243, 234, 0.12);
+            --border-gold: rgba(212, 175, 55, 0.38);
+
+            --btn-primary-bg: #D4AF37;
+            --btn-primary-text: #061321;
+            --btn-primary-hover: #E6C75E;
+
+            --shadow-soft: 0 24px 56px -22px rgba(0, 0, 0, 0.65);
+            --drawer-bg: rgba(8, 23, 40, 0.98);
+            --sticky-bar-bg: rgba(6, 19, 33, 0.96);
+        }
+
+        /* =========================================================
+           2. BASE TYPOGRAPHY & SEMANTIC COLOR UTILITIES
+           ========================================================= */
+        html {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        body {
+            font-family: 'IBM Plex Sans Arabic', 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-canvas);
+            color: var(--text-main);
+            transition: background-color 0.35s ease, color 0.35s ease;
+            overflow-x: hidden;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        html[lang="en"] body {
+            font-family: 'Plus Jakarta Sans', 'IBM Plex Sans Arabic', sans-serif;
+        }
+        html[lang="ar"] body :not([dir="ltr"]):not([dir="ltr"] *) {
+            letter-spacing: normal;
+        }
+
+        .font-display {
+            font-family: 'Amiri', serif;
+            font-weight: 700;
+        }
+        html[lang="en"] .font-display {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+        .font-en { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif-en { font-family: 'Cormorant Garamond', serif; }
+
+        .bg-canvas { background-color: var(--bg-canvas); }
+        .bg-surface { background-color: var(--bg-surface); }
+        .bg-subtle { background-color: var(--bg-subtle); }
+        .bg-band { background-color: var(--bg-band); color: var(--text-band); }
+
+        .text-main { color: var(--text-main); }
+        .text-secondary { color: var(--text-secondary); }
+        .text-muted { color: var(--text-muted); }
+        .text-gold { color: var(--gold); }
+        .text-band-muted { color: var(--text-band-muted); }
+
+        .border-hairline { border-color: var(--border-line); }
+        .border-gold-line { border-color: var(--border-gold); }
+
+        html[dir="rtl"] .dir-ltr-only { display: none; }
+        html[dir="ltr"] .dir-rtl-only { display: none; }
+
+        /* =========================================================
+           3. MATHEMATICALLY FIXED 3-LAYER SEAMLESS BANNER ARCHITECTURE
+              Shared identically by .vellora-header-banner & .vellora-footer-banner
+           ========================================================= */
+        .vellora-header-banner,
+        .vellora-footer-banner {
+            position: relative;
+            width: 100%;
+            height: var(--bar-h);
+            background: linear-gradient(90deg, #EFE3CD 0%, #F6EEE0 18%, #FBF7EB 38%, #FBF7EB 62%, #F6EEE0 82%, #EFE3CD 100%);
+            border-bottom: 1px solid rgba(196, 154, 82, 0.55);
+            overflow: hidden;
+        }
+
+        .vellora-header-banner {
+            --bar-h: 74px;
+            box-shadow: 0 10px 30px -16px rgba(6, 19, 33, 0.32);
+        }
+        @media (min-width: 640px) {
+            .vellora-header-banner { --bar-h: 96px; }
+        }
+
+        .vellora-footer-banner {
+            --bar-h: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (min-width: 640px) {
+            .vellora-footer-banner { --bar-h: 130px; }
+        }
+
+        /* Subtle golden filigree arcs spanning across the parchment base */
+        .banner-filigree-arcs {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.28;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Strictly cropped outer corner ornament slots (width = 0.50 * H) */
+        .ornament-slot {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: calc(var(--bar-h) * 0.50);
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .ornament-left {
+            left: 0;
+            -webkit-mask-image: linear-gradient(to right, #000 68%, transparent 100%);
+            mask-image: linear-gradient(to right, #000 68%, transparent 100%);
+        }
+        .ornament-right {
+            right: 0;
+            -webkit-mask-image: linear-gradient(to left, #000 68%, transparent 100%);
+            mask-image: linear-gradient(to left, #000 68%, transparent 100%);
+        }
+        .ornament-slot img {
+            position: absolute;
+            top: -9%;
+            height: 118%;
+            width: auto;
+            max-width: none;
+            display: block;
+        }
+        .ornament-left img { left: 0; }
+        .ornament-right img { right: 0; }
+
+        .ornament-fallback {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Single seamless center logo blended onto #FBF7EB parchment */
+        .banner-center-logo {
+            height: calc(var(--bar-h) - 14px);
+            width: auto;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+            display: block;
+        }
+        .vellora-footer-banner .banner-center-logo {
+            height: calc(var(--bar-h) - 18px);
+        }
+
+        /* =========================================================
+           4. BALANCED HEADER BUTTON CLUSTER & THIN DESKTOP NAV STRIP
+           ========================================================= */
+        .header-center-cluster {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding-inline: calc(var(--bar-h) * 0.56);
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        @media (min-width: 640px) {
+            .header-center-cluster { gap: 1.25rem; }
+        }
+        @media (min-width: 1024px) {
+            .header-center-cluster { gap: 2rem; }
+        }
+
+        .hdr-pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hdr-pill:hover { transform: translateY(-1px); }
+
+        .hdr-pill-navy {
+            background-color: #081B2E;
+            color: #FBF7EB;
+            border: 1px solid rgba(212, 175, 55, 0.6);
+            box-shadow: 0 5px 14px -6px rgba(6, 19, 33, 0.5);
+        }
+        .hdr-pill-navy:hover {
+            background-color: #102B48;
+            border-color: #E8C975;
+        }
+
+        .hdr-pill-gold {
+            background: linear-gradient(135deg, #D4AF37 0%, #B88B38 100%);
+            color: #081B2E;
+            border: 1px solid rgba(139, 99, 33, 0.65);
+            box-shadow: 0 6px 16px -6px rgba(139, 99, 33, 0.55);
+        }
+        .hdr-pill-gold:hover {
+            background: linear-gradient(135deg, #E2BE4A 0%, #C69841 100%);
+        }
+
+        .hdr-pill-wa {
+            background-color: #0F7A3A;
+            color: #FFFFFF;
+            border: 1px solid rgba(110, 231, 160, 0.45);
+            box-shadow: 0 6px 16px -6px rgba(15, 122, 58, 0.55);
+        }
+        .hdr-pill-wa:hover {
+            background-color: #139146;
+        }
+
+        .desktop-nav-ribbon {
+            background-color: var(--bg-canvas);
+            border-bottom: 1px solid var(--border-line);
+            transition: background-color 0.35s ease, border-color 0.35s ease;
+        }
+
+        #mobile-menu {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+            background-color: var(--drawer-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        #mobile-menu.is-open {
+            grid-template-rows: 1fr;
+            border-bottom: 1px solid var(--border-gold);
+            box-shadow: 0 20px 44px -16px rgba(6, 19, 33, 0.45);
+        }
+        .accordion-inner { overflow: hidden; min-height: 0; }
+
+        /* =========================================================
+           5. EDITORIAL LEGAL DOSSIER COMPONENTS
+           ========================================================= */
+        .btn-editorial {
+            background-color: var(--btn-primary-bg);
+            color: var(--btn-primary-text);
+            border: 1px solid var(--btn-primary-bg);
+            border-radius: 6px;
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+        .btn-editorial:hover {
+            background-color: var(--btn-primary-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline-editorial {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-gold);
+            border-radius: 6px;
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+        .btn-outline-editorial:hover {
+            background-color: var(--gold-soft);
+            border-color: var(--gold);
+        }
+
+        .btn-whatsapp {
+            background-color: #137A46;
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 6px;
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+        .btn-whatsapp:hover {
+            background-color: #179254;
+            transform: translateY(-1px);
+        }
+
+        .arch-card {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-line);
+            border-radius: 8px;
+            box-shadow: var(--shadow-soft);
+            transition: border-color 0.3s ease, background-color 0.35s ease;
+        }
+        .arch-card:hover { border-color: var(--border-gold); }
+
+        /* TOC Link Active Highlight */
+        .toc-link {
+            color: var(--text-secondary);
+            border-radius: 6px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .toc-link:hover {
+            background-color: var(--gold-soft);
+            color: var(--text-main);
+        }
+        .toc-link.active {
+            color: var(--gold);
+            background-color: var(--gold-soft);
+            font-weight: 700;
+        }
+
+        /* Editorial Note Callout */
+        .dossier-note {
+            background-color: var(--gold-soft);
+            border: 1px solid var(--border-gold);
+            border-radius: 6px;
+        }
+
+        /* Subtle Icon Badge */
+        .icon-badge {
+            background-color: var(--gold-soft);
+            border: 1px solid var(--border-gold);
+            color: var(--gold);
+        }
+
+        /* Mobile Sticky Bottom Action Bar */
+        .mobile-sticky-bar {
+            background-color: var(--sticky-bar-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-top: 1px solid var(--border-gold);
+            transform: translateY(100%);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .mobile-sticky-bar.is-visible { transform: translateY(0); }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 7px; }
+        ::-webkit-scrollbar-track { background: var(--bg-canvas); }
+        ::-webkit-scrollbar-thumb { background: var(--gold-bright); }
+    
+        /* Smooth scroll-linked header fade before footer */
+        .site-header {
+            will-change: transform, opacity;
+            transition: opacity 0.12s linear, transform 0.12s linear;
+        }
+
+        /* Responsive compact sizing for unified 4-button header on small mobile screens */
+        @media (max-width: 639px) {
+            .header-center-cluster {
+                padding-inline: calc(var(--bar-h) * 0.44);
+                gap: 0.3rem;
+            }
+            .hdr-pill {
+                gap: 0.22rem;
+                padding-inline: 0.45rem !important;
+                height: 28px !important;
+                font-size: 10px !important;
+            }
+            .hdr-pill i {
+                font-size: 10px !important;
+            }
+            .vellora-header-banner .banner-center-logo {
+                height: calc(var(--bar-h) - 22px);
+                max-width: 82px;
+            }
+        }
+
+        /* Editorial Scroll-Spy / Horizontal Scrollable Nav Rail (Mobile + Desktop) */
+        .editorial-nav-rail {
+            background-color: var(--bg-ribbon);
+            border-bottom: 1px solid rgba(166, 124, 55, 0.28);
+            transition: background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+            position: relative;
+        }
+        [data-theme="midnight"] .editorial-nav-rail {
+            border-bottom: 1px solid rgba(212, 175, 55, 0.24);
+            box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.65);
+        }
+        .editorial-nav-track {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0.35rem;
+            overflow-x: auto;
+            scroll-snap-type: x proximity;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding: 0.38rem 0.85rem;
+            -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 18px, #000 calc(100% - 18px), transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0%, #000 18px, #000 calc(100% - 18px), transparent 100%);
+        }
+        .editorial-nav-track::-webkit-scrollbar {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .editorial-nav-track {
+                justify-content: center;
+                gap: 0.5rem;
+                padding: 0.42rem 1rem;
+                -webkit-mask-image: none;
+                mask-image: none;
+            }
+        }
+        .nav-rail-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.32rem 0.72rem;
+            border-radius: 9999px;
+            font-size: 11px;
+            font-weight: 600;
+            white-space: nowrap;
+            scroll-snap-align: center;
+            color: var(--text-secondary);
+            border: 1px solid transparent;
+            transition: background-color 0.22s ease, color 0.22s ease, border-color 0.22s ease, transform 0.2s ease;
+            flex-shrink: 0;
+        }
+        .nav-rail-pill i {
+            font-size: 10px;
+            color: var(--gold);
+            opacity: 0.82;
+            transition: opacity 0.2s ease;
+        }
+        .nav-rail-pill:hover {
+            color: var(--gold);
+            background-color: var(--gold-soft);
+        }
+        .nav-rail-pill.is-active {
+            color: var(--gold);
+            background-color: var(--gold-soft);
+            border-color: var(--border-gold);
+            font-weight: 700;
+        }
+        .nav-rail-pill.is-active i {
+            opacity: 1;
+        }
     </style>
 </head>
-<body class="antialiased selection:bg-gold-500 selection:text-white">
+<body id="top" class="pb-16 lg:pb-0 selection:bg-[#C49A52] selection:text-[#061321]">
 
-    <!-- HEADER -->
-    <header class="fixed top-0 left-0 right-0 z-50">
-        <nav class="site-nav flex items-center justify-between">
-            <a id="brand-link" href="index.html" class="flex items-center gap-3 group focus:outline-none shrink-0" aria-label="VELLORA">
-                <div class="nav-medallion">
-                    <img src="logo-icon.jpg" alt="VELLORA" width="1042" height="893">
+    <!-- =========================================================
+         1. FIXED 3-LAYER SEAMLESS HEADER BANNER (IDENTICAL TO index.html)
+         ========================================================= -->
+    <header class="site-header fixed top-0 inset-x-0 z-50">
+        <div class="vellora-header-banner">
+
+            <!-- Layer 1b: Subtle Decorative Golden SVG Arc Filigree Overlay -->
+            <svg class="banner-filigree-arcs" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M-20 15 C220 95, 420 5, 720 60 C1020 115, 1220 25, 1460 105" fill="none" stroke="#C49A52" stroke-width="1.2"/>
+                <path d="M-20 105 C260 20, 480 110, 720 60 C960 10, 1180 100, 1460 15" fill="none" stroke="#B88B38" stroke-width="0.9"/>
+                <path d="M120 0 C320 65, 520 22, 720 60 C920 98, 1120 55, 1320 120" fill="none" stroke="#D4AF37" stroke-width="0.7" opacity="0.7"/>
+            </svg>
+
+            <!-- Layer 2a: Far-Left Corner Ornament -->
+            <div class="ornament-slot ornament-left" aria-hidden="true">
+                <img src="vellora-footer-banner.jpg" alt="" fetchpriority="high" onerror="handleOrnamentError(this)">
+                <svg class="ornament-fallback hidden" viewBox="0 0 120 200" preserveAspectRatio="xMinYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="hdrOrnGoldL" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#9E742E"/><stop offset="50%" stop-color="#E8C975"/><stop offset="100%" stop-color="#7D5A1C"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M0 0 C54 18, 86 58, 108 100 C86 142, 54 182, 0 200 Z" fill="#081B2E" stroke="url(#hdrOrnGoldL)" stroke-width="4.5"/>
+                    <path d="M0 24 C42 40, 68 70, 84 100 C68 130, 42 160, 0 176" fill="none" stroke="url(#hdrOrnGoldL)" stroke-width="3"/>
+                    <path d="M0 54 C28 66, 48 82, 62 100 C48 118, 28 134, 0 146 Z" fill="url(#hdrOrnGoldL)" opacity="0.92"/>
+                    <path d="M0 76 C16 84, 28 92, 38 100 C28 108, 16 116, 0 124 Z" fill="#081B2E"/>
+                    <path d="M0 0 C65 8, 98 24, 118 44 C78 30, 40 20, 0 20 Z" fill="#081B2E" stroke="url(#hdrOrnGoldL)" stroke-width="2.2"/>
+                    <path d="M0 200 C65 192, 98 176, 118 156 C78 170, 40 180, 0 180 Z" fill="#081B2E" stroke="url(#hdrOrnGoldL)" stroke-width="2.2"/>
+                </svg>
+            </div>
+
+            <!-- Layer 2b: Far-Right Corner Ornament -->
+            <div class="ornament-slot ornament-right" aria-hidden="true">
+                <img src="vellora-footer-banner.jpg" alt="" fetchpriority="high" onerror="handleOrnamentError(this)">
+                <svg class="ornament-fallback hidden" viewBox="0 0 120 200" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="hdrOrnGoldR" x1="100%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#9E742E"/><stop offset="50%" stop-color="#E8C975"/><stop offset="100%" stop-color="#7D5A1C"/>
+                        </linearGradient>
+                    </defs>
+                    <g transform="translate(120,0) scale(-1,1)">
+                        <path d="M0 0 C54 18, 86 58, 108 100 C86 142, 54 182, 0 200 Z" fill="#081B2E" stroke="url(#hdrOrnGoldR)" stroke-width="4.5"/>
+                        <path d="M0 24 C42 40, 68 70, 84 100 C68 130, 42 160, 0 176" fill="none" stroke="url(#hdrOrnGoldR)" stroke-width="3"/>
+                        <path d="M0 54 C28 66, 48 82, 62 100 C48 118, 28 134, 0 146 Z" fill="url(#hdrOrnGoldR)" opacity="0.92"/>
+                        <path d="M0 76 C16 84, 28 92, 38 100 C28 108, 16 116, 0 124 Z" fill="#081B2E"/>
+                        <path d="M0 0 C65 8, 98 24, 118 44 C78 30, 40 20, 0 20 Z" fill="#081B2E" stroke="url(#hdrOrnGoldR)" stroke-width="2.2"/>
+                        <path d="M0 200 C65 192, 98 176, 118 156 C78 170, 40 180, 0 180 Z" fill="#081B2E" stroke="url(#hdrOrnGoldR)" stroke-width="2.2"/>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Layer 3: Centered 3-Column Cluster -->
+            <div class="header-center-cluster">
+
+                <!-- Start Side: Unified Mobile & Desktop Theme + Language -->
+                <div class="flex items-center justify-end gap-1 sm:gap-2.5">
+                    <button type="button" id="theme-toggle-btn" onclick="toggleTheme()"
+                            class="hdr-pill hdr-pill-navy h-9 px-3.5 text-xs"
+                            aria-label="تبديل المظهر">
+                        <i id="theme-icon" class="fa-solid fa-moon text-[#D4AF37] text-xs sm:text-sm"></i>
+                        <span id="theme-label">ليلي</span>
+                    </button>
+
+                    <button type="button" id="lang-toggle-btn" onclick="toggleLanguage()"
+                            class="hdr-pill hdr-pill-navy h-9 px-3.5 text-xs"
+                            aria-label="Switch Language">
+                        <i class="fa-solid fa-globe text-[#D4AF37] text-xs"></i>
+                        <span id="lang-btn-label" class="font-en">English</span>
+                    </button>
                 </div>
-                <div class="flex flex-col justify-center leading-none" dir="ltr">
-                    <span class="nav-wordmark" style="font-family:'Cormorant Garamond','Plus Jakarta Sans',serif">VELLORA</span>
-                    <span class="nav-tagline font-en">Medical Travel Concierge</span>
-                </div>
-            </a>
-            <div class="flex items-center gap-2 sm:gap-3">
-                <button id="lang-toggle-btn" onclick="toggleLanguage()" class="nav-btn nav-lang">
-                    <i class="fa-solid fa-globe text-gold-400 hidden sm:inline"></i>
-                    <span id="lang-btn-label">English</span>
-                </button>
-                <a id="back-link" href="index.html" class="nav-btn nav-home">
-                    <i class="fa-solid fa-house text-sm"></i>
-                    <span id="back-text">الرئيسية</span>
+
+                <!-- Exact Horizontal Center: Single Seamless vellora-logo.jpg -->
+                <a id="brand-link" href="index.html?lang=ar" class="flex items-center justify-center focus:outline-none shrink-0" aria-label="VELLORA — Medical Travel Concierge">
+                    <img src="vellora-logo.jpg"
+                         alt="VELLORA — Medical Travel Concierge"
+                         fetchpriority="high"
+                         onerror="handleCenterLogoError(this)"
+                         class="banner-center-logo">
+                    <!-- Clean Inline SVG Fallback if local vellora-logo.jpg is unavailable in preview -->
+                    <svg class="center-logo-fallback hidden banner-center-logo" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="ctrGoldHdr" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#B08438"/><stop offset="45%" stop-color="#E7CC86"/><stop offset="72%" stop-color="#C49A52"/><stop offset="100%" stop-color="#8B6321"/>
+                            </linearGradient>
+                        </defs>
+                        <g transform="translate(180, 74) scale(0.36)">
+                            <path d="M-158 -15 C-185 -100, -108 -178, -28 -135 C-10 -125, 0 -108, 0 -92 C0 -108, 12 -126, 30 -136 C82 -162, 138 -132, 152 -78" fill="none" stroke="url(#ctrGoldHdr)" stroke-width="24" stroke-linecap="round"/>
+                            <path d="M-112 72 L0 185 L125 62" fill="none" stroke="url(#ctrGoldHdr)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M40 -42 C108 -95, 178 -138, 226 -212 C215 -140, 172 -88, 108 -52 Z" fill="url(#ctrGoldHdr)"/>
+                            <path d="M62 -15 C132 -52, 198 -82, 232 -140 C205 -78, 155 -35, 92 -8 Z" fill="url(#ctrGoldHdr)"/>
+                            <path d="M74 16 C140 -6, 196 -28, 224 -76 C192 -20, 146 12, 86 28 Z" fill="url(#ctrGoldHdr)"/>
+                            <path d="M72 48 C132 35, 180 18, 206 -18 C176 28, 135 52, 76 62 Z" fill="url(#ctrGoldHdr)"/>
+                            <path d="M55 78 C108 72, 148 58, 174 30 C142 70, 104 90, 48 96 Z" fill="url(#ctrGoldHdr)"/>
+                            <path d="M-108 -68 C-74 -62, -45 25, 0 116 C-28 52, -55 -40, -82 -66 Z" fill="#081B2E"/>
+                            <path d="M-82 -66 C-48 -58, -18 28, 0 116 L24 68 C-2 8, -32 -62, -62 -68 Z" fill="url(#ctrGoldHdr)"/>
+                            <path d="M104 -68 C70 -56, 36 28, 0 116 C32 72, 68 -16, 86 -56 Z" fill="#081B2E"/>
+                            <path d="M84 -66 C48 -42, 16 28, -4 96 C22 50, 56 -24, 98 -64 Z" fill="url(#ctrGoldHdr)"/>
+                            <rect x="-194" y="16" width="120" height="38" rx="2" fill="#081B2E"/>
+                            <rect x="-153" y="-25" width="38" height="120" rx="2" fill="#081B2E"/>
+                        </g>
+                        <text x="180" y="176" text-anchor="middle" font-family="Georgia, 'Cormorant Garamond', serif" font-size="44" font-weight="700" letter-spacing="7" fill="#081B2E">VELLORA</text>
+                        <line x1="38" y1="198" x2="68" y2="198" stroke="#C49A52" stroke-width="2"/>
+                        <text x="180" y="203" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#081B2E">MEDICAL TRAVEL CONCIERGE</text>
+                        <line x1="292" y1="198" x2="322" y2="198" stroke="#C49A52" stroke-width="2"/>
+                    </svg>
                 </a>
+
+                <!-- End Side: Unified Mobile & Desktop Home CTA + WhatsApp -->
+                <div class="flex items-center justify-start gap-1 sm:gap-2.5">
+                    <a id="back-link" href="index.html?lang=ar" class="hdr-pill hdr-pill-gold h-9 px-4 text-xs">
+                        <i class="fa-solid fa-house text-xs"></i>
+                        <span id="back-text">الرئيسية</span>
+                    </a>
+
+                    <a href="https://wa.me/963930888475" target="_blank" rel="noopener"
+                       class="hdr-pill hdr-pill-wa h-9 px-3.5 text-xs"
+                       aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp text-sm"></i>
+                        <span id="hdr-wa-label">واتساب</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Editorial Horizontal Nav Rail (Unified Mobile & Desktop) -->
+        <nav class="editorial-nav-rail" aria-label="Section Navigation">
+            <div class="editorial-nav-track" id="editorial-nav-track">
+                <a id="nav-link-leadership" href="index.html?lang=ar#leadership" class="nav-rail-pill">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <span id="nav-text-leadership">الإشراف الطبي</span>
+                </a>
+                <a id="nav-link-centers" href="index.html?lang=ar#centers" class="nav-rail-pill">
+                    <i class="fa-solid fa-hospital"></i>
+                    <span id="nav-text-centers">مستشفيات لندن</span>
+                </a>
+                <a id="nav-link-studio" href="index.html?lang=ar#studio" class="nav-rail-pill">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span id="nav-text-studio">مكتب التنسيق الذكي</span>
+                </a>
+                <a id="nav-link-privacy" href="privacy.html?lang=ar" class="nav-rail-pill">
+                    <i class="fa-solid fa-shield-heart"></i>
+                    <span id="nav-text-privacy">سياسة الخصوصية</span>
+                </a>
+                <span aria-current="page" class="nav-rail-pill is-active">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <span id="nav-link-terms">الشروط والأحكام</span>
+                </span>
             </div>
         </nav>
     </header>
 
-    <!-- HERO -->
-    <section class="hero-pattern relative pt-36 pb-24 md:pt-44 md:pb-28 text-white overflow-hidden">
-        <div class="absolute -bottom-20 -left-16 opacity-[0.06] pointer-events-none text-gold-500">
-            <i class="fa-solid fa-scale-balanced text-[380px]"></i>
-        </div>
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-6">
-            <div class="mx-auto w-20 h-20 rounded-3xl border border-gold-500/50 bg-white/5 flex items-center justify-center shadow-[0_0_40px_-8px_rgba(196,154,82,0.55)]">
-                <i class="fa-solid fa-file-contract text-3xl text-gold-400"></i>
-            </div>
-            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold">
-                <i class="fa-regular fa-calendar"></i>
-                <span id="updated-text"></span>
-            </span>
-            <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight" id="page-title"></h1>
-            <p class="text-sm sm:text-lg text-stone-300 leading-relaxed max-w-2xl mx-auto" id="page-lead"></p>
-        </div>
-    </section>
+    <!-- =========================================================
+         2. QUIET LUXURY LEGAL DOSSIER MAIN BODY
+         ========================================================= -->
+    <main>
 
-    <!-- AT A GLANCE (overlaps hero) -->
-    <section class="relative z-10 -mt-12 sm:-mt-14">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="glance-grid"></div>
-        </div>
-    </section>
+        <!-- Editorial Hero Section -->
+        <section class="pt-36 pb-12 sm:pt-44 md:pb-16 bg-canvas border-b border-hairline">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- BODY: TOC + SECTIONS -->
-    <main class="py-16 md:py-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-            <aside class="lg:col-span-4 lg:sticky lg:top-28">
-                <div class="glass-card-light rounded-3xl p-5 shadow-sm">
-                    <h2 class="text-sm font-extrabold text-navy-900 mb-3 flex items-center gap-2">
-                        <i class="fa-solid fa-list-ul text-gold-600"></i><span id="toc-title"></span>
-                    </h2>
-                    <ol class="space-y-1" id="toc-list"></ol>
+                <!-- Breadcrumb & Last Updated Metadata Line -->
+                <div class="flex flex-wrap items-center justify-between gap-3 pb-5 mb-10 border-b border-hairline text-xs text-muted">
+                    <nav aria-label="Breadcrumb" class="flex items-center gap-2">
+                        <a id="crumb-home" href="index.html?lang=ar" class="hover:text-gold transition-colors font-semibold text-secondary"></a>
+                        <i class="fa-solid fa-chevron-left dir-rtl-only text-[10px] opacity-50"></i>
+                        <i class="fa-solid fa-chevron-right dir-ltr-only text-[10px] opacity-50"></i>
+                        <span id="crumb-current" class="text-gold font-bold"></span>
+                    </nav>
+                    <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-subtle border border-gold-line text-gold font-semibold">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span id="updated-text"></span>
+                    </span>
                 </div>
-            </aside>
-            <div class="lg:col-span-8 space-y-5" id="sections"></div>
-        </div>
+
+                <!-- Architectural Crest, Title & Lead -->
+                <div class="max-w-3xl mx-auto text-center space-y-5">
+                    <div class="mx-auto w-16 h-16 rounded-md icon-badge flex items-center justify-center shadow-sm">
+                        <i class="fa-solid fa-scale-balanced text-2xl"></i>
+                    </div>
+                    <h1 id="page-title" class="font-display text-3xl sm:text-5xl text-main leading-tight"></h1>
+                    <p id="page-lead" class="text-sm sm:text-lg text-secondary leading-relaxed max-w-2xl mx-auto"></p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- At-a-Glance Summary Cards (4 Cards) -->
+        <section class="bg-subtle py-10 border-b border-hairline">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="glance-grid"></div>
+            </div>
+        </section>
+
+        <!-- Two-Column Legal Dossier: Sticky TOC + 9 Clauses -->
+        <section class="py-14 md:py-20 bg-canvas">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+                <!-- Sticky Table of Contents Sidebar + Privacy Cross-Link Card -->
+                <aside class="lg:col-span-4 lg:sticky lg:top-36 space-y-5">
+                    <div class="arch-card p-5 sm:p-6">
+                        <h2 class="text-xs font-bold uppercase tracking-wider text-gold pb-3 mb-3 border-b border-hairline flex items-center gap-2">
+                            <i class="fa-solid fa-list-ul"></i>
+                            <span id="toc-title"></span>
+                        </h2>
+                        <ol class="space-y-1" id="toc-list"></ol>
+                    </div>
+
+                    <!-- Subtle Cross-Link Card to Privacy Policy -->
+                    <a id="sidebar-privacy-card" href="privacy.html?lang=ar" class="arch-card p-5 flex items-start gap-3.5 group block">
+                        <div class="w-10 h-10 rounded-md icon-badge flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-shield-heart"></i>
+                        </div>
+                        <div class="space-y-1 flex-1 min-w-0">
+                            <span id="sidebar-privacy-kicker" class="block text-[10px] font-bold uppercase tracking-wider text-gold"></span>
+                            <h3 id="sidebar-privacy-title" class="text-sm font-bold text-main group-hover:text-gold transition-colors leading-snug"></h3>
+                            <p id="sidebar-privacy-desc" class="text-xs text-muted leading-relaxed"></p>
+                        </div>
+                        <i class="fa-solid fa-arrow-left dir-rtl-only text-xs text-gold mt-1 shrink-0 transition-transform group-hover:-translate-x-1"></i>
+                        <i class="fa-solid fa-arrow-right dir-ltr-only text-xs text-gold mt-1 shrink-0 transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                </aside>
+
+                <!-- Clauses Column (s1 – s9) -->
+                <div class="lg:col-span-8 space-y-5" id="sections"></div>
+
+            </div>
+        </section>
+
     </main>
 
-    <!-- FOOTER -->
-    <footer class="bg-navy-950 text-white border-t border-gold-500/30">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
-            <div class="flex flex-col sm:flex-row items-center gap-4">
-                <a href="index.html" class="inline-block rounded-xl p-2 border border-gold-500/40 hover:border-gold-400 transition-colors shrink-0" style="background:#FBF7EB" aria-label="VELLORA — Medical Travel Concierge">
-                    <img src="vellora-logo.jpg" alt="VELLORA Medical Travel Concierge" class="block w-32 sm:w-36 h-auto rounded-md" width="1400" height="1226" loading="lazy">
-                </a>
-                <p id="footer-copy"></p>
+    <!-- =========================================================
+         3. SLIM 3-LAYER SEAMLESS FOOTER BANNER + 3-COLUMN FOOTER
+            Exact 1:1 parity with index.html
+         ========================================================= -->
+    <footer class="bg-canvas border-t border-gold-line">
+
+        <!-- Slim 3-Layer Seamless Banner (88px mobile / 130px desktop) -->
+        <div class="vellora-footer-banner">
+
+            <!-- Layer 1b: Subtle Decorative Golden Arc Filigree -->
+            <svg class="banner-filigree-arcs" viewBox="0 0 1440 130" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M-20 18 C240 105, 440 10, 720 65 C1000 120, 1200 25, 1460 112" fill="none" stroke="#C49A52" stroke-width="1.2"/>
+                <path d="M-20 112 C260 22, 480 118, 720 65 C960 12, 1180 108, 1460 18" fill="none" stroke="#B88B38" stroke-width="0.9"/>
+            </svg>
+
+            <!-- Layer 2a: Far-Left Corner Ornament -->
+            <div class="ornament-slot ornament-left" aria-hidden="true">
+                <img src="vellora-footer-banner.jpg" alt="" loading="lazy" onerror="handleOrnamentError(this)">
+                <svg class="ornament-fallback hidden" viewBox="0 0 120 200" preserveAspectRatio="xMinYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="ftrOrnGoldL" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#9E742E"/><stop offset="50%" stop-color="#E8C975"/><stop offset="100%" stop-color="#7D5A1C"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M0 0 C54 18, 86 58, 108 100 C86 142, 54 182, 0 200 Z" fill="#081B2E" stroke="url(#ftrOrnGoldL)" stroke-width="4.5"/>
+                    <path d="M0 24 C42 40, 68 70, 84 100 C68 130, 42 160, 0 176" fill="none" stroke="url(#ftrOrnGoldL)" stroke-width="3"/>
+                    <path d="M0 54 C28 66, 48 82, 62 100 C48 118, 28 134, 0 146 Z" fill="url(#ftrOrnGoldL)" opacity="0.92"/>
+                    <path d="M0 76 C16 84, 28 92, 38 100 C28 108, 16 116, 0 124 Z" fill="#081B2E"/>
+                </svg>
             </div>
-            <div class="flex items-center gap-5">
-                <a id="footer-privacy" href="privacy.html" class="hover:text-gold-300 transition"></a>
-                <a id="footer-back" href="index.html" class="inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 transition">
-                    <i class="fa-solid fa-arrow-right rtl:rotate-180"></i><span id="footer-back-text"></span>
-                </a>
+
+            <!-- Layer 2b: Far-Right Corner Ornament -->
+            <div class="ornament-slot ornament-right" aria-hidden="true">
+                <img src="vellora-footer-banner.jpg" alt="" loading="lazy" onerror="handleOrnamentError(this)">
+                <svg class="ornament-fallback hidden" viewBox="0 0 120 200" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="ftrOrnGoldR" x1="100%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#9E742E"/><stop offset="50%" stop-color="#E8C975"/><stop offset="100%" stop-color="#7D5A1C"/>
+                        </linearGradient>
+                    </defs>
+                    <g transform="translate(120,0) scale(-1,1)">
+                        <path d="M0 0 C54 18, 86 58, 108 100 C86 142, 54 182, 0 200 Z" fill="#081B2E" stroke="url(#ftrOrnGoldR)" stroke-width="4.5"/>
+                        <path d="M0 24 C42 40, 68 70, 84 100 C68 130, 42 160, 0 176" fill="none" stroke="url(#ftrOrnGoldR)" stroke-width="3"/>
+                        <path d="M0 54 C28 66, 48 82, 62 100 C48 118, 28 134, 0 146 Z" fill="url(#ftrOrnGoldR)" opacity="0.92"/>
+                        <path d="M0 76 C16 84, 28 92, 38 100 C28 108, 16 116, 0 124 Z" fill="#081B2E"/>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Layer 3: Single Seamless Centered vellora-logo.jpg -->
+            <a id="footer-logo-link" href="index.html?lang=ar" class="relative z-10 flex items-center justify-center focus:outline-none" aria-label="VELLORA — Medical Travel Concierge">
+                <img src="vellora-logo.jpg"
+                     alt="VELLORA — Medical Travel Concierge"
+                     loading="lazy"
+                     onerror="handleCenterLogoError(this)"
+                     class="banner-center-logo">
+                <!-- Clean Inline SVG Fallback if local vellora-logo.jpg is unavailable in preview -->
+                <svg class="center-logo-fallback hidden banner-center-logo" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="ctrGoldFtr" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#B08438"/><stop offset="45%" stop-color="#E7CC86"/><stop offset="72%" stop-color="#C49A52"/><stop offset="100%" stop-color="#8B6321"/>
+                        </linearGradient>
+                    </defs>
+                    <g transform="translate(180, 74) scale(0.36)">
+                        <path d="M-158 -15 C-185 -100, -108 -178, -28 -135 C-10 -125, 0 -108, 0 -92 C0 -108, 12 -126, 30 -136 C82 -162, 138 -132, 152 -78" fill="none" stroke="url(#ctrGoldFtr)" stroke-width="24" stroke-linecap="round"/>
+                        <path d="M-112 72 L0 185 L125 62" fill="none" stroke="url(#ctrGoldFtr)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M40 -42 C108 -95, 178 -138, 226 -212 C215 -140, 172 -88, 108 -52 Z" fill="url(#ctrGoldFtr)"/>
+                        <path d="M62 -15 C132 -52, 198 -82, 232 -140 C205 -78, 155 -35, 92 -8 Z" fill="url(#ctrGoldFtr)"/>
+                        <path d="M74 16 C140 -6, 196 -28, 224 -76 C192 -20, 146 12, 86 28 Z" fill="url(#ctrGoldFtr)"/>
+                        <path d="M72 48 C132 35, 180 18, 206 -18 C176 28, 135 52, 76 62 Z" fill="url(#ctrGoldFtr)"/>
+                        <path d="M55 78 C108 72, 148 58, 174 30 C142 70, 104 90, 48 96 Z" fill="url(#ctrGoldFtr)"/>
+                        <path d="M-108 -68 C-74 -62, -45 25, 0 116 C-28 52, -55 -40, -82 -66 Z" fill="#081B2E"/>
+                        <path d="M-82 -66 C-48 -58, -18 28, 0 116 L24 68 C-2 8, -32 -62, -62 -68 Z" fill="url(#ctrGoldFtr)"/>
+                        <path d="M104 -68 C70 -56, 36 28, 0 116 C32 72, 68 -16, 86 -56 Z" fill="#081B2E"/>
+                        <path d="M84 -66 C48 -42, 16 28, -4 96 C22 50, 56 -24, 98 -64 Z" fill="url(#ctrGoldFtr)"/>
+                        <rect x="-194" y="16" width="120" height="38" rx="2" fill="#081B2E"/>
+                        <rect x="-153" y="-25" width="38" height="120" rx="2" fill="#081B2E"/>
+                    </g>
+                    <text x="180" y="176" text-anchor="middle" font-family="Georgia, 'Cormorant Garamond', serif" font-size="44" font-weight="700" letter-spacing="7" fill="#081B2E">VELLORA</text>
+                    <line x1="38" y1="198" x2="68" y2="198" stroke="#C49A52" stroke-width="2"/>
+                    <text x="180" y="203" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#081B2E">MEDICAL TRAVEL CONCIERGE</text>
+                    <line x1="292" y1="198" x2="322" y2="198" stroke="#C49A52" stroke-width="2"/>
+                </svg>
+            </a>
+        </div>
+
+        <!-- Clean 3-Column Architectural Footer (Centered on Mobile, Normal on Desktop) -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-hairline text-center md:text-start">
+
+                <!-- Column 1: About VELLORA -->
+                <div class="space-y-3 flex flex-col items-center md:items-start">
+                    <h4 id="footer-about-title" class="font-en text-xs uppercase tracking-[0.2em] text-gold font-bold">عن فيلورا</h4>
+                    <p id="footer-bio" class="text-xs sm:text-sm text-secondary leading-relaxed max-w-sm mx-auto md:mx-0"></p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="space-y-3 flex flex-col items-center md:items-start">
+                    <h4 id="footer-quick-links-title" class="font-en text-xs uppercase tracking-[0.2em] text-gold font-bold">روابط سريعة</h4>
+                    <ul class="space-y-2.5 text-xs sm:text-sm text-secondary">
+                        <li><a id="footer-link-leadership" href="index.html?lang=ar#leadership" class="hover:text-gold transition"></a></li>
+                        <li><a id="footer-link-centers" href="index.html?lang=ar#centers" class="hover:text-gold transition"></a></li>
+                        <li><a id="footer-link-journey" href="index.html?lang=ar#journey" class="hover:text-gold transition"></a></li>
+                        <li><a id="footer-link-studio" href="index.html?lang=ar#studio" class="hover:text-gold transition"></a></li>
+                        <li><a id="footer-link-faq" href="index.html?lang=ar#faq" class="hover:text-gold transition"></a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Direct Contact -->
+                <div class="space-y-3 flex flex-col items-center md:items-start">
+                    <h4 id="footer-contact-title" class="font-en text-xs uppercase tracking-[0.2em] text-gold font-bold">التواصل المباشر</h4>
+                    <p id="footer-location" class="text-xs sm:text-sm text-secondary"></p>
+                    <div class="pt-1">
+                        <a href="https://wa.me/963930888475" target="_blank" rel="noopener" class="btn-outline-editorial inline-flex items-center gap-2.5 px-4 py-2.5 text-xs font-bold">
+                            <i class="fa-brands fa-whatsapp text-emerald-600 text-base"></i>
+                            <span class="font-en" dir="ltr" style="direction: ltr; unicode-bidi: isolate;">+963 930 888 475</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Legal Bar -->
+            <div class="pt-7 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted text-center sm:text-start">
+                <p id="footer-copy"></p>
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <a id="footer-privacy" href="privacy.html?lang=ar" class="hover:text-gold transition"></a>
+                    <span>•</span>
+                    <a id="footer-back" href="index.html?lang=ar" class="inline-flex items-center gap-1.5 text-gold hover:underline font-semibold">
+                        <span id="footer-back-text"></span>
+                        <i class="fa-solid fa-arrow-left dir-rtl-only text-[11px]"></i>
+                        <i class="fa-solid fa-arrow-right dir-ltr-only text-[11px]"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- =========================================================
+         4. MOBILE STICKY BOTTOM ACTION BAR (< lg, appears after 280px scroll)
+         ========================================================= -->
+    <div id="mobile-sticky-bar" class="mobile-sticky-bar lg:hidden fixed bottom-0 inset-x-0 z-40 px-4 py-2.5">
+        <div class="grid grid-cols-2 gap-2.5 max-w-md mx-auto">
+            <a href="https://wa.me/963930888475" target="_blank" rel="noopener" class="btn-whatsapp py-2.5 flex items-center justify-center gap-2 text-xs font-bold">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+                <span id="sticky-wa-text">واتساب مباشر</span>
+            </a>
+            <a id="sticky-home-link" href="index.html?lang=ar" class="btn-editorial py-2.5 flex items-center justify-center gap-2 text-xs font-bold">
+                <i class="fa-solid fa-house text-xs"></i>
+                <span id="sticky-home-text">الرئيسية</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- =========================================================
+         JAVASCRIPT ENGINE: DUAL THEME + BILINGUAL + TERMS DOSSIER + WHATSAPP
+         ========================================================= -->
     <script>
+        /* ---------------- GLOBAL STATE ---------------- */
         let currentLang = 'ar';
+        let currentTheme = document.documentElement.getAttribute('data-theme') || 'ivory';
         const PHONE_DISPLAY = '+963 930 888 475';
         const PHONE_LINK = 'https://wa.me/963930888475';
 
-        // WhatsApp buttons open the chat directly (no wa.me "Continue to chat" page)
+        /* ---------------- DUAL THEME ENGINE (IVORY <-> MIDNIGHT) ---------------- */
+        function applyTheme(theme) {
+            currentTheme = theme === 'midnight' ? 'midnight' : 'ivory';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            try { localStorage.setItem('vellora-theme', currentTheme); } catch (e) {}
+            const meta = document.getElementById('meta-theme-color');
+            if (meta) meta.setAttribute('content', currentTheme === 'midnight' ? '#061321' : '#FBF7EB');
+            updateThemeButtonUI();
+        }
+
+        function updateThemeButtonUI() {
+            const icon = document.getElementById('theme-icon');
+            const label = document.getElementById('theme-label');
+            const btn = document.getElementById('theme-toggle-btn');
+            if (!icon || !label) return;
+            if (currentTheme === 'ivory') {
+                icon.className = 'fa-solid fa-moon text-[#D4AF37] text-xs sm:text-sm';
+                label.textContent = currentLang === 'ar' ? 'ليلي' : 'Midnight';
+                if (btn) btn.setAttribute('aria-label', currentLang === 'ar' ? 'التبديل للوضع الكحلي الليلي' : 'Switch to Midnight Editorial');
+            } else {
+                icon.className = 'fa-solid fa-sun text-[#D4AF37] text-xs sm:text-sm';
+                label.textContent = currentLang === 'ar' ? 'عاجي' : 'Ivory';
+                if (btn) btn.setAttribute('aria-label', currentLang === 'ar' ? 'التبديل للوضع العاجي الفاتح' : 'Switch to Quiet Luxury Ivory');
+            }
+        }
+
+        function toggleTheme() {
+            applyTheme(currentTheme === 'ivory' ? 'midnight' : 'ivory');
+        }
+
+        /* ---------------- MOBILE DRAWER & STICKY ACTION BAR ---------------- */
+        function setMobileMenu(open) {
+            const menu = document.getElementById('mobile-menu');
+            const btn = document.getElementById('mobile-menu-btn');
+            const ic = document.getElementById('mobile-menu-icon');
+            if (!menu || !btn) return;
+            menu.classList.toggle('is-open', open);
+            menu.setAttribute('aria-hidden', String(!open));
+            btn.setAttribute('aria-expanded', String(open));
+            if (ic) ic.className = open ? 'fa-solid fa-xmark text-sm text-[#D4AF37]' : 'fa-solid fa-bars text-xs text-[#D4AF37]';
+        }
+        function toggleMobileMenu() { setMobileMenu(!document.getElementById('mobile-menu').classList.contains('is-open')); }
+        function closeMobileMenu() { setMobileMenu(false); }
+
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMobileMenu(); });
+        document.addEventListener('click', function (e) {
+            const hdr = document.querySelector('header');
+            if (hdr && !hdr.contains(e.target)) closeMobileMenu();
+        });
+        window.addEventListener('resize', function () { if (window.innerWidth >= 640) closeMobileMenu(); });
+
+        window.addEventListener('scroll', function () {
+            const bar = document.getElementById('mobile-sticky-bar');
+            if (bar) bar.classList.toggle('is-visible', window.scrollY > 280);
+        }, { passive: true });
+
+        /* ---------------- DIRECT WHATSAPP LAUNCHER ---------------- */
         document.addEventListener('click', function (e) {
             const link = e.target.closest('a[href*="wa.me/"]');
             if (!link) return;
@@ -243,258 +1014,553 @@
             const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) ||
                              (navigator.maxTouchPoints > 1 && /Macintosh/i.test(navigator.userAgent));
             if (isMobile) {
-                const fb = setTimeout(() => { if (!document.hidden) location.href = 'https://api.whatsapp.com/send?phone=' + phone; }, 1800);
-                document.addEventListener('visibilitychange', () => { if (document.hidden) clearTimeout(fb); }, { once: true });
-                window.addEventListener('pagehide', () => clearTimeout(fb), { once: true });
+                const fb = setTimeout(function () {
+                    if (!document.hidden) location.href = 'https://api.whatsapp.com/send?phone=' + phone;
+                }, 1800);
+                document.addEventListener('visibilitychange', function () { if (document.hidden) clearTimeout(fb); }, { once: true });
+                window.addEventListener('pagehide', function () { clearTimeout(fb); }, { once: true });
                 location.href = 'whatsapp://send?phone=' + phone;
             } else {
                 const webUrl = 'https://web.whatsapp.com/send?phone=' + phone;
                 let handled = false;
-                const mark = () => { handled = true; };
+                const mark = function () { handled = true; };
                 window.addEventListener('blur', mark, { once: true });
-                document.addEventListener('visibilitychange', () => { if (document.hidden) handled = true; }, { once: true });
+                document.addEventListener('visibilitychange', function () { if (document.hidden) handled = true; }, { once: true });
                 location.href = 'whatsapp://send?phone=' + phone;
-                setTimeout(() => {
+                setTimeout(function () {
                     window.removeEventListener('blur', mark);
                     if (handled || document.getElementById('wa-web-hint')) return;
                     const ar = document.documentElement.lang === 'ar';
                     const box = document.createElement('div');
                     box.id = 'wa-web-hint';
-                    box.style.cssText = 'position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;max-width:92vw;background:#081B2E;color:#fff;border:1px solid #C49A52;border-radius:14px;padding:12px 16px;box-shadow:0 18px 50px -12px rgba(0,0,0,.55);font-size:13px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center';
+                    box.setAttribute('role', 'status');
+                    box.style.cssText = 'position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;max-width:92vw;background:#081B2E;color:#FBF7EB;border:1px solid #C49A52;border-radius:10px;padding:12px 16px;box-shadow:0 18px 50px -12px rgba(0,0,0,.55);font-size:13px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center';
                     const msg = document.createElement('span');
                     msg.textContent = ar ? 'لم يُفتح تطبيق واتساب؟' : "WhatsApp didn't open?";
                     const a2 = document.createElement('a');
                     a2.href = webUrl; a2.target = '_blank'; a2.rel = 'noopener';
                     a2.textContent = ar ? 'افتح واتساب ويب' : 'Open WhatsApp Web';
-                    a2.style.cssText = 'background:#C49A52;color:#040F1B;font-weight:700;padding:6px 12px;border-radius:10px;text-decoration:none';
-                    box.append(msg, a2);
+                    a2.style.cssText = 'background:#D4AF37;color:#061321;font-weight:700;padding:6px 12px;border-radius:6px;text-decoration:none';
+                    const close = document.createElement('button');
+                    close.type = 'button'; close.textContent = '×'; close.setAttribute('aria-label', 'close');
+                    close.style.cssText = 'color:#BDC8D6;font-size:18px;line-height:1;background:none;border:0;cursor:pointer';
+                    close.onclick = function () { box.remove(); };
+                    box.append(msg, a2, close);
                     document.body.appendChild(box);
-                    setTimeout(() => box.remove(), 15000);
+                    setTimeout(function () { if (box.parentElement) box.remove(); }, 15000);
                 }, 3500);
             }
         });
 
+        /* ---------------- BILINGUAL DICTIONARY & EXACT TERMS CONTENT ---------------- */
         const T = {
             ar: {
-                langBtn: 'English', back: 'الرئيسية',
+                pageTitle: 'الشروط والأحكام | VELLORA فيلورا',
+                langBtn: 'English', langBtnMobile: 'EN',
+                back: 'الرئيسية', hdrWa: 'واتساب', mmWa: 'واتساب مباشر',
+                navLeadership: 'الإشراف الطبي', navCenters: 'مستشفيات لندن', navStudio: 'مكتب التنسيق الذكي',
+                navPrivacy: 'سياسة الخصوصية', navTerms: 'الشروط والأحكام',
+                crumbHome: 'الرئيسية', crumbCurrent: 'الشروط والأحكام',
                 title: 'الشروط والأحكام',
                 lead: 'باستخدامك موقع VELLORA وخدماتها توافق على الشروط التالية. اقرأها بهدوء، وإن كان لديك أي سؤال فنحن جاهزون للإجابة.',
                 updated: 'آخر تحديث: 21 نوفمبر 2026',
                 toc: 'محتويات الصفحة',
-                copy: '© 2026 VELLORA Medical Travel Concierge. جميع الحقوق محفوظة.',
-                backHome: 'العودة إلى الموقع',
-                privacy: 'سياسة الخصوصية',
+                sidebarPrivKicker: 'وثيقة ذات صلة',
+                sidebarPrivTitle: 'سياسة الخصوصية والسرية الطبية',
+                sidebarPrivDesc: 'اطّلع على كيفية تعاملنا مع بياناتك الطبية ومعلوماتك الشخصية وحقوقك الكاملة.',
                 contactTitle: 'لأي سؤال بخصوص هذه الشروط',
                 contactText: 'راسلنا عبر واتساب وسنرد عليك بأقرب وقت ممكن.',
-                contactBtn: 'تواصل عبر واتساب'
+                contactBtn: 'تواصل عبر واتساب',
+                footerAboutTitle: 'عن فيلورا',
+                footerBio: 'خدمات تنسيق طبي وسفر علاجي إلى لندن، واستشارات كبار الجراحين البريطانيين، برعاية احترافية وسرّية تامة.',
+                footerLinksTitle: 'روابط سريعة',
+                footerLinkLeadership: 'الإشراف الطبي و د.مرهف',
+                footerLinkCenters: 'مستشفيات لندن المعتمدة',
+                footerLinkJourney: 'رحلة المريض والحوكمة',
+                footerLinkStudio: 'مكتب التنسيق الذكي',
+                footerLinkFaq: 'الأسئلة الشائعة',
+                footerContactTitle: 'التواصل المباشر',
+                footerLocation: 'لندن، المملكة المتحدة • خدمة 24/7',
+                copy: '© 2026 VELLORA Medical Travel Concierge. جميع الحقوق محفوظة.',
+                privacy: 'سياسة الخصوصية والسرية الطبية',
+                backHome: 'العودة إلى الموقع'
             },
             en: {
-                langBtn: 'عربي', back: 'Home',
+                pageTitle: 'Terms & Conditions | VELLORA',
+                langBtn: 'عربي', langBtnMobile: 'ع',
+                back: 'Home', hdrWa: 'WhatsApp', mmWa: 'Direct WhatsApp',
+                navLeadership: 'Medical Oversight', navCenters: 'London Hospitals', navStudio: 'Concierge Studio',
+                navPrivacy: 'Privacy Policy', navTerms: 'Terms & Conditions',
+                crumbHome: 'Home', crumbCurrent: 'Terms & Conditions',
                 title: 'Terms & Conditions',
                 lead: 'By using the VELLORA website and services you agree to the terms below. Please read them calmly, and if you have any question we are happy to answer.',
                 updated: 'Last updated: 21 November 2026',
                 toc: 'On this page',
-                copy: '© 2026 VELLORA Medical Travel Concierge. All rights reserved.',
-                backHome: 'Back to the website',
-                privacy: 'Privacy Policy',
+                sidebarPrivKicker: 'Related Document',
+                sidebarPrivTitle: 'Privacy & Medical Confidentiality Policy',
+                sidebarPrivDesc: 'Learn how we handle and protect your medical and personal details, and your rights.',
                 contactTitle: 'Questions about these terms',
                 contactText: 'Message us on WhatsApp and we will reply as soon as we can.',
-                contactBtn: 'Contact us on WhatsApp'
+                contactBtn: 'Contact us on WhatsApp',
+                footerAboutTitle: 'About VELLORA',
+                footerBio: 'Private medical travel concierge and senior UK consultant coordination in London with complete discretion.',
+                footerLinksTitle: 'Quick Links',
+                footerLinkLeadership: 'Medical Oversight',
+                footerLinkCenters: 'London Hospitals',
+                footerLinkJourney: 'Patient Journey',
+                footerLinkStudio: 'Concierge Studio',
+                footerLinkFaq: 'FAQ',
+                footerContactTitle: 'Direct Contact',
+                footerLocation: 'London, United Kingdom • 24/7 Service',
+                copy: '© 2026 VELLORA Medical Travel Concierge. All rights reserved.',
+                privacy: 'Privacy & Confidentiality Policy',
+                backHome: 'Back to the website'
             }
         };
 
         const glance = [
-            { icon: 'fa-solid fa-handshake-angle',
-              ar: ['خدمة تنسيق', 'ننسّق رحلتك العلاجية، والعلاج يقدّمه أطباء ومستشفيات مستقلون.'],
-              en: ['A coordination service', 'We coordinate your care journey; treatment is provided by independent doctors and hospitals.'] },
-            { icon: 'fa-solid fa-circle-check',
-              ar: ['الحجز بتأكيد كتابي', 'لا يُعد الحجز نهائياً إلا بعد تأكيدنا لك عبر واتساب.'],
-              en: ['Booking needs written confirmation', 'A booking is final only once we confirm it to you on WhatsApp.'] },
-            { icon: 'fa-solid fa-passport',
-              ar: ['نتكفل بالتأشيرة والقبول', 'ننجز إجراءات التأشيرة والقبول لدى المستشفى نيابةً عنك.'],
-              en: ['We handle visa and admission', 'We complete the visa and hospital admission procedures on your behalf.'] },
-            { icon: 'fa-solid fa-file-invoice-dollar',
-              ar: ['تكاليف واضحة مسبقاً', 'نوضّح التكاليف المتوقعة قبل أن تلتزم بأي حجز.'],
-              en: ['Costs explained upfront', 'We explain expected costs before you commit to any booking.'] }
+            {
+                icon: 'fa-solid fa-handshake-angle',
+                ar: ['خدمة تنسيق', 'ننسّق رحلتك العلاجية، والعلاج يقدّمه أطباء ومستشفيات مستقلون.'],
+                en: ['A coordination service', 'We coordinate your care journey; treatment is provided by independent doctors and hospitals.']
+            },
+            {
+                icon: 'fa-solid fa-circle-check',
+                ar: ['الحجز بتأكيد كتابي', 'لا يُعد الحجز نهائياً إلا بعد تأكيدنا لك عبر واتساب.'],
+                en: ['Booking needs written confirmation', 'A booking is final only once we confirm it to you on WhatsApp.']
+            },
+            {
+                icon: 'fa-solid fa-passport',
+                ar: ['نتكفل بالتأشيرة والقبول', 'ننجز إجراءات التأشيرة والقبول لدى المستشفى نيابةً عنك.'],
+                en: ['We handle visa and admission', 'We complete the visa and hospital admission procedures on your behalf.']
+            },
+            {
+                icon: 'fa-solid fa-file-invoice-dollar',
+                ar: ['تكاليف واضحة مسبقاً', 'نوضّح التكاليف المتوقعة قبل أن تلتزم بأي حجز.'],
+                en: ['Costs explained upfront', 'We explain expected costs before you commit to any booking.']
+            }
         ];
 
-        // Each body item: string = paragraph, {list:[...]} = bullet list, {note:'...'} = highlighted note
+        // All 9 exact clauses (AR & EN)
         const sections = [
-            { id: 's1', icon: 'fa-solid fa-file-signature',
-              ar: { t: 'القبول والنطاق', b: [
-                    'يقدّم موقع VELLORA (فيلورا) خدمة تنسيق طبي وسفر علاجي إلى لندن. باستخدامك هذا الموقع، أو بإرسال طلب عبر النموذج أو واتساب، فإنك تقرّ بأنك قرأت هذه الشروط وتوافق عليها.',
-                    'إن لم توافق على أي جزء منها فنرجو عدم استخدام الموقع أو إرسال طلب.'] },
-              en: { t: 'Acceptance and scope', b: [
-                    'The VELLORA website provides medical travel coordination services for care in London. By using this website, or by sending a request through the form or WhatsApp, you confirm that you have read and agree to these terms.',
-                    'If you do not agree with any part of them, please do not use the website or send a request.'] } },
-
-            { id: 's2', icon: 'fa-solid fa-user-doctor',
-              ar: { t: 'طبيعة خدماتنا', b: [
-                    'نحن جهة تنسيق وتسهيل: نساعدك في ترتيب المواعيد مع المستشارين والمستشفيات، والاستقبال والإقامة والمواصلات، ومرافقتك خلال الرحلة وتوجيهك في إجراءات التأشيرة.',
-                    'العلاج الطبي يقدّمه الأطباء والمستشفيات المستقلون الذين ننسّق معهم، ولكل منهم شروطه وسياساته. الفرز الأولي لملفك الطبي هدفه اختيار الاستشاري والمستشفى الأنسب، ولا يُعد تشخيصاً ولا خطة علاج.',
-                    { note: 'المحتوى المنشور في هذا الموقع للتعريف بالخدمة فقط، وليس نصيحة طبية ولا بديلاً عن استشارة الطبيب. في الحالات الطارئة اتصل فوراً بخدمات الطوارئ في بلدك ولا تنتظر ردّنا.' }] },
-              en: { t: 'The nature of our services', b: [
-                    'We are a coordination and facilitation service: we help arrange appointments with consultants and hospitals, reception, accommodation and transport, accompany you during the trip and guide you through visa procedures.',
-                    'Medical treatment is provided by the independent doctors and hospitals we coordinate with, each under its own terms and policies. The initial review of your file is meant to select the most suitable consultant and hospital; it is not a diagnosis or a treatment plan.',
-                    { note: 'The content of this website describes our service only; it is not medical advice and does not replace consulting a doctor. In an emergency, call your local emergency services immediately and do not wait for our reply.' }] } },
-
-            { id: 's3', icon: 'fa-solid fa-calendar-check',
-              ar: { t: 'الطلبات والمواعيد', b: [
-                    'إرسال الطلب وحده لا يُنشئ التزاماً علينا. يُعتبر الحجز مؤكداً عندما نؤكده لك كتابياً عبر واتساب.',
-                    'تخضع المواعيد لتوفر المستشارين والمستشفيات وسياساتهم، وقد تتغير أو تُلغى من جهتهم. وفي هذه الحالة سنبلغك ونسعى لترتيب بديل مناسب.'] },
-              en: { t: 'Requests and appointments', b: [
-                    'Sending a request on its own does not bind us. A booking is confirmed when we confirm it to you in writing on WhatsApp.',
-                    'Appointments depend on the availability and policies of the consultants and hospitals, and may be changed or cancelled by them. If that happens we will inform you and try to arrange a suitable alternative.'] } },
-
-            { id: 's4', icon: 'fa-solid fa-clipboard-check',
-              ar: { t: 'مسؤولياتك', b: [
-                    'لنتمكن من خدمتك بشكل صحيح، نرجو منك:',
-                    { list: [
-                        'تقديم معلومات ووثائق صحيحة وكاملة، وإبلاغنا بأي تغيير في حالتك الصحية أو خططك.',
-                        'التأكد من صلاحية جواز السفر والوثائق المطلوبة للسفر والإقامة.',
-                        'الالتزام بتعليمات الأطباء والمستشفيات ومواعيدهم.',
-                        'إرسال الطلب بنفسك إن كنت بالغاً، أو عبر وليّ الأمر إن كان المريض قاصراً أو غير قادر على التصرف.'] }] },
-              en: { t: 'Your responsibilities', b: [
-                    'So that we can serve you properly, we ask you to:',
-                    { list: [
-                        'Provide accurate and complete information and documents, and tell us about any change in your health or plans.',
-                        'Make sure your passport and the documents required for travel and stay are valid.',
-                        'Follow the instructions and appointment times of the doctors and hospitals.',
-                        'Send the request yourself if you are an adult, or through a parent or legal guardian if the patient is a minor or unable to act.'] }] } },
-
-            { id: 's5', icon: 'fa-solid fa-passport',
-              ar: { t: 'التأشيرة والسفر', b: [
-                    'نتكفل بإنجاز إجراءات التأشيرة الطبية والحصول على القبول لدى المستشفى المعالج نيابةً عنك، ونتابع طلبك معك خطوة بخطوة حتى اكتماله.'] },
-              en: { t: 'Visas and travel', b: [
-                    'We take care of completing your medical visa procedures and obtaining admission at the treating hospital on your behalf, and we follow your request with you step by step until it is complete.'] } },
-
-            { id: 's6', icon: 'fa-solid fa-file-invoice-dollar',
-              ar: { t: 'التكاليف والمدفوعات', b: [
-                    'رسوم العلاج والإقامة والمواصلات وغيرها يحدّدها مقدّمو الخدمة المستقلون ولهم شروطهم. نوضّح لك التكاليف المتوقعة والترتيبات المالية قبل أن تلتزم بأي حجز، وأي رسوم لخدماتنا نحن يُتفق عليها معك مسبقاً.',
-                    'تختلف سياسات الإلغاء والاسترداد من مقدّم خدمة لآخر، ونبلغك بها قبل تأكيد الحجز.'] },
-              en: { t: 'Costs and payments', b: [
-                    'Fees for treatment, accommodation, transport and other services are set by the independent providers, each under its own terms. We explain the expected costs and financial arrangements before you commit to any booking, and any fee for our own services is agreed with you in advance.',
-                    'Cancellation and refund policies differ from one provider to another, and we tell you about them before a booking is confirmed.'] } },
-
-            { id: 's7', icon: 'fa-solid fa-scale-balanced',
-              ar: { t: 'النتائج الطبية وحدود المسؤولية', b: [
-                    'تختلف نتائج العلاج من حالة لأخرى، ولا نضمن أي نتيجة طبية. القرارات العلاجية يتخذها الأطباء المعالجون بحسب حالتك.',
-                    'نبذل العناية المعقولة في اختيار مقدّمي الخدمة والتنسيق معهم، ولا نتحمل المسؤولية عن أفعال أو إهمال أطراف مستقلة، ولا عن ظروف خارجة عن إرادتنا كإغلاق الحدود أو إلغاء الرحلات أو تأخرها، وذلك بالقدر الذي يسمح به القانون. ولا يمتد هذا إلى ما لا يجوز قانوناً استثناؤه.'] },
-              en: { t: 'Medical outcomes and limits of liability', b: [
-                    'Treatment results vary from case to case and we do not guarantee any medical outcome. Treatment decisions are made by the treating doctors according to your condition.',
-                    'We take reasonable care in selecting and coordinating with providers. We are not responsible for the acts or omissions of independent parties, or for circumstances beyond our control such as border closures or cancelled or delayed travel, to the extent the law allows. This does not extend to anything that cannot lawfully be excluded.'] } },
-
-            { id: 's8', icon: 'fa-solid fa-copyright',
-              ar: { t: 'الاستخدام المقبول والملكية الفكرية', b: [
-                    'محتوى الموقع من نصوص وتصميم وشعار ملك لـ VELLORA أو مرخّص لها، ولا يجوز نسخه أو إعادة نشره دون إذن مسبق.',
-                    'يُمنع استخدام الموقع بطريقة مخالفة للقانون، أو إرسال معلومات كاذبة أو مضلّلة، أو محاولة تعطيل الموقع أو الوصول غير المصرّح به إليه.'] },
-              en: { t: 'Acceptable use and intellectual property', b: [
-                    'The website content, including text, design and logo, belongs to or is licensed to VELLORA and may not be copied or republished without prior permission.',
-                    'You may not use the website unlawfully, send false or misleading information, or try to disrupt the website or gain unauthorised access to it.'] } },
-
-            { id: 's9', icon: 'fa-solid fa-arrows-rotate',
-              ar: { t: 'الخصوصية والتعديلات والتواصل', b: [
-                    'نتعامل مع بياناتك وفق <a class="privacy-inline font-bold text-navy-900 underline decoration-gold-500 decoration-2 underline-offset-4 hover:text-gold-700" href="privacy.html">سياسة الخصوصية والسرية الطبية</a>.',
-                    'قد نعدّل هذه الشروط من وقت لآخر، ويظهر تاريخ آخر تحديث أعلى الصفحة. استمرارك في استخدام الموقع بعد التعديل يعني موافقتك على النسخة الجديدة. تخضع هذه الشروط للقانون المعمول به، ونرحّب بالتواصل معنا أولاً لحل أي خلاف ودياً.',
-                    { contact: true }] },
-              en: { t: 'Privacy, changes and contact', b: [
-                    'We handle your data according to our <a class="privacy-inline font-bold text-navy-900 underline decoration-gold-500 decoration-2 underline-offset-4 hover:text-gold-700" href="privacy.html">Privacy & Medical Confidentiality Policy</a>.',
-                    'We may update these terms from time to time; the last-updated date appears at the top of the page. Continuing to use the website after a change means you accept the new version. These terms are governed by the applicable law, and we welcome you contacting us first so we can try to resolve any dispute amicably.',
-                    { contact: true }] } }
+            {
+                id: 's1', icon: 'fa-solid fa-file-signature',
+                ar: {
+                    t: 'القبول والنطاق',
+                    b: [
+                        'يقدّم موقع VELLORA (فيلورا) خدمة تنسيق طبي وسفر علاجي إلى لندن. باستخدامك هذا الموقع، أو بإرسال طلب عبر النموذج أو واتساب، فإنك تقرّ بأنك قرأت هذه الشروط وتوافق عليها.',
+                        'إن لم توافق على أي جزء منها فنرجو عدم استخدام الموقع أو إرسال طلب.'
+                    ]
+                },
+                en: {
+                    t: 'Acceptance and scope',
+                    b: [
+                        'The VELLORA website provides medical travel coordination services for care in London. By using this website, or by sending a request through the form or WhatsApp, you confirm that you have read and agree to these terms.',
+                        'If you do not agree with any part of them, please do not use the website or send a request.'
+                    ]
+                }
+            },
+            {
+                id: 's2', icon: 'fa-solid fa-user-doctor',
+                ar: {
+                    t: 'طبيعة خدماتنا',
+                    b: [
+                        'نحن جهة تنسيق وتسهيل: نساعدك في ترتيب المواعيد مع المستشارين والمستشفيات، والاستقبال والإقامة والمواصلات، ومرافقتك خلال الرحلة وتوجيهك في إجراءات التأشيرة.',
+                        'العلاج الطبي يقدّمه الأطباء والمستشفيات المستقلون الذين ننسّق معهم، ولكل منهم شروطه وسياساته. الفرز الأولي لملفك الطبي هدفه اختيار الاستشاري والمستشفى الأنسب، ولا يُعد تشخيصاً ولا خطة علاج.',
+                        { note: 'المحتوى المنشور في هذا الموقع للتعريف بالخدمة فقط، وليس نصيحة طبية ولا بديلاً عن استشارة الطبيب. في الحالات الطارئة اتصل فوراً بخدمات الطوارئ في بلدك ولا تنتظر ردّنا.' }
+                    ]
+                },
+                en: {
+                    t: 'The nature of our services',
+                    b: [
+                        'We are a coordination and facilitation service: we help arrange appointments with consultants and hospitals, reception, accommodation and transport, accompany you during the trip and guide you through visa procedures.',
+                        'Medical treatment is provided by the independent doctors and hospitals we coordinate with, each under its own terms and policies. The initial review of your file is meant to select the most suitable consultant and hospital; it is not a diagnosis or a treatment plan.',
+                        { note: 'The content of this website describes our service only; it is not medical advice and does not replace consulting a doctor. In an emergency, call your local emergency services immediately and do not wait for our reply.' }
+                    ]
+                }
+            },
+            {
+                id: 's3', icon: 'fa-solid fa-calendar-check',
+                ar: {
+                    t: 'الطلبات والمواعيد',
+                    b: [
+                        'إرسال الطلب وحده لا يُنشئ التزاماً علينا. يُعتبر الحجز مؤكداً عندما نؤكده لك كتابياً عبر واتساب.',
+                        'تخضع المواعيد لتوفر المستشارين والمستشفيات وسياساتهم، وقد تتغير أو تُلغى من جهتهم. وفي هذه الحالة سنبلغك ونسعى لترتيب بديل مناسب.'
+                    ]
+                },
+                en: {
+                    t: 'Requests and appointments',
+                    b: [
+                        'Sending a request on its own does not bind us. A booking is confirmed when we confirm it to you in writing on WhatsApp.',
+                        'Appointments depend on the availability and policies of the consultants and hospitals, and may be changed or cancelled by them. If that happens we will inform you and try to arrange a suitable alternative.'
+                    ]
+                }
+            },
+            {
+                id: 's4', icon: 'fa-solid fa-clipboard-check',
+                ar: {
+                    t: 'مسؤولياتك',
+                    b: [
+                        'لنتمكن من خدمتك بشكل صحيح، نرجو منك:',
+                        {
+                            list: [
+                                'تقديم معلومات ووثائق صحيحة وكاملة، وإبلاغنا بأي تغيير في حالتك الصحية أو خططك.',
+                                'التأكد من صلاحية جواز السفر والوثائق المطلوبة للسفر والإقامة.',
+                                'الالتزام بتعليمات الأطباء والمستشفيات ومواعيدهم.',
+                                'إرسال الطلب بنفسك إن كنت بالغاً، أو عبر وليّ الأمر إن كان المريض قاصراً أو غير قادر على التصرف.'
+                            ]
+                        }
+                    ]
+                },
+                en: {
+                    t: 'Your responsibilities',
+                    b: [
+                        'So that we can serve you properly, we ask you to:',
+                        {
+                            list: [
+                                'Provide accurate and complete information and documents, and tell us about any change in your health or plans.',
+                                'Make sure your passport and the documents required for travel and stay are valid.',
+                                'Follow the instructions and appointment times of the doctors and hospitals.',
+                                'Send the request yourself if you are an adult, or through a parent or legal guardian if the patient is a minor or unable to act.'
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                id: 's5', icon: 'fa-solid fa-passport',
+                ar: {
+                    t: 'التأشيرة والسفر',
+                    b: [
+                        'نتكفل بإنجاز إجراءات التأشيرة الطبية والحصول على القبول لدى المستشفى المعالج نيابةً عنك، ونتابع طلبك معك خطوة بخطوة حتى اكتماله.'
+                    ]
+                },
+                en: {
+                    t: 'Visas and travel',
+                    b: [
+                        'We take care of completing your medical visa procedures and obtaining admission at the treating hospital on your behalf, and we follow your request with you step by step until it is complete.'
+                    ]
+                }
+            },
+            {
+                id: 's6', icon: 'fa-solid fa-file-invoice-dollar',
+                ar: {
+                    t: 'التكاليف والمدفوعات',
+                    b: [
+                        'رسوم العلاج والإقامة والمواصلات وغيرها يحدّدها مقدّمو الخدمة المستقلون ولهم شروطهم. نوضّح لك التكاليف المتوقعة والترتيبات المالية قبل أن تلتزم بأي حجز، وأي رسوم لخدماتنا نحن يُتفق عليها معك مسبقاً.',
+                        'تختلف سياسات الإلغاء والاسترداد من مقدّم خدمة لآخر، ونبلغك بها قبل تأكيد الحجز.'
+                    ]
+                },
+                en: {
+                    t: 'Costs and payments',
+                    b: [
+                        'Fees for treatment, accommodation, transport and other services are set by the independent providers, each under its own terms. We explain the expected costs and financial arrangements before you commit to any booking, and any fee for our own services is agreed with you in advance.',
+                        'Cancellation and refund policies differ from one provider to another, and we tell you about them before a booking is confirmed.'
+                    ]
+                }
+            },
+            {
+                id: 's7', icon: 'fa-solid fa-scale-balanced',
+                ar: {
+                    t: 'النتائج الطبية وحدود المسؤولية',
+                    b: [
+                        'تختلف نتائج العلاج من حالة لأخرى، ولا نضمن أي نتيجة طبية. القرارات العلاجية يتخذها الأطباء المعالجون بحسب حالتك.',
+                        'نبذل العناية المعقولة في اختيار مقدّمي الخدمة والتنسيق معهم، ولا نتحمل المسؤولية عن أفعال أو إهمال أطراف مستقلة، ولا عن ظروف خارجة عن إرادتنا كإغلاق الحدود أو إلغاء الرحلات أو تأخرها، وذلك بالقدر الذي يسمح به القانون. ولا يمتد هذا إلى ما لا يجوز قانوناً استثناؤه.'
+                    ]
+                },
+                en: {
+                    t: 'Medical outcomes and limits of liability',
+                    b: [
+                        'Treatment results vary from case to case and we do not guarantee any medical outcome. Treatment decisions are made by the treating doctors according to your condition.',
+                        'We take reasonable care in selecting and coordinating with providers. We are not responsible for the acts or omissions of independent parties, or for circumstances beyond our control such as border closures or cancelled or delayed travel, to the extent the law allows. This does not extend to anything that cannot lawfully be excluded.'
+                    ]
+                }
+            },
+            {
+                id: 's8', icon: 'fa-solid fa-copyright',
+                ar: {
+                    t: 'الاستخدام المقبول والملكية الفكرية',
+                    b: [
+                        'محتوى الموقع من نصوص وتصميم وشعار ملك لـ VELLORA أو مرخّص لها، ولا يجوز نسخه أو إعادة نشره دون إذن مسبق.',
+                        'يُمنع استخدام الموقع بطريقة مخالفة للقانون، أو إرسال معلومات كاذبة أو مضلّلة، أو محاولة تعطيل الموقع أو الوصول غير المصرّح به إليه.'
+                    ]
+                },
+                en: {
+                    t: 'Acceptable use and intellectual property',
+                    b: [
+                        'The website content, including text, design and logo, belongs to or is licensed to VELLORA and may not be copied or republished without prior permission.',
+                        'You may not use the website unlawfully, send false or misleading information, or try to disrupt the website or gain unauthorised access to it.'
+                    ]
+                }
+            },
+            {
+                id: 's9', icon: 'fa-solid fa-arrows-rotate',
+                ar: {
+                    t: 'الخصوصية والتعديلات والتواصل',
+                    b: [
+                        'نتعامل مع بياناتك وفق <a class="privacy-inline font-bold text-main underline decoration-[#C49A52] decoration-2 underline-offset-4 hover:text-gold transition-colors" href="privacy.html?lang=ar">سياسة الخصوصية والسرية الطبية</a>.',
+                        'قد نعدّل هذه الشروط من وقت لآخر، ويظهر تاريخ آخر تحديث أعلى الصفحة. استمرارك في استخدام الموقع بعد التعديل يعني موافقتك على النسخة الجديدة. تخضع هذه الشروط للقانون المعمول به، ونرحّب بالتواصل معنا أولاً لحل أي خلاف ودياً.',
+                        { contact: true }
+                    ]
+                },
+                en: {
+                    t: 'Privacy, changes and contact',
+                    b: [
+                        'We handle your data according to our <a class="privacy-inline font-bold text-main underline decoration-[#C49A52] decoration-2 underline-offset-4 hover:text-gold transition-colors" href="privacy.html?lang=en">Privacy &amp; Medical Confidentiality Policy</a>.',
+                        'We may update these terms from time to time; the last-updated date appears at the top of the page. Continuing to use the website after a change means you accept the new version. These terms are governed by the applicable law, and we welcome you contacting us first so we can try to resolve any dispute amicably.',
+                        { contact: true }
+                    ]
+                }
+            }
         ];
 
+        /* ---------------- RENDER LEGAL BODY ITEMS ---------------- */
         function renderBody(items, lang) {
-            return items.map(it => {
-                if (typeof it === 'string') return `<p class="text-sm sm:text-[15px] leading-8 text-slate-800">${it}</p>`;
-                if (it.list) return `<ul class="space-y-2.5">${it.list.map(li => `
-                    <li class="flex items-start gap-3 text-sm sm:text-[15px] leading-7 text-slate-800">
-                        <i class="fa-solid fa-check mt-1.5 text-[10px] text-gold-600 shrink-0"></i><span>${li}</span>
-                    </li>`).join('')}</ul>`;
-                if (it.note) return `
-                    <div class="flex items-start gap-3 rounded-2xl border border-gold-500/40 bg-gold-500/10 p-4">
-                        <i class="fa-solid fa-circle-info mt-0.5 text-gold-600"></i>
-                        <p class="text-sm leading-7 font-medium text-navy-900">${it.note}</p>
+            return items.map(function (it) {
+                if (typeof it === 'string') {
+                    return `<p class="text-sm sm:text-[15px] leading-8 text-secondary">${it}</p>`;
+                }
+                if (it.list) {
+                    return `<ul class="space-y-2.5">${it.list.map(function (li) {
+                        return `<li class="flex items-start gap-3 text-sm sm:text-[15px] leading-7 text-secondary">
+                            <i class="fa-solid fa-check mt-2 text-[10px] text-gold shrink-0"></i>
+                            <span>${li}</span>
+                        </li>`;
+                    }).join('')}</ul>`;
+                }
+                if (it.note) {
+                    return `<div class="dossier-note flex items-start gap-3 p-4">
+                        <i class="fa-solid fa-circle-info mt-1 text-gold shrink-0"></i>
+                        <p class="text-sm leading-7 font-medium text-main">${it.note}</p>
                     </div>`;
-                if (it.contact) return `
-                    <div class="rounded-2xl bg-navy-900 text-white p-5 sm:p-6 border border-gold-500/40 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                        <div>
-                            <h3 class="font-bold text-gold-400 text-base">${T[lang].contactTitle}</h3>
-                            <p class="text-xs sm:text-sm text-stone-300 mt-1">${T[lang].contactText}</p>
+                }
+                if (it.contact) {
+                    return `<div class="bg-band border border-gold-line rounded-md p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="space-y-1">
+                            <h3 class="font-display text-xl text-[#F7F3EA]">${T[lang].contactTitle}</h3>
+                            <p class="text-xs sm:text-sm text-band-muted">${T[lang].contactText}</p>
                         </div>
-                        <a href="${PHONE_LINK}" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white text-sm font-semibold px-4 py-3 rounded-xl border border-emerald-400/30 shrink-0">
+                        <a href="${PHONE_LINK}" target="_blank" rel="noopener" class="btn-whatsapp inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-bold px-4 py-3 shrink-0">
                             <i class="fa-brands fa-whatsapp text-lg"></i>
                             <span>${T[lang].contactBtn}</span>
-                            <span class="font-en text-xs opacity-80" dir="ltr">${PHONE_DISPLAY}</span>
+                            <span class="font-en text-xs opacity-90" dir="ltr" style="direction: ltr; unicode-bidi: isolate;">${PHONE_DISPLAY}</span>
                         </a>
                     </div>`;
+                }
                 return '';
             }).join('');
         }
 
+        /* ---------------- BILINGUAL PAGE RENDER ---------------- */
         function render(lang) {
             currentLang = lang;
             const t = T[lang];
             document.documentElement.lang = lang;
             document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-            document.title = (lang === 'ar' ? 'الشروط والأحكام | VELLORA فيلورا' : 'Terms & Conditions | VELLORA');
+            document.title = t.pageTitle;
 
+            // Header buttons & labels
             document.getElementById('lang-btn-label').textContent = t.langBtn;
             document.getElementById('back-text').textContent = t.back;
+            document.getElementById('hdr-wa-label').textContent = t.hdrWa;
+            document.getElementById('sticky-home-text').textContent = t.back;
+            document.getElementById('sticky-wa-text').textContent = t.mmWa;
+            updateThemeButtonUI();
+
+            // Sync all navigation links with active ?lang= parameter
+            const homeUrl = 'index.html?lang=' + lang;
+            const privacyUrl = 'privacy.html?lang=' + lang;
+
+            ['brand-link', 'back-link', 'crumb-home', 'footer-logo-link', 'footer-back', 'sticky-home-link'].forEach(function (id) {
+                const el = document.getElementById(id);
+                if (el) el.href = homeUrl;
+            });
+
+            document.getElementById('crumb-home').textContent = t.crumbHome;
+            document.getElementById('crumb-current').textContent = t.crumbCurrent;
+
+            // Editorial Nav Rail links (preserving icons inside <a>)
+            document.getElementById('nav-text-leadership').textContent = t.navLeadership;
+            document.getElementById('nav-link-leadership').href = homeUrl + '#leadership';
+            document.getElementById('nav-text-centers').textContent = t.navCenters;
+            document.getElementById('nav-link-centers').href = homeUrl + '#centers';
+            document.getElementById('nav-text-studio').textContent = t.navStudio;
+            document.getElementById('nav-link-studio').href = homeUrl + '#studio';
+            document.getElementById('nav-text-privacy').textContent = t.navPrivacy;
+            document.getElementById('nav-link-privacy').href = privacyUrl;
+            document.getElementById('nav-link-terms').textContent = t.navTerms;
+
+            // Hero, TOC & Sidebar Cross-Link Card
             document.getElementById('page-title').textContent = t.title;
             document.getElementById('page-lead').textContent = t.lead;
             document.getElementById('updated-text').textContent = t.updated;
             document.getElementById('toc-title').textContent = t.toc;
-            document.getElementById('footer-copy').textContent = t.copy;
-            document.getElementById('footer-back-text').textContent = t.backHome;
-            document.getElementById('footer-privacy').textContent = t.privacy;
-            ['brand-link', 'back-link', 'footer-back'].forEach(id => { document.getElementById(id).href = 'index.html?lang=' + lang; });
-            document.getElementById('footer-privacy').href = 'privacy.html?lang=' + lang;
 
-            document.getElementById('glance-grid').innerHTML = glance.map(g => `
-                <div class="glass-card-light rounded-3xl p-5 shadow-xl text-center space-y-3">
-                    <div class="mx-auto w-12 h-12 rounded-2xl bg-navy-900 border border-gold-500/50 flex items-center justify-center text-gold-400 text-xl"><i class="${g.icon}"></i></div>
-                    <h3 class="font-extrabold text-navy-900 text-base">${g[lang][0]}</h3>
-                    <p class="text-xs sm:text-[13px] leading-6 text-slate-700">${g[lang][1]}</p>
-                </div>`).join('');
+            const spCard = document.getElementById('sidebar-privacy-card');
+            spCard.href = privacyUrl;
+            document.getElementById('sidebar-privacy-kicker').textContent = t.sidebarPrivKicker;
+            document.getElementById('sidebar-privacy-title').textContent = t.sidebarPrivTitle;
+            document.getElementById('sidebar-privacy-desc').textContent = t.sidebarPrivDesc;
 
-            document.getElementById('toc-list').innerHTML = sections.map((s, i) => `
-                <li><a href="#${s.id}" data-toc="${s.id}" class="toc-link flex items-center gap-3 rounded-xl px-3 py-2 text-[13px] text-slate-700 hover:bg-gold-500/10">
-                    <span class="font-en text-[11px] font-bold text-gold-600 w-5">${String(i + 1).padStart(2, '0')}</span>
-                    <span>${s[lang].t}</span></a></li>`).join('');
+            // At-a-Glance 4 cards
+            document.getElementById('glance-grid').innerHTML = glance.map(function (g) {
+                return `<div class="arch-card p-5 sm:p-6 text-center space-y-3">
+                    <div class="mx-auto w-11 h-11 rounded-md icon-badge flex items-center justify-center text-lg">
+                        <i class="${g.icon}"></i>
+                    </div>
+                    <h3 class="font-bold text-main text-base">${g[lang][0]}</h3>
+                    <p class="text-xs sm:text-[13px] leading-6 text-secondary">${g[lang][1]}</p>
+                </div>`;
+            }).join('');
 
-            document.getElementById('sections').innerHTML = sections.map((s, i) => `
-                <section id="${s.id}" class="scroll-mt-28 glass-card-light rounded-3xl p-6 sm:p-8 shadow-sm relative overflow-hidden">
-                    <span class="font-en absolute top-3 ltr:right-5 rtl:left-5 text-6xl sm:text-7xl font-extrabold text-gold-500/15 select-none pointer-events-none">${String(i + 1).padStart(2, '0')}</span>
-                    <div class="flex items-center gap-3 mb-4 relative">
-                        <div class="w-11 h-11 rounded-2xl bg-navy-900 border border-gold-500/40 flex items-center justify-center text-gold-400 shrink-0"><i class="${s.icon}"></i></div>
-                        <h2 class="text-lg sm:text-xl font-extrabold text-navy-900">${s[lang].t}</h2>
+            // TOC list
+            document.getElementById('toc-list').innerHTML = sections.map(function (s, i) {
+                return `<li>
+                    <a href="#${s.id}" data-toc="${s.id}" class="toc-link flex items-center gap-3 px-3 py-2 text-[13px]">
+                        <span class="font-en text-[11px] font-bold text-gold w-5 shrink-0">${String(i + 1).padStart(2, '0')}</span>
+                        <span>${s[lang].t}</span>
+                    </a>
+                </li>`;
+            }).join('');
+
+            // 9 Legal Dossier Clauses
+            document.getElementById('sections').innerHTML = sections.map(function (s, i) {
+                return `<section id="${s.id}" class="scroll-mt-36 arch-card p-6 sm:p-8 relative overflow-hidden">
+                    <span class="font-serif-en absolute top-3 ltr:right-5 rtl:left-5 text-6xl sm:text-7xl font-bold text-gold opacity-10 select-none pointer-events-none">${String(i + 1).padStart(2, '0')}</span>
+                    <div class="flex items-center gap-3.5 pb-4 mb-5 border-b border-hairline relative">
+                        <div class="w-10 h-10 rounded-md icon-badge flex items-center justify-center shrink-0">
+                            <i class="${s.icon}"></i>
+                        </div>
+                        <h2 class="font-display text-xl sm:text-2xl text-main">${s[lang].t}</h2>
                     </div>
                     <div class="space-y-4 relative">${renderBody(s[lang].b, lang)}</div>
-                </section>`).join('');
-            document.querySelectorAll('.privacy-inline').forEach(a => { a.href = 'privacy.html?lang=' + lang; });
+                </section>`;
+            }).join('');
+
+            // Ensure inline privacy link stays synchronized with language
+            document.querySelectorAll('.privacy-inline').forEach(function (a) {
+                a.href = privacyUrl;
+            });
+
+            // Footer text & synced links
+            document.getElementById('footer-about-title').textContent = t.footerAboutTitle;
+            document.getElementById('footer-bio').textContent = t.footerBio;
+            document.getElementById('footer-quick-links-title').textContent = t.footerLinksTitle;
+            document.getElementById('footer-contact-title').textContent = t.footerContactTitle;
+            document.getElementById('footer-location').textContent = t.footerLocation;
+
+            const fLead = document.getElementById('footer-link-leadership');
+            fLead.textContent = t.footerLinkLeadership; fLead.href = homeUrl + '#leadership';
+            const fCen = document.getElementById('footer-link-centers');
+            fCen.textContent = t.footerLinkCenters; fCen.href = homeUrl + '#centers';
+            const fJrn = document.getElementById('footer-link-journey');
+            fJrn.textContent = t.footerLinkJourney; fJrn.href = homeUrl + '#journey';
+            const fStu = document.getElementById('footer-link-studio');
+            fStu.textContent = t.footerLinkStudio; fStu.href = homeUrl + '#studio';
+            const fFaq = document.getElementById('footer-link-faq');
+            fFaq.textContent = t.footerLinkFaq; fFaq.href = homeUrl + '#faq';
+
+            document.getElementById('footer-copy').textContent = t.copy;
+            const fp = document.getElementById('footer-privacy');
+            fp.textContent = t.privacy; fp.href = privacyUrl;
+            document.getElementById('footer-back-text').textContent = t.backHome;
+
             observeSections();
         }
 
-        function toggleLanguage() { render(currentLang === 'ar' ? 'en' : 'ar'); }
+        function toggleLanguage() {
+            render(currentLang === 'ar' ? 'en' : 'ar');
+        }
 
-        // highlight the current section in the table of contents
+        /* ---------------- INTERSECTION OBSERVER FOR ACTIVE TOC ---------------- */
         let io;
         function observeSections() {
             if (io) io.disconnect();
-            io = new IntersectionObserver(entries => {
-                entries.forEach(e => {
+            if (!('IntersectionObserver' in window)) return;
+            io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
                     if (e.isIntersecting) {
-                        document.querySelectorAll('.toc-link').forEach(a => a.classList.toggle('active', a.dataset.toc === e.target.id));
+                        document.querySelectorAll('.toc-link').forEach(function (a) {
+                            a.classList.toggle('active', a.dataset.toc === e.target.id);
+                        });
                     }
                 });
             }, { rootMargin: '-25% 0px -65% 0px' });
-            document.querySelectorAll('#sections section').forEach(el => io.observe(el));
+            document.querySelectorAll('#sections section').forEach(function (el) { io.observe(el); });
         }
 
+        /* ---------------- INITIALIZE ON LOAD ---------------- */
         window.onload = function () {
+            applyTheme(currentTheme);
             const q = new URLSearchParams(location.search).get('lang');
             render(q === 'en' ? 'en' : 'ar');
         };
+    
+        /* ---------------- CENTER ACTIVE NAV RAIL PILL ON MOBILE ---------------- */
+        (function centerActiveNavRailPill() {
+            function align() {
+                var track = document.getElementById('editorial-nav-track');
+                var active = track && track.querySelector('.nav-rail-pill.is-active');
+                if (track && active && track.scrollWidth > track.clientWidth) {
+                    var targetLeft = active.offsetLeft - (track.clientWidth - active.offsetWidth) / 2;
+                    try { track.scrollTo({ left: targetLeft, behavior: 'auto' }); } catch (e) { track.scrollLeft = targetLeft; }
+                }
+            }
+            window.addEventListener('load', align);
+            window.addEventListener('resize', align, { passive: true });
+            align();
+        })();
+
+        /* ---------------- GRADUAL HEADER HIDE BEFORE FOOTER ---------------- */
+        (function initHeaderFooterFade() {
+            var FADE_START_PX = 80;   // Start fading out 80px before footer enters viewport
+            var FADE_END_PX = -140;   // Complete fade out smoothly right as footer logo appears
+            var ticking = false;
+
+            function updateHeaderVisibility() {
+                ticking = false;
+                var header = document.querySelector('.site-header');
+                var footer = document.querySelector('footer');
+                if (!header || !footer) return;
+
+                var distanceToFooter = footer.getBoundingClientRect().top - window.innerHeight;
+                var progress = 0;
+
+                if (distanceToFooter <= FADE_END_PX) {
+                    progress = 1;
+                } else if (distanceToFooter < FADE_START_PX) {
+                    progress = (FADE_START_PX - distanceToFooter) / (FADE_START_PX - FADE_END_PX);
+                }
+
+                // Smoothstep easing for gradual, natural disappearance
+                var eased = progress * progress * (3 - 2 * progress);
+
+                header.style.opacity = String(1 - eased);
+                header.style.transform = 'translate3d(0, ' + (-eased * 100) + '%, 0)';
+
+                if (eased >= 0.98) {
+                    header.style.pointerEvents = 'none';
+                    header.setAttribute('aria-hidden', 'true');
+                } else {
+                    header.style.pointerEvents = '';
+                    header.removeAttribute('aria-hidden');
+                }
+            }
+
+            function onScrollOrResize() {
+                if (!ticking) {
+                    ticking = true;
+                    window.requestAnimationFrame(updateHeaderVisibility);
+                }
+            }
+
+            window.addEventListener('scroll', onScrollOrResize, { passive: true });
+            document.addEventListener('scroll', onScrollOrResize, { passive: true });
+            window.addEventListener('resize', onScrollOrResize, { passive: true });
+            window.addEventListener('load', updateHeaderVisibility);
+            updateHeaderVisibility();
+        })();
     </script>
 </body>
+<!-- VELLORA Terms & Conditions -->
 </html>
