@@ -782,7 +782,37 @@
             font-weight: 700;
         }
 
-    </style>
+    
+        /* =========================================================
+           MOBILE HEADER CLEARANCE FIX (No Overlap With Center Logo)
+           ========================================================= */
+        @media (max-width: 639px) {
+            .header-center-cluster {
+                padding-inline: 0.35rem !important;
+                gap: 0.25rem !important;
+            }
+            .hdr-action-group {
+                gap: 0.16rem !important;
+                padding: 0.12rem !important;
+            }
+            .hdr-lang-balanced {
+                min-width: 54px !important;
+            }
+            .hdr-pill {
+                gap: 0.18rem !important;
+                padding-inline: 0.38rem !important;
+                height: 25px !important;
+                font-size: 9.5px !important;
+            }
+            .hdr-pill i {
+                font-size: 9px !important;
+            }
+            .vellora-header-banner .header-brand-logo-wrap {
+                height: calc(var(--bar-h) - 24px) !important;
+                width: min(88px, calc((var(--bar-h) - 24px) * 1.96)) !important;
+            }
+        }
+</style>
 </head>
 <body id="top" class="pb-16 lg:pb-0 selection:bg-[#C49A52] selection:text-[#061321]">
 
@@ -981,10 +1011,10 @@
 
         <!-- Clean 3-Column Architectural Footer -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-hairline">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-hairline text-center items-center">
 
                 <!-- Column 1: About VELLORA -->
-                <div class="space-y-3">
+                <div class="space-y-3 flex flex-col items-center justify-self-center text-center">
                     <h4 id="footer-about-title" class="font-en text-xs uppercase tracking-[0.2em] text-gold font-bold">عن فيلورا</h4>
                     <p id="footer-bio" class="text-xs sm:text-sm text-secondary leading-relaxed max-w-sm mx-auto">
                         خدمات تنسيق طبي وسفر علاجي إلى لندن، واستشارات كبار الجراحين البريطانيين، برعاية احترافية وسرّية تامة.
@@ -992,7 +1022,7 @@
                 </div>
 
                 <!-- Column 2: Quick Links with Exact Arabic Spacing Fix -->
-                <div class="space-y-3">
+                <div class="space-y-3 flex flex-col items-center justify-self-center text-center">
                     <h4 id="footer-quick-links-title" class="font-en text-xs uppercase tracking-[0.2em] text-gold font-bold">روابط سريعة</h4>
                     <ul class="space-y-2.5 text-xs sm:text-sm text-secondary">
                         <li><a id="footer-link-leadership" href="index.html?lang=ar#leadership" class="hover:text-gold transition">الإشراف الطبي و د. مرهف</a></li>
@@ -1004,7 +1034,7 @@
                 </div>
 
                 <!-- Column 3: Direct Contact -->
-                <div class="space-y-3">
+                <div class="space-y-3 flex flex-col items-center justify-self-center text-center">
                     <h4 id="footer-contact-title" class="font-en text-xs uppercase tracking-[0.2em] text-gold font-bold">التواصل المباشر</h4>
                     <p id="footer-location" class="text-xs sm:text-sm text-secondary">لندن، المملكة المتحدة • خدمة 24/7</p>
                     <div class="pt-1">
