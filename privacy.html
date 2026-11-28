@@ -510,7 +510,37 @@
             }
         }
 
-    </style>
+    
+        /* =========================================================
+           MOBILE HEADER CLEARANCE FIX (No Overlap With Center Logo)
+           ========================================================= */
+        @media (max-width: 639px) {
+            .header-center-cluster {
+                padding-inline: 0.35rem !important;
+                gap: 0.25rem !important;
+            }
+            .hdr-action-group {
+                gap: 0.16rem !important;
+                padding: 0.12rem !important;
+            }
+            .hdr-lang-balanced {
+                min-width: 54px !important;
+            }
+            .hdr-pill {
+                gap: 0.18rem !important;
+                padding-inline: 0.38rem !important;
+                height: 25px !important;
+                font-size: 9.5px !important;
+            }
+            .hdr-pill i {
+                font-size: 9px !important;
+            }
+            .vellora-header-banner .header-brand-logo-wrap {
+                height: calc(var(--bar-h) - 24px) !important;
+                width: min(88px, calc((var(--bar-h) - 24px) * 1.96)) !important;
+            }
+        }
+</style>
 </head>
 <body id="top" class="selection:bg-[#C49A52] selection:text-[#061321]">
 
