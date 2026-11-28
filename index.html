@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" data-theme="ivory" class="scroll-smooth">
+<html lang="ar" dir="rtl" data-theme="midnight" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VELLORA | فيلورا — Medical Travel Concierge (UK)</title>
 
     <meta name="description" content="VELLORA فيلورا — تنسيق طبي وسفر علاجي إلى بريطانيا: حجز مواعيد لدى كبار الاستشاريين، مراجعة التقارير الطبية، استقبال وإقامة ومرافقة طوال الرحلة.">
-    <meta name="theme-color" content="#EFE5D0" id="meta-theme-color">
+    <meta name="theme-color" content="#0D2036" id="meta-theme-color">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="VELLORA">
     <meta property="og:title" content="VELLORA | فيلورا — Medical Travel Concierge">
@@ -65,14 +65,7 @@
 
     <!-- Restore Saved Theme Before First Paint & Graceful Local Asset Fallbacks -->
     <script>
-        (function () {
-            try {
-                var saved = localStorage.getItem('vellora-theme');
-                if (saved === 'midnight' || saved === 'ivory') {
-                    document.documentElement.setAttribute('data-theme', saved);
-                }
-            } catch (e) {}
-        })();
+        // Midnight Editorial theme enforced permanently
 
         // Show clean inline SVG corner ornament if local vellora-footer-banner.jpg is absent in sandbox preview
         function handleOrnamentError(imgEl) {
@@ -101,39 +94,6 @@
               High-contrast pairs verified for every surface, card & input
            ========================================================= */
         :root,
-        [data-theme="ivory"] {
-            --bg-canvas: #FCFBF7;
-            --bg-surface: #FFFFFF;
-            --bg-subtle: #F5F1E7;
-            --bg-ribbon: #F3ECDD;
-            --bg-band: #081B2E;
-            --text-band: #F7F3EA;
-            --text-band-muted: #CBD6E2;
-
-            --text-main: #081B2E;
-            --text-secondary: #334155;
-            --text-muted: #64748B;
-
-            --gold: #9A6F26;
-            --gold-bright: #C49A52;
-            --gold-soft: rgba(196, 154, 82, 0.13);
-
-            --border-line: rgba(8, 27, 46, 0.12);
-            --border-gold: rgba(166, 124, 55, 0.42);
-
-            --btn-primary-bg: #081B2E;
-            --btn-primary-text: #FBF7EB;
-            --btn-primary-hover: #112E4B;
-
-            --input-bg: #FFFFFF;
-            --input-text: #081B2E;
-            --input-border: rgba(8, 27, 46, 0.22);
-
-            --shadow-soft: 0 20px 48px -28px rgba(8, 27, 46, 0.16);
-            --drawer-bg: rgba(252, 251, 247, 0.98);
-            --sticky-bar-bg: rgba(252, 251, 247, 0.96);
-        }
-
         [data-theme="midnight"] {
             --bg-canvas: #061321;
             --bg-surface: #0C1F34;
@@ -391,7 +351,7 @@
         }
 
         /* Ivory Mode: multiply clips cream to exact transparency */
-        [data-theme="ivory"] img.banner-center-logo,
+        [data-theme="midnight"] img.banner-center-logo,
         img.banner-center-logo {
             mix-blend-mode: multiply;
             filter: brightness(1.08) contrast(1.12) saturate(1.08);
@@ -1229,6 +1189,144 @@
             color: var(--btn-primary-text);
             transform: rotate(45deg);
         }
+
+        /* Symmetrical 3-Button Header Balance (Centered between Corner Ornaments & Logo) */
+        .hdr-side-slot {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+        }
+        .hdr-action-group {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.22rem;
+            border-radius: 9999px;
+            background-color: rgba(6, 19, 33, 0.58);
+            border: 1px solid rgba(212, 175, 55, 0.38);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            box-shadow: 0 6px 18px -8px rgba(0, 0, 0, 0.55);
+        }
+        .hdr-lang-balanced {
+            min-width: 84px;
+        }
+        @media (min-width: 640px) {
+            .hdr-lang-balanced {
+                min-width: 118px;
+            }
+        }
+        @media (max-width: 639px) {
+            .hdr-action-group {
+                gap: 0.2rem;
+                padding: 0.14rem;
+            }
+            .hdr-lang-balanced {
+                min-width: 68px;
+            }
+        }
+    
+        /* =========================================================
+           CUSTOM UPLOADED HEADER & FOOTER BANNER (vellora-footer-banner.jpg)
+           Exact #01112B background match + Enlarged Side Waves + Crisp Center Logo
+           ========================================================= */
+        .vellora-header-banner,
+        [data-theme="midnight"] .vellora-header-banner,
+        [data-theme="ivory"] .vellora-header-banner,
+        .vellora-footer-banner,
+        [data-theme="midnight"] .vellora-footer-banner,
+        [data-theme="ivory"] .vellora-footer-banner {
+            background: linear-gradient(90deg, #000F26 0%, #01112B 22%, #01112B 78%, #000F26 100%) !important;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.48) !important;
+            box-shadow: 0 14px 36px -14px rgba(0, 0, 0, 0.72) !important;
+        }
+        .vellora-footer-banner,
+        [data-theme="midnight"] .vellora-footer-banner,
+        [data-theme="ivory"] .vellora-footer-banner {
+            border-top: 1px solid rgba(212, 175, 55, 0.42) !important;
+        }
+
+        /* Side Golden Waves */
+        .header-wave-slot {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: calc(var(--bar-h) * 1.48);
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .header-wave-left {
+            left: 0;
+            -webkit-mask-image: linear-gradient(to right, #000 72%, transparent 100%);
+            mask-image: linear-gradient(to right, #000 72%, transparent 100%);
+        }
+        .header-wave-right {
+            right: 0;
+            -webkit-mask-image: linear-gradient(to left, #000 72%, transparent 100%);
+            mask-image: linear-gradient(to left, #000 72%, transparent 100%);
+        }
+        .header-wave-slot img {
+            position: absolute;
+            height: 215%;
+            width: auto;
+            max-width: none;
+            display: block;
+            filter: none !important;
+            mix-blend-mode: normal !important;
+        }
+        .header-wave-left img {
+            top: 0;
+            left: 0;
+        }
+        .header-wave-right img {
+            bottom: 0;
+            right: 0;
+            top: auto;
+        }
+
+        /* Crisp Center Logo (Tightly Cropped from vellora-footer-banner.jpg) */
+        .header-brand-logo-wrap {
+            position: relative;
+            display: block;
+            height: calc(var(--bar-h) - 8px);
+            width: calc((var(--bar-h) - 8px) * 1.96);
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 5%, #000 95%, transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0%, #000 5%, #000 95%, transparent 100%);
+        }
+        .header-brand-logo-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 149%;
+            width: auto;
+            max-width: none;
+            transform: translate(-50%, -44.8%);
+            display: block;
+            image-rendering: -webkit-optimize-contrast;
+            filter: none !important;
+            mix-blend-mode: normal !important;
+        }
+        .vellora-footer-banner .header-brand-logo-wrap {
+            height: calc(var(--bar-h) - 14px);
+            width: calc((var(--bar-h) - 14px) * 1.96);
+        }
+
+        @media (max-width: 639px) {
+            .header-wave-slot {
+                width: calc(var(--bar-h) * 1.15);
+            }
+            .header-brand-logo-wrap {
+                height: calc(var(--bar-h) - 14px);
+                width: min(124px, calc((var(--bar-h) - 14px) * 1.96));
+            }
+            .vellora-footer-banner .header-brand-logo-wrap {
+                height: calc(var(--bar-h) - 16px);
+                width: min(176px, calc((var(--bar-h) - 16px) * 1.96));
+            }
+        }
+
     </style>
 </head>
 <body id="top" class="pb-16 lg:pb-0 selection:bg-[#C49A52] selection:text-[#061321]">
@@ -1241,61 +1339,21 @@
          ========================================================= -->
     <header class="site-header fixed top-0 inset-x-0 z-50">
         <div class="vellora-header-banner">
-
-            <!-- Layer 1b: Split Left & Right Golden Filigree Arcs (Center 470..970 completely empty!) -->
-            <svg class="banner-filigree-arcs" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <!-- Left-side curves (stop strictly before x = 470) -->
-                <path d="M-10 18 C140 84, 305 24, 465 56" fill="none" stroke="#C49A52" stroke-width="1.25"/>
-                <path d="M-10 102 C155 36, 320 94, 465 64" fill="none" stroke="#B88B38" stroke-width="0.95"/>
-                <path d="M90 0 C225 56, 345 30, 455 46" fill="none" stroke="#D4AF37" stroke-width="0.75" opacity="0.75"/>
-                <!-- Right-side curves (start strictly after x = 970) -->
-                <path d="M1450 18 C1300 84, 1135 24, 975 56" fill="none" stroke="#C49A52" stroke-width="1.25"/>
-                <path d="M1450 102 C1285 36, 1120 94, 975 64" fill="none" stroke="#B88B38" stroke-width="0.95"/>
-                <path d="M1350 0 C1215 56, 1095 30, 985 46" fill="none" stroke="#D4AF37" stroke-width="0.75" opacity="0.75"/>
-            </svg>
-
-            <!-- Layer 2a: Far-Left Corner Ornament -->
-            <div class="ornament-slot ornament-left" aria-hidden="true">
-                <img src="vellora-footer-banner.jpg" alt="" fetchpriority="high" onerror="handleOrnamentError(this)">
-                <svg class="ornament-fallback hidden" viewBox="0 0 120 200" preserveAspectRatio="xMinYMid slice" xmlns="http://www.w3.org/2000/svg">
-                    <path class="orn-fill orn-stroke" d="M0 0 C54 18, 86 58, 108 100 C86 142, 54 182, 0 200 Z" stroke-width="4.5"/>
-                    <path class="orn-stroke" d="M0 24 C42 40, 68 70, 84 100 C68 130, 42 160, 0 176" fill="none" stroke-width="3"/>
-                    <path class="orn-accent" d="M0 54 C28 66, 48 82, 62 100 C48 118, 28 134, 0 146 Z" opacity="0.92"/>
-                    <path class="orn-fill" d="M0 76 C16 84, 28 92, 38 100 C28 108, 16 116, 0 124 Z"/>
-                    <path class="orn-fill orn-stroke" d="M0 0 C65 8, 98 24, 118 44 C78 30, 40 20, 0 20 Z" stroke-width="2.2"/>
-                    <path class="orn-fill orn-stroke" d="M0 200 C65 192, 98 176, 118 156 C78 170, 40 180, 0 180 Z" stroke-width="2.2"/>
-                </svg>
+            <!-- Custom Header Banner Side Waves (vellora-footer-banner.jpg) -->
+            <div class="header-wave-slot header-wave-left" aria-hidden="true">
+                <img src="vellora-footer-banner.jpg" alt="" fetchpriority="high">
+            </div>
+            <div class="header-wave-slot header-wave-right" aria-hidden="true">
+                <img src="vellora-footer-banner.jpg" alt="" fetchpriority="high">
             </div>
 
-            <!-- Layer 2b: Far-Right Corner Ornament -->
-            <div class="ornament-slot ornament-right" aria-hidden="true">
-                <img src="vellora-footer-banner.jpg" alt="" fetchpriority="high" onerror="handleOrnamentError(this)">
-                <svg class="ornament-fallback hidden" viewBox="0 0 120 200" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg">
-                    <g transform="translate(120,0) scale(-1,1)">
-                        <path class="orn-fill orn-stroke" d="M0 0 C54 18, 86 58, 108 100 C86 142, 54 182, 0 200 Z" stroke-width="4.5"/>
-                        <path class="orn-stroke" d="M0 24 C42 40, 68 70, 84 100 C68 130, 42 160, 0 176" fill="none" stroke-width="3"/>
-                        <path class="orn-accent" d="M0 54 C28 66, 48 82, 62 100 C48 118, 28 134, 0 146 Z" opacity="0.92"/>
-                        <path class="orn-fill" d="M0 76 C16 84, 28 92, 38 100 C28 108, 16 116, 0 124 Z"/>
-                        <path class="orn-fill orn-stroke" d="M0 0 C65 8, 98 24, 118 44 C78 30, 40 20, 0 20 Z" stroke-width="2.2"/>
-                        <path class="orn-fill orn-stroke" d="M0 200 C65 192, 98 176, 118 156 C78 170, 40 180, 0 180 Z" stroke-width="2.2"/>
-                    </g>
-                </svg>
-            </div>
-
-            <!-- Layer 3: Centered 3-Column Cluster (NO z-index so mix-blend-mode composites cleanly!) -->
             <div class="header-center-cluster">
 
                 <!-- START SIDE (Right in AR / Left in EN) — Unified Mobile & Desktop -->
-                <div class="flex items-center justify-end gap-1 sm:gap-2.5">
-                    <button type="button" id="theme-toggle-btn" onclick="toggleTheme()"
-                            class="hdr-pill hdr-pill-navy h-9 px-3.5 text-xs"
-                            aria-label="تبديل المظهر">
-                        <i id="theme-icon" class="fa-solid fa-moon text-[#D4AF37] text-xs sm:text-sm"></i>
-                        <span id="theme-label">ليلي</span>
-                    </button>
+                <div class="hdr-side-slot">
 
                     <button type="button" id="lang-toggle-btn" onclick="toggleLanguage()"
-                            class="hdr-pill hdr-pill-navy h-9 px-3.5 text-xs"
+                            class="hdr-pill hdr-pill-navy hdr-lang-balanced h-9 px-3.5 text-xs"
                             aria-label="Switch Language">
                         <i class="fa-solid fa-globe text-[#D4AF37] text-xs"></i>
                         <span id="lang-btn-label" class="font-en">English</span>
@@ -1304,52 +1362,29 @@
 
                 <!-- EXACT CENTER: Single Seamless vellora-logo.jpg -->
                 <a href="#top" class="flex items-center justify-center focus:outline-none shrink-0" aria-label="VELLORA — Medical Travel Concierge">
-                    <img src="vellora-logo.jpg"
-                         alt="VELLORA — Medical Travel Concierge"
-                         fetchpriority="high"
-                         onerror="handleCenterLogoError(this)"
-                         class="banner-center-logo">
-                    <svg class="center-logo-fallback hidden banner-center-logo" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <defs>
-                            <linearGradient id="ctrGoldHdr" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#B08438"/><stop offset="45%" stop-color="#E7CC86"/><stop offset="72%" stop-color="#C49A52"/><stop offset="100%" stop-color="#8B6321"/>
-                            </linearGradient>
-                        </defs>
-                        <g transform="translate(180, 74) scale(0.36)">
-                            <path d="M-158 -15 C-185 -100, -108 -178, -28 -135 C-10 -125, 0 -108, 0 -92 C0 -108, 12 -126, 30 -136 C82 -162, 138 -132, 152 -78" fill="none" stroke="url(#ctrGoldHdr)" stroke-width="24" stroke-linecap="round"/>
-                            <path d="M-112 72 L0 185 L125 62" fill="none" stroke="url(#ctrGoldHdr)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M40 -42 C108 -95, 178 -138, 226 -212 C215 -140, 172 -88, 108 -52 Z" fill="url(#ctrGoldHdr)"/>
-                            <path d="M62 -15 C132 -52, 198 -82, 232 -140 C205 -78, 155 -35, 92 -8 Z" fill="url(#ctrGoldHdr)"/>
-                            <path d="M74 16 C140 -6, 196 -28, 224 -76 C192 -20, 146 12, 86 28 Z" fill="url(#ctrGoldHdr)"/>
-                            <path d="M72 48 C132 35, 180 18, 206 -18 C176 28, 135 52, 76 62 Z" fill="url(#ctrGoldHdr)"/>
-                            <path d="M55 78 C108 72, 148 58, 174 30 C142 70, 104 90, 48 96 Z" fill="url(#ctrGoldHdr)"/>
-                            <path class="logo-ink" d="M-108 -68 C-74 -62, -45 25, 0 116 C-28 52, -55 -40, -82 -66 Z"/>
-                            <path d="M-82 -66 C-48 -58, -18 28, 0 116 L24 68 C-2 8, -32 -62, -62 -68 Z" fill="url(#ctrGoldHdr)"/>
-                            <path class="logo-ink" d="M104 -68 C70 -56, 36 28, 0 116 C32 72, 68 -16, 86 -56 Z"/>
-                            <path d="M84 -66 C48 -42, 16 28, -4 96 C22 50, 56 -24, 98 -64 Z" fill="url(#ctrGoldHdr)"/>
-                            <rect class="logo-ink" x="-194" y="16" width="120" height="38" rx="2"/>
-                            <rect class="logo-ink" x="-153" y="-25" width="38" height="120" rx="2"/>
-                        </g>
-                        <text class="logo-ink" x="180" y="176" text-anchor="middle" font-family="Georgia, 'Cormorant Garamond', serif" font-size="44" font-weight="700" letter-spacing="7">VELLORA</text>
-                        <line x1="38" y1="198" x2="68" y2="198" stroke="#C49A52" stroke-width="2"/>
-                        <text class="logo-ink" x="180" y="203" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">MEDICAL TRAVEL CONCIERGE</text>
-                        <line x1="292" y1="198" x2="322" y2="198" stroke="#C49A52" stroke-width="2"/>
-                    </svg>
+                    <span class="header-brand-logo-wrap">
+                        <img src="vellora-footer-banner.jpg"
+                             alt="VELLORA — Medical Travel Concierge"
+                             fetchpriority="high"
+                             class="header-brand-logo-img">
+                    </span>
                 </a>
 
                 <!-- END SIDE (Left in AR / Right in EN) — Unified Mobile & Desktop -->
-                <div class="flex items-center justify-start gap-1 sm:gap-2.5">
-                    <a href="#studio" class="hdr-pill hdr-pill-gold h-9 px-4 text-xs">
+                <div class="hdr-side-slot">
+                    <div class="hdr-action-group">
+                    <a href="#studio" class="hdr-pill hdr-pill-gold h-8 px-4 text-xs">
                         <i class="fa-regular fa-calendar-check text-xs"></i>
                         <span id="hdr-book-label">ابدأ التنسيق</span>
                     </a>
 
                     <a href="https://wa.me/963930888475" target="_blank" rel="noopener"
-                       class="hdr-pill hdr-pill-wa h-9 px-3.5 text-xs"
+                       class="hdr-pill hdr-pill-wa h-8 px-3.5 text-xs"
                        aria-label="WhatsApp">
                         <i class="fa-brands fa-whatsapp text-sm"></i>
                         <span id="hdr-wa-label">واتساب</span>
                     </a>
+                                    </div>
                 </div>
             </div>
         </div>
@@ -2066,85 +2101,30 @@
     <footer class="bg-canvas border-t border-gold-line">
 
         <div class="vellora-footer-banner">
-
-            <!-- Layer 1b: Split Left & Right Golden Filigree Arcs (Center 470..970 completely empty!) -->
-            <svg class="banner-filigree-arcs" viewBox="0 0 1440 130" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <!-- Left-side curves (stop strictly before x = 470) -->
-                <path d="M-10 20 C145 92, 310 26, 465 62" fill="none" stroke="#C49A52" stroke-width="1.25"/>
-                <path d="M-10 110 C155 40, 320 102, 465 70" fill="none" stroke="#B88B38" stroke-width="0.95"/>
-                <path d="M90 0 C225 60, 345 34, 455 50" fill="none" stroke="#D4AF37" stroke-width="0.75" opacity="0.75"/>
-                <!-- Right-side curves (start strictly after x = 970) -->
-                <path d="M1450 20 C1295 92, 1130 26, 975 62" fill="none" stroke="#C49A52" stroke-width="1.25"/>
-                <path d="M1450 110 C1285 40, 1120 102, 975 70" fill="none" stroke="#B88B38" stroke-width="0.95"/>
-                <path d="M1350 0 C1215 60, 1095 34, 985 50" fill="none" stroke="#D4AF37" stroke-width="0.75" opacity="0.75"/>
-            </svg>
-
-            <!-- Layer 2a: Far-Left Corner Ornament -->
-            <div class="ornament-slot ornament-left" aria-hidden="true">
-                <img src="vellora-footer-banner.jpg" alt="" loading="lazy" onerror="handleOrnamentError(this)">
-                <svg class="ornament-fallback hidden" viewBox="0 0 120 200" preserveAspectRatio="xMinYMid slice" xmlns="http://www.w3.org/2000/svg">
-                    <path class="orn-fill orn-stroke" d="M0 0 C54 18, 86 58, 108 100 C86 142, 54 182, 0 200 Z" stroke-width="4.5"/>
-                    <path class="orn-stroke" d="M0 24 C42 40, 68 70, 84 100 C68 130, 42 160, 0 176" fill="none" stroke-width="3"/>
-                    <path class="orn-accent" d="M0 54 C28 66, 48 82, 62 100 C48 118, 28 134, 0 146 Z" opacity="0.92"/>
-                    <path class="orn-fill" d="M0 76 C16 84, 28 92, 38 100 C28 108, 16 116, 0 124 Z"/>
-                </svg>
+            <!-- Custom Footer Banner Side Waves (vellora-footer-banner.jpg) -->
+            <div class="header-wave-slot header-wave-left" aria-hidden="true">
+                <img src="vellora-footer-banner.jpg" alt="" loading="lazy">
+            </div>
+            <div class="header-wave-slot header-wave-right" aria-hidden="true">
+                <img src="vellora-footer-banner.jpg" alt="" loading="lazy">
             </div>
 
-            <!-- Layer 2b: Far-Right Corner Ornament -->
-            <div class="ornament-slot ornament-right" aria-hidden="true">
-                <img src="vellora-footer-banner.jpg" alt="" loading="lazy" onerror="handleOrnamentError(this)">
-                <svg class="ornament-fallback hidden" viewBox="0 0 120 200" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg">
-                    <g transform="translate(120,0) scale(-1,1)">
-                        <path class="orn-fill orn-stroke" d="M0 0 C54 18, 86 58, 108 100 C86 142, 54 182, 0 200 Z" stroke-width="4.5"/>
-                        <path class="orn-stroke" d="M0 24 C42 40, 68 70, 84 100 C68 130, 42 160, 0 176" fill="none" stroke-width="3"/>
-                        <path class="orn-accent" d="M0 54 C28 66, 48 82, 62 100 C48 118, 28 134, 0 146 Z" opacity="0.92"/>
-                        <path class="orn-fill" d="M0 76 C16 84, 28 92, 38 100 C28 108, 16 116, 0 124 Z"/>
-                    </g>
-                </svg>
-            </div>
-
-            <!-- Layer 3: Single Seamless Centered vellora-logo.jpg -->
             <a href="#top" class="relative flex items-center justify-center focus:outline-none" aria-label="VELLORA — Medical Travel Concierge">
-                <img src="vellora-logo.jpg"
-                     alt="VELLORA — Medical Travel Concierge"
-                     loading="lazy"
-                     onerror="handleCenterLogoError(this)"
-                     class="banner-center-logo">
-                <svg class="center-logo-fallback hidden banner-center-logo" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <defs>
-                        <linearGradient id="ctrGoldFtr" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#B08438"/><stop offset="45%" stop-color="#E7CC86"/><stop offset="72%" stop-color="#C49A52"/><stop offset="100%" stop-color="#8B6321"/>
-                        </linearGradient>
-                    </defs>
-                    <g transform="translate(180, 74) scale(0.36)">
-                        <path d="M-158 -15 C-185 -100, -108 -178, -28 -135 C-10 -125, 0 -108, 0 -92 C0 -108, 12 -126, 30 -136 C82 -162, 138 -132, 152 -78" fill="none" stroke="url(#ctrGoldFtr)" stroke-width="24" stroke-linecap="round"/>
-                        <path d="M-112 72 L0 185 L125 62" fill="none" stroke="url(#ctrGoldFtr)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M40 -42 C108 -95, 178 -138, 226 -212 C215 -140, 172 -88, 108 -52 Z" fill="url(#ctrGoldFtr)"/>
-                        <path d="M62 -15 C132 -52, 198 -82, 232 -140 C205 -78, 155 -35, 92 -8 Z" fill="url(#ctrGoldFtr)"/>
-                        <path d="M74 16 C140 -6, 196 -28, 224 -76 C192 -20, 146 12, 86 28 Z" fill="url(#ctrGoldFtr)"/>
-                        <path d="M72 48 C132 35, 180 18, 206 -18 C176 28, 135 52, 76 62 Z" fill="url(#ctrGoldFtr)"/>
-                        <path d="M55 78 C108 72, 148 58, 174 30 C142 70, 104 90, 48 96 Z" fill="url(#ctrGoldFtr)"/>
-                        <path class="logo-ink" d="M-108 -68 C-74 -62, -45 25, 0 116 C-28 52, -55 -40, -82 -66 Z"/>
-                        <path d="M-82 -66 C-48 -58, -18 28, 0 116 L24 68 C-2 8, -32 -62, -62 -68 Z" fill="url(#ctrGoldFtr)"/>
-                        <path class="logo-ink" d="M104 -68 C70 -56, 36 28, 0 116 C32 72, 68 -16, 86 -56 Z"/>
-                        <path d="M84 -66 C48 -42, 16 28, -4 96 C22 50, 56 -24, 98 -64 Z" fill="url(#ctrGoldFtr)"/>
-                        <rect class="logo-ink" x="-194" y="16" width="120" height="38" rx="2"/>
-                        <rect class="logo-ink" x="-153" y="-25" width="38" height="120" rx="2"/>
-                    </g>
-                    <text class="logo-ink" x="180" y="176" text-anchor="middle" font-family="Georgia, 'Cormorant Garamond', serif" font-size="44" font-weight="700" letter-spacing="7">VELLORA</text>
-                    <line x1="38" y1="198" x2="68" y2="198" stroke="#C49A52" stroke-width="2"/>
-                    <text class="logo-ink" x="180" y="203" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">MEDICAL TRAVEL CONCIERGE</text>
-                    <line x1="292" y1="198" x2="322" y2="198" stroke="#C49A52" stroke-width="2"/>
-                </svg>
+                <span class="header-brand-logo-wrap">
+                    <img src="vellora-footer-banner.jpg"
+                         alt="VELLORA — Medical Travel Concierge"
+                         loading="lazy"
+                         class="header-brand-logo-img">
+                </span>
             </a>
         </div>
 
         <!-- Clean 3-Column Architectural Footer (Centered on Mobile, Symmetrically Spaced on Desktop) -->
         <div class="max-w-6xl mx-auto px-5 sm:px-8 lg:px-10 pt-12 pb-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 pb-10 border-b border-hairline text-center md:text-start items-start">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 pb-10 border-b border-hairline text-center items-center">
 
                 <!-- Column 1: About VELLORA (Start-Aligned on Desktop) -->
-                <div class="space-y-3 flex flex-col items-center md:items-start md:justify-self-start">
+                <div class="space-y-3 flex flex-col items-center justify-self-center text-center">
                     <h4 id="footer-about-title" class="font-en text-xs uppercase tracking-[0.2em] text-gold font-bold">عن فيلورا</h4>
                     <p id="footer-bio" class="text-xs sm:text-sm text-secondary leading-relaxed max-w-xs mx-auto md:mx-0">
                         خدمات تنسيق طبي وسفر علاجي إلى بريطانيا، واستشارات كبار الجراحين البريطانيين، برعاية احترافية وسرّية تامة.
@@ -2152,7 +2132,7 @@
                 </div>
 
                 <!-- Column 2: Quick Links (Perfectly Centered Track on Desktop) -->
-                <div class="space-y-3 flex flex-col items-center md:items-start md:justify-self-center">
+                <div class="space-y-3 flex flex-col items-center justify-self-center text-center">
                     <h4 id="footer-quick-links-title" class="font-en text-xs uppercase tracking-[0.2em] text-gold font-bold">روابط سريعة</h4>
                     <ul class="space-y-2.5 text-xs sm:text-sm text-secondary">
                         <li><a href="#leadership" id="footer-link-about" class="hover:text-gold transition">الإشراف الطبي و د.مرهف</a></li>
@@ -2164,7 +2144,7 @@
                 </div>
 
                 <!-- Column 3: Direct Contact & Discreet Partnerships Link (End-Aligned on Desktop) -->
-                <div class="space-y-3.5 flex flex-col items-center md:items-start md:justify-self-end">
+                <div class="space-y-3.5 flex flex-col items-center justify-self-center text-center">
                     <h4 id="footer-contact-title" class="font-en text-xs uppercase tracking-[0.2em] text-gold font-bold">التواصل المباشر</h4>
                     <p id="footer-location" class="text-xs sm:text-sm text-secondary">المملكة المتحدة • خدمة 24/7</p>
                     <div class="pt-0.5">
@@ -2181,7 +2161,7 @@
             </div>
 
             <!-- Bottom Legal Bar -->
-            <div class="pt-7 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted text-center sm:text-start">
+            <div class="pt-7 flex flex-col items-center justify-center gap-3 text-xs text-muted text-center">
                 <p id="footer-copyright">© 2026 VELLORA Medical Travel Concierge. جميع الحقوق محفوظة.</p>
                 <div class="flex flex-wrap items-center justify-center gap-4">
                     <a href="privacy.html?lang=ar" id="footer-privacy" class="hover:text-gold transition">سياسة الخصوصية والسرية الطبية</a>
@@ -2240,7 +2220,7 @@
 
         /* ---------------- GLOBAL STATE ---------------- */
         let currentLang = 'ar';
-        let currentTheme = document.documentElement.getAttribute('data-theme') || 'ivory';
+        const currentTheme = 'midnight';
         let selectedVisa = '';
         let selectedConsultMode = 'in_person';
         let selectedCenterId = null;
@@ -2274,38 +2254,13 @@
         }
 
         /* ---------------- DUAL THEME ENGINE (IVORY <-> MIDNIGHT) ---------------- */
-        function applyTheme(theme) {
-            try {
-                currentTheme = theme === 'midnight' ? 'midnight' : 'ivory';
-                document.documentElement.setAttribute('data-theme', currentTheme);
-                try { localStorage.setItem('vellora-theme', currentTheme); } catch (e) {}
-                var meta = document.getElementById('meta-theme-color');
-                if (meta) meta.setAttribute('content', currentTheme === 'midnight' ? '#0D2036' : '#EFE5D0');
-                updateThemeButtonUI();
-            } catch (e) {}
+        function applyTheme() {
+            document.documentElement.setAttribute('data-theme', 'midnight');
         }
 
-        function updateThemeButtonUI() {
-            try {
-                var icon = document.getElementById('theme-icon');
-                var label = document.getElementById('theme-label');
-                var btn = document.getElementById('theme-toggle-btn');
-                if (!icon || !label) return;
-                if (currentTheme === 'ivory') {
-                    icon.className = 'fa-solid fa-moon text-[#D4AF37] text-xs sm:text-sm';
-                    label.textContent = currentLang === 'ar' ? 'ليلي' : 'Midnight';
-                    if (btn) btn.setAttribute('aria-label', currentLang === 'ar' ? 'التبديل للوضع الكحلي الليلي' : 'Switch to Midnight Editorial');
-                } else {
-                    icon.className = 'fa-solid fa-sun text-[#D4AF37] text-xs sm:text-sm';
-                    label.textContent = currentLang === 'ar' ? 'عاجي' : 'Ivory';
-                    if (btn) btn.setAttribute('aria-label', currentLang === 'ar' ? 'التبديل للوضع العاجي الفاتح' : 'Switch to Quiet Luxury Ivory');
-                }
-            } catch (e) {}
-        }
+        function updateThemeButtonUI() {}
 
-        function toggleTheme() {
-            applyTheme(currentTheme === 'ivory' ? 'midnight' : 'ivory');
-        }
+        function toggleTheme() {}
 
         /* ---------------- MOBILE DRAWER ---------------- */
         function setMobileMenu(open) {
